@@ -84,11 +84,10 @@ const PricingSection = () => {
             Investment
           </p>
           <h2
-            className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 transition-all duration-700 ${
-              isVisible
+            className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 transition-all duration-700 ${isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
-            }`}
+              }`}
           >
             Transparent <span className="gradient-text">Pricing</span>
           </h2>
@@ -101,11 +100,10 @@ const PricingSection = () => {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl border p-8 transition-all duration-700 ${
-                plan.popular
+              className={`relative rounded-2xl border p-8 transition-all duration-700 ${plan.popular
                   ? "border-primary/50 bg-gradient-to-b from-primary/10 to-card/80"
                   : "border-border/50 bg-card/50"
-              }`}
+                }`}
               style={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible
@@ -125,9 +123,8 @@ const PricingSection = () => {
 
               <div className="text-center mb-8">
                 <div
-                  className={`w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center ${
-                    plan.popular ? "bg-primary/20" : "bg-muted"
-                  }`}
+                  className={`w-14 h-14 rounded-2xl mx-auto mb-4 flex items-center justify-center ${plan.popular ? "bg-primary/20" : "bg-muted"
+                    }`}
                 >
                   <plan.icon
                     size={28}
@@ -153,9 +150,8 @@ const PricingSection = () => {
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <div
-                      className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                        plan.popular ? "bg-primary/20" : "bg-muted"
-                      }`}
+                      className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${plan.popular ? "bg-primary/20" : "bg-muted"
+                        }`}
                     >
                       <Check
                         size={12}
@@ -168,12 +164,13 @@ const PricingSection = () => {
               </ul>
 
               <a
-                href="#apply"
-                className={`block w-full py-3.5 rounded-xl font-semibold text-center transition-all duration-300 ${
-                  plan.popular
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc_Mh4rYuBIgvH0tq7nRb2pvB5na6l7sjEHd1QuRAJQbXzJpQ/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full py-3.5 rounded-xl font-semibold text-center transition-all duration-300 ${plan.popular
                     ? "cta-button"
                     : "border border-border hover:border-primary/50 text-foreground hover:bg-primary/5"
-                }`}
+                  }`}
               >
                 Apply Now
               </a>

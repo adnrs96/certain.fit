@@ -16,9 +16,8 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav py-3" : "py-5 bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-3" : "py-5 bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between">
@@ -50,7 +49,9 @@ const Navigation = () => {
               Pricing
             </a>
             <a
-              href="#apply"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc_Mh4rYuBIgvH0tq7nRb2pvB5na6l7sjEHd1QuRAJQbXzJpQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button text-sm px-6 py-2.5"
             >
               Apply Now
@@ -92,7 +93,9 @@ const Navigation = () => {
                 Pricing
               </a>
               <a
-                href="#apply"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSc_Mh4rYuBIgvH0tq7nRb2pvB5na6l7sjEHd1QuRAJQbXzJpQ/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="cta-button text-center mt-2"
               >
