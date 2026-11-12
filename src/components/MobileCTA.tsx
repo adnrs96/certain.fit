@@ -1,16 +1,12 @@
-const MobileCTA = () => {
-  return (
-    <div className="sticky-cta">
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSc_Mh4rYuBIgvH0tq7nRb2pvB5na6l7sjEHd1QuRAJQbXzJpQ/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="cta-button w-full block text-center py-4"
-      >
-        Apply Now
-      </a>
-    </div>
-  );
-};
+const MobileCTA = () => (
+  <div className="sticky-cta-bar" id="sticky-cta">
+    <a className="sticky-ghost" href="#timeline-estimator">
+      My timeline
+    </a>
+    <a className="sticky-primary" href="#start-journey">
+      Meet your coach
+    </a>
+  </div>
+);
 
 export default MobileCTA;

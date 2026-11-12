@@ -1,59 +1,114 @@
-import heroImage from "@/assets/hero-system.jpg";
-
-const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="System visualization"
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+const HeroSection = () => (
+  <section className="hero" id="top">
+    <div className="container hero-grid">
+      <div className="hero-copy">
+        <span className="eyebrow-pill">
+          HUMAN-LED WEIGHT LOSS
+          <span className="eyebrow-more"> · SUPPORTED, NOT SUPERVISED</span>
+        </span>
+        <h1 className="hero-title">
+          Make this the last time you{" "}
+          <span className="serif-italic">start over.</span>
+        </h1>
+        <p className="hero-lead">
+          CERTAIN gives you your own <strong>one-to-one coach</strong>: a real
+          person who gets to know you, builds a plan around your actual week,
+          and stays in your corner when life gets in the way.
+        </p>
+        <div className="hero-ctas">
+          <a className="btn-ocean-lg" href="#start-journey">
+            Meet your coach
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path
+                d="M5 12h14M13 6l6 6-6 6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+          </a>
+          <a className="btn-ghost-lg" href="#how-it-works">
+            See how it works
+          </a>
+        </div>
+        <a className="hero-timeline-link" href="#timeline-estimator">
+          <span className="htl-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18">
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              ></circle>
+              <path
+                d="M12 7v5l3 2"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              ></path>
+            </svg>
+          </span>
+          <span>
+            <strong>How long will it take you?</strong> See your personal
+            timeline in 60 seconds →
+          </span>
+        </a>
+        <ul className="hero-trust">
+          <li>A real person, never a bot</li>
+          <li>No crash diets</li>
+          <li>Built for weeks that don’t go to plan</li>
+        </ul>
       </div>
-
-      {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-primary font-medium tracking-widest uppercase text-sm mb-6 opacity-0 animate-fade-up">
-            Weight Management Coaching
-          </p>
-          
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 opacity-0 animate-fade-up animation-delay-200">
-            Fat Loss for{" "}
-            <span className="gradient-text">High-Cognitive-Load</span>{" "}
-            Professionals.
-          </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-up animation-delay-400">
-            Don't diet. Build a structure you can run for life.{" "}
-            <span className="text-foreground font-medium">CERTAIN™</span> is a
-            fat-loss system designed for when work is busy.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-fade-up animation-delay-600">
-            <a href="#framework" className="cta-button">
-              View the System
-            </a>
-            <a
-              href="#apply"
-              className="px-8 py-4 rounded-xl font-semibold text-lg border border-border hover:border-primary/50 text-foreground transition-all duration-300 hover:bg-primary/5"
-            >
-              Apply for Coaching
-            </a>
+      <div className="hero-visual" aria-hidden="true">
+        <div className="hv-orbit"></div>
+        <div className="hv-card hv-welcome">
+          <div className="hv-row">
+            <span className="hv-kicker">WELCOME TO CERTAIN</span>
+            <span className="hv-day">DAY 0</span>
           </div>
+          <p className="hv-title">You’re not doing this alone.</p>
+          <p className="hv-text">Meet your own CERTAIN coach.</p>
+          <div className="hv-partner">
+            <span className="hv-avatar avatar-photo"></span>
+            <span className="hv-partner-text">
+              <strong>Rhea Menon</strong>
+              <small>Your personal point of contact</small>
+            </span>
+          </div>
+          <p className="hv-promise">
+            Your journey. Your pace. Someone in your corner.
+          </p>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-primary rounded-full animate-bounce" />
+        <div className="hv-card hv-journal">
+          <span className="hv-journal-kicker">MY WEEK · WEEK 03</span>
+          <span className="hv-q">01 · My wins</span>
+          <span className="hand">
+            Walked after dinner 4 times, even on Thursday!
+          </span>
+          <span className="hv-q">05 · My intention for next week</span>
+          <span className="hand">Pack lunch the night before.</span>
         </div>
+        <div className="hv-card hv-rhythm">
+          <span className="hv-rhythm-kicker">
+            <i></i>RETURNING TO RHYTHM
+          </span>
+          <strong>Day 2 of 3 · Re-establish</strong>
+          <span className="hv-bars">
+            <i className="on"></i>
+            <i className="on"></i>
+            <i></i>
+          </span>
+          <small>Normal meals, groceries, an easy walk.</small>
+        </div>
+        <p className="hv-caption">Illustrative examples</p>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default HeroSection;
