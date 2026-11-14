@@ -77,9 +77,10 @@
 
 .founder-photo-pair {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 34px;
-  width: min(100%, 420px);
+  grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 500px);
   margin: 36px auto 0;
 }
 
@@ -92,7 +93,7 @@
   transform: rotate(-3deg);
 }
 
-.founder-photo:nth-child(2) {
+.founder-photo:last-child {
   transform: rotate(3deg) translateY(10px);
 }
 
@@ -113,41 +114,33 @@
 }
 
 .founder-milestone {
-  position: relative;
-  width: min(260px, calc(100% - 24px));
-  margin: 30px auto 0;
-  padding: 14px 18px;
-  border: 2px dashed #91aec7;
-  border-radius: 14px;
-  background: #e9f2fb;
   color: var(--ink-hand);
   text-align: center;
-  transform: rotate(-3deg);
 }
 
 .founder-milestone strong {
   display: block;
   font-family: var(--font-serif);
-  font-size: clamp(42px, 6vw, 56px);
+  font-size: 24px;
   font-style: italic;
   font-weight: 600;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .founder-milestone span {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   font-family: var(--font-hand);
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.2;
 }
 
 .founder-milestone-arrow {
-  position: absolute;
-  top: -25px;
-  left: -68px;
-  width: 78px;
-  height: 65px;
+  display: block;
+  width: 38px;
+  height: 14px;
+  margin: 6px auto 0;
 }
 
 .founder-photo-note {
@@ -434,7 +427,8 @@
   }
 
   .founder-photo-pair {
-    gap: 16px;
+    grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr);
+    gap: 6px;
     margin-top: 38px;
   }
 
@@ -450,11 +444,8 @@
     font-size: 18px;
   }
 
-  .founder-milestone-arrow {
-    top: -30px;
-    left: 0;
-    width: 42px;
-    height: 40px;
+  .founder-milestone strong {
+    font-size: 19px;
   }
 
   .founder-reading-column {

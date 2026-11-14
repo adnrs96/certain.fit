@@ -33,6 +33,24 @@ const Coach = () => (
             />
             <figcaption>Me, on my 27th birthday.</figcaption>
           </figure>
+          <aside className="founder-milestone" aria-label="My weight-loss transformation">
+            <strong>~40 kg</strong>
+            <span>lost</span>
+            <svg
+              className="founder-milestone-arrow"
+              viewBox="0 0 40 14"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 7h34m-6-5 6 5-6 5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </aside>
           <figure className="founder-photo">
             <img
               src={akshatNow}
@@ -43,24 +61,6 @@ const Coach = () => (
             <figcaption>Me, a little further along.</figcaption>
           </figure>
         </div>
-        <aside className="founder-milestone" aria-label="My weight-loss transformation">
-          <svg
-            className="founder-milestone-arrow"
-            viewBox="0 0 90 75"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 5C-3 52 34 71 77 48M61 45l18 2-8 17"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <strong>~40 kg</strong>
-          <span>lost. A lot of life gained.</span>
-        </aside>
         <p className="founder-photo-note">
           Two photographs. Years of learning in between.
         </p>

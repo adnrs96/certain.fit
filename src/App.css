@@ -552,60 +552,63 @@ p {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  align-items: center;
-  gap: 56px;
+  grid-template-areas: "title portrait" "intro portrait" "actions portrait";
+  align-items: start;
+  column-gap: 56px;
+  row-gap: 22px;
 }
 
 .hero-founder {
+  position: relative;
+  grid-area: portrait;
+  align-self: center;
   justify-self: center;
-  width: min(100%, 340px);
+  width: min(100%, 360px);
   margin: 0;
-  padding: 10px 10px 0;
-  border: 1px solid var(--border-subtle);
-  border-radius: 28px;
-  background: #FFFFFF;
-  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  border-radius: 180px 180px 24px 24px;
 }
 
 .hero-founder img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
-  border-radius: 20px;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
 }
 
 .hero-founder figcaption {
+  position: absolute;
+  inset: auto 0 0;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding: 14px 8px 18px;
-  color: var(--ink-secondary);
+  padding: 44px 24px 22px;
+  background: linear-gradient(transparent, rgba(14, 30, 43, 0.8));
+  color: #FFFFFF;
   font-size: 11px;
 }
 
 .hero-founder figcaption strong {
-  color: var(--ink-hand);
+  color: inherit;
   font-family: var(--font-hand);
   font-size: 30px;
   font-weight: 500;
   line-height: 1;
 }
 
-.hero-copy > * {
+.hero-grid > :not(.hero-founder) {
   animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.hero-copy > :nth-child(2) { animation-delay: 0.06s; }
-.hero-copy > :nth-child(3) { animation-delay: 0.12s; }
-.hero-copy > :nth-child(4) { animation-delay: 0.18s; }
-.hero-copy > :nth-child(5) { animation-delay: 0.24s; }
-.hero-copy > :nth-child(6) { animation-delay: 0.3s; }
+.hero-grid > .hero-lead { animation-delay: 0.06s; }
+.hero-grid > .hero-ctas { animation-delay: 0.12s; }
 
 .hero-title {
-  margin: 4px 0 22px;
+  grid-area: title;
+  align-self: end;
+  margin: 0;
   font-size: clamp(42px, 5.6vw, 72px);
   font-weight: 800;
   line-height: 1.04;
@@ -617,6 +620,7 @@ p {
 }
 
 .hero-lead {
+  grid-area: intro;
   max-width: 540px;
   margin: 0;
   color: var(--ink-secondary);
@@ -629,11 +633,12 @@ p {
 }
 
 .hero-ctas {
+  grid-area: actions;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
-  margin-top: 32px;
+  margin-top: 0;
 }
 
 .hero-secondary-link {
@@ -3618,7 +3623,7 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-grid {
-    gap: 36px;
+    column-gap: 36px;
   }
 
   /* Smaller collage so the three cards don't cover each other */
@@ -3719,20 +3724,15 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 132px minmax(0, 1fr);
+    grid-template-areas: "title title" "portrait intro" "actions actions";
+    align-items: center;
+    column-gap: 24px;
   }
 
   .hero-founder {
-    grid-row: 1;
-    max-width: 168px;
-    padding: 6px;
-    border-radius: 20px;
-  }
-
-  .hero-founder img {
-    aspect-ratio: 1;
-    border-radius: 14px;
-    object-position: center 30%;
+    width: 100%;
+    border-radius: 80px 80px 14px 14px;
   }
 
   .hero-founder figcaption {
@@ -3962,7 +3962,6 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-title {
     font-size: clamp(38px, 11vw, 46px);
-    margin-bottom: 16px;
   }
 
   .hero-title .serif-italic {
@@ -3970,7 +3969,8 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-lead {
-    font-size: 16.5px;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   .hero-ctas .btn-ocean-lg,
@@ -3981,7 +3981,6 @@ html.js .role-card[data-reveal].is-visible:hover {
   .hero-ctas {
     justify-content: center;
     row-gap: 6px;
-    margin-top: 24px;
   }
 
   .hero {
@@ -3989,11 +3988,9 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-grid {
-    gap: 20px;
-  }
-
-  .hero-founder {
-    max-width: 144px;
+    grid-template-columns: clamp(108px, 34vw, 148px) minmax(0, 1fr);
+    column-gap: 18px;
+    row-gap: 22px;
   }
 
   .hero-trust {
