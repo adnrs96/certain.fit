@@ -18,7 +18,7 @@ const SiteLayout = () => {
   const isHome = location.pathname === "/";
   const pageTitle =
     location.pathname === "/start-journey"
-      ? "Meet your CERTAIN coach"
+      ? "Work with Akshat"
       : sitePages.find((page) => page.path === location.pathname)?.title;
 
   useEffect(() => {

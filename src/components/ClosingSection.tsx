@@ -46,12 +46,12 @@ const ClosingSection = () => (
         <span className="serif-italic">Someone in your corner.</span>
       </h2>
       <p>
-        A one-to-one weight-loss programme, built around your real life.
-        Supported, not supervised.
+        A weight-loss programme personally guided by Akshat, built around your
+        real life. Supported, not supervised.
       </p>
       <div className="closing-ctas">
         <Link className="btn-ocean-lg on-dark" to="/start-journey">
-          Meet your coach →
+          Work with Akshat →
         </Link>
         <Link className="btn-ghost-lg on-dark" to="/timeline">
           See my timeline

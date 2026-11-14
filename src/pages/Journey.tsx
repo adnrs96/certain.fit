@@ -11,15 +11,15 @@ const Journey = () => {
         <div className="start-copy" data-reveal="">
           <span className="eyebrow-pill">START HERE</span>
           <h1 className="section-title left">
-            Meet your <span className="serif-italic">CERTAIN coach.</span>
+            Let’s start <span className="serif-italic">with your story.</span>
           </h1>
           <p className="section-lead">
-            Three short questions, about two minutes. Your first conversation
-            starts from your story, not a sales script.
+            I’m Akshat. Three short questions, about two minutes, to start a
+            conversation with me about your story, not a sales script.
           </p>
           <ol className="expect">
             <li>
-              <b>Tell us a little about you</b>
+              <b>Tell me a little about you</b>
               <span>
                 Your WHY, your real week, and how you usually restart.
               </span>
@@ -27,15 +27,15 @@ const Journey = () => {
             <li>
               <b>Your first conversation</b>
               <span>
-                Your story, what’s made it hard before, and whether CERTAIN is
-                right for you. No pressure.
+                We’ll talk about your story, what’s made it hard before, and
+                whether CERTAIN is right for you. No pressure.
               </span>
             </li>
             <li>
               <b>Day 0</b>
               <span>
-                If it feels right, you meet your coach and open your Journey
-                Journal.
+                If it feels right, we open your Journey Journal and build your
+                starting plan together.
               </span>
             </li>
           </ol>
@@ -188,7 +188,7 @@ const Journey = () => {
                       type="radio"
                       name="restart"
                       defaultValue="I restart quickly"
-                      data-reply="Restarting quickly is a real strength. Your coach will help you build on it."
+                      data-reply="Restarting quickly is a real strength. I’ll help you build on it."
                     />
                     <span>I restart quickly</span>
                   </label>
@@ -197,7 +197,7 @@ const Journey = () => {
                       type="radio"
                       name="restart"
                       defaultValue="It takes me a week or two"
-                      data-reply="Together, you’ll make that gap shorter, one small step at a time."
+                      data-reply="Together, we’ll make that gap shorter, one small step at a time."
                     />
                     <span>It takes me a week or two</span>
                   </label>
@@ -299,7 +299,7 @@ const Journey = () => {
                   ← Back
                 </button>
                 <button type="submit" className="btn-ocean-lg">
-                  Meet my coach →
+                  Talk to Akshat →
                 </button>
               </div>
             </div>
@@ -318,7 +318,7 @@ const Journey = () => {
                 <p data-fill="why"></p>
               </div>
               <div className="wc-block">
-                <span className="wc-label">Where your coach would start</span>
+                <span className="wc-label">Where I’d start</span>
                 <ul className="wc-focus" data-fill="focus"></ul>
                 <p className="wc-restart" data-fill="restart"></p>
               </div>

@@ -770,10 +770,8 @@ p {
   color: #FFFFFF;
 }
 
-/* Profile picture of the sample coach: website/images/guide-rhea.jpg. To change it, replace that file
-   with any square photo (at least 160 px) and keep the file name. */
 .avatar-photo {
-  background: var(--ice-blue) url("./assets/guide-rhea.jpg") center / cover no-repeat;
+  background: var(--ice-blue) url("./assets/akshat-avatar.webp") center / cover no-repeat;
   box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 3px var(--border-subtle);
 }
 

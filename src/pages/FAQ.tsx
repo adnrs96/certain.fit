@@ -18,13 +18,13 @@ const FAQ = () => (
         style={{ "--d": " 1" } as CSSProperties}
       >
         <details className="faq-item" open>
-          <summary>What does a CERTAIN coach do?</summary>
+          <summary>Will I work directly with Akshat?</summary>
           <div className="faq-body">
             <p>
-              Your coach is a real person, never a chatbot, who works one-to-one
-              with you. They get to know your story, shape your food and
-              movement plan around your week, review it with you every week, and
-              help you find your way back when life gets in the way.
+              Yes. I’m Akshat, the founder of CERTAIN, and I personally guide
+              the programme. From understanding your story to building your
+              food and movement plan, reviewing your progress, and helping you
+              adapt, you work directly with me.
             </p>
           </div>
         </details>
@@ -46,8 +46,8 @@ const FAQ = () => (
           <div className="faq-body">
             <p>
               Then you’re living a normal life, and CERTAIN is built for it.
-              Your coach helps you plan ahead, adjusts expectations while you’re
-              away and guides you back with the Return to Rhythm protocol.
+              I help you plan ahead, adjust expectations while you’re away,
+              and guide you back with the Return to Rhythm protocol.
               There’s no catching up and no starting over from zero.
             </p>
           </div>
@@ -69,8 +69,8 @@ const FAQ = () => (
             <p>
               No. We look at calm weekly trends rather than single readings, and
               progress also means your waist, energy, strength and how you’re
-              handling real life. If the scale stresses you out, tell your coach
-              and you’ll track progress in other ways.
+              handling real life. If the scale stresses you out, tell me
+              and we’ll track progress in other ways.
             </p>
           </div>
         </details>
@@ -81,7 +81,7 @@ const FAQ = () => (
               CERTAIN is a lifestyle and behaviour-change programme, not medical
               treatment. If you have a condition such as a thyroid issue, PCOS
               or type 2 diabetes, please check with your doctor before making
-              changes, and your coach will plan around their advice. If you’re
+              changes, and I’ll plan around their advice. If you’re
               pregnant, have or have had an eating disorder, or are in cancer
               treatment, CERTAIN isn’t the right place to start. Please consult
               your physician before you enrol for a weight loss program.

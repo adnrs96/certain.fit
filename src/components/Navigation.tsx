@@ -25,7 +25,7 @@ const Navigation = () => (
         </ul>
       </nav>
       <Link className="header-cta" to="/start-journey">
-        Meet your coach
+        Work with Akshat
       </Link>
       <button
         className="menu-toggle"
@@ -48,7 +48,7 @@ const Navigation = () => (
         </NavLink>
       ))}
       <Link className="btn-ocean-lg" to="/start-journey">
-        Meet your coach
+        Work with Akshat
       </Link>
     </nav>
   </header>

@@ -19,7 +19,7 @@ const Footer = () => (
           <h2>Get started</h2>
           <Link to="/timeline">Your timeline</Link>
           <Link to="/programme">Programme</Link>
-          <Link to="/start-journey">Meet your coach</Link>
+          <Link to="/start-journey">Work with Akshat</Link>
           <Link to="/faq">Questions</Link>
         </div>
       </nav>

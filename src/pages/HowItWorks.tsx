@@ -22,7 +22,7 @@ const HowItWorks = () => (
             <span className="stage-when">Days 0–3</span>
             <h3>Understand yourself</h3>
             <p>
-              Your coach introduces your Journey Journal. Together you explore
+              I introduce your Journey Journal. Together we explore
               your WHY, your past attempts, your strengths and the moments that
               make healthy choices hard.
             </p>
@@ -70,7 +70,7 @@ const HowItWorks = () => (
           </li>
         </ol>
         <div className="rhythm-strip" data-reveal="">
-          <span className="rhythm-label">Your rhythm with your coach</span>
+          <span className="rhythm-label">Your rhythm with Akshat</span>
           <ol>
             <li>
               <b>Day 0</b>My Story

@@ -13,7 +13,7 @@ const ProgrammeSection = ({
       <div className="section-head center" data-reveal="">
         <span className="eyebrow-pill">THE PROGRAMME</span>
         <Heading className="section-title">
-          One-to-one with your coach.{" "}
+          Personally guided by Akshat.{" "}
           <span className="serif-italic">Skills for life.</span>
         </Heading>
       </div>
@@ -21,18 +21,18 @@ const ProgrammeSection = ({
         <article className="offer-card" data-reveal="">
           <span className="offer-badge">FOUNDING COHORT</span>
           <h3>The CERTAIN programme</h3>
-          <p className="offer-sub">One-to-one, for a small founding group.</p>
+          <p className="offer-sub">Founder-led support, for a small founding group.</p>
           <ul className="offer-list">
-            <li>Your own CERTAIN coach, one-to-one from Day 0</li>
+            <li>Work directly with me, Akshat, from Day 0</li>
             <li>Your Journey Journal, from My Story to My Future</li>
             <li>A food and movement plan built around your real week</li>
-            <li>A weekly check-in, adjusted to how your week went</li>
+            <li>A weekly check-in with me, adjusted to how your week went</li>
             <li>WhatsApp support between check-ins, within agreed hours</li>
             <li>A progress review every 4 weeks</li>
             <li>Your “making it last” plan for life on your own</li>
           </ul>
           <Link className="btn-ocean-lg on-dark" to="/start-journey">
-            Meet your coach →
+            Work with Akshat →
           </Link>
           <p className="offer-small">
             Starting a conversation is free, with no obligation.
@@ -100,7 +100,7 @@ const ProgrammeSection = ({
           <div className="programme-learning">
             <h2>Learn while you progress.</h2>
             <p>
-              Along the way, we teach you the basics of nutrition and exercise,
+              Along the way, I teach you the basics of nutrition and exercise,
               so you understand your plan, make informed choices, and build the
               confidence to keep going on your own.
             </p>
@@ -113,7 +113,7 @@ const ProgrammeSection = ({
           <div className="honest-col yes">
             <span className="honest-kicker">What we promise</span>
             <ul>
-              <li>A real person who knows your story</li>
+              <li>Direct support from Akshat, who knows your story</li>
               <li>A plan that fits your actual life</li>
               <li>Steady, sustainable progress. No crash diets.</li>
               <li>No guilt, and no starting over from zero</li>

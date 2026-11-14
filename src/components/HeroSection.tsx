@@ -5,7 +5,7 @@ const HeroSection = () => (
     <div className="container hero-grid">
       <div className="hero-copy">
         <span className="eyebrow-pill">
-          HUMAN-LED WEIGHT LOSS
+          FOUNDER-LED WEIGHT LOSS
           <span className="eyebrow-more"> · SUPPORTED, NOT SUPERVISED</span>
         </span>
         <h1 className="hero-title">
@@ -13,14 +13,15 @@ const HeroSection = () => (
           <span className="serif-italic">Built around your life.</span>
         </h1>
         <p className="hero-lead">
-          CERTAIN is a personalised <strong>weight-loss programme</strong> with
-          your own <strong>one-to-one coach</strong>. We work on food, movement,
-          cravings, stress, sleep, and habits, with a plan built around your
-          actual life.
+          CERTAIN is a science-informed <strong>weight-loss programme</strong>{" "}
+          built on practical skills and everyday habits, not rigid food
+          rules. I’m Akshat, and I’ll personally guide your plan, check-ins, and
+          progress, helping you learn what works for you and adapt as life
+          changes.
         </p>
         <div className="hero-ctas">
           <Link className="btn-ocean-lg" to="/start-journey">
-            Meet your coach
+            Work with Akshat
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path
                 d="M5 12h14M13 6l6 6-6 6"
@@ -62,7 +63,7 @@ const HeroSection = () => (
           </span>
         </Link>
         <ul className="hero-trust">
-          <li>A real person, never a bot</li>
+          <li>Personally guided by Akshat</li>
           <li>No crash diets</li>
           <li>Built for weeks that don’t go to plan</li>
         </ul>
@@ -75,12 +76,12 @@ const HeroSection = () => (
             <span className="hv-day">DAY 0</span>
           </div>
           <p className="hv-title">You’re not doing this alone.</p>
-          <p className="hv-text">Meet your own CERTAIN coach.</p>
+          <p className="hv-text">Work directly with the founder.</p>
           <div className="hv-partner">
             <span className="hv-avatar avatar-photo"></span>
             <span className="hv-partner-text">
-              <strong>Rhea Menon</strong>
-              <small>Your personal point of contact</small>
+              <strong>Akshat</strong>
+              <small>Founder · Your guide throughout</small>
             </span>
           </div>
           <p className="hv-promise">

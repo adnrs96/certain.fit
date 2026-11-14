@@ -12,8 +12,8 @@ const Journal = () => (
           </h1>
           <p className="section-lead">
             A workbook is something you complete. Your Journey Journal is a
-            personal record of how you finally learned to move forward. Your
-            coach reads it and brings it into every conversation, so it never
+            personal record of how you finally learned to move forward. I
+            read it and bring it into our conversations, so it never
             feels like homework.
           </p>
         </div>
@@ -151,7 +151,7 @@ const Journal = () => (
           >
             <header className="jp-head">
               <span className="jp-meta">
-                Chapter 01 · Days 0–1, with your coach
+                Chapter 01 · Days 0–1, with Akshat
               </span>
               <h3>My Story</h3>
               <p>
@@ -368,7 +368,7 @@ const Journal = () => (
                 me most.
               </span>
               <p className="jp-note">
-                Your coach remembers this, so the next time life happens you
+                I keep this in mind, so the next time life happens you
                 already have a plan that fits you.
               </p>
             </div>
@@ -422,8 +422,7 @@ const Journal = () => (
             <b>Planning</b>The next small action or experiment.
           </li>
           <li>
-            <b>Conversation</b>Prompts that become talking points with your
-            coach.
+            <b>Conversation</b>Prompts that become talking points with me.
           </li>
         </ul>
       </div>

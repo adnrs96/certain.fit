@@ -93,6 +93,11 @@ standalone Programme page. Update the offering in this component so both
 locations stay consistent. It uses an `h2` on the homepage and an `h1` on
 the standalone page, preserving one primary heading per page.
 
+The current offering is personally delivered by Akshat. Keep programme,
+contact-form, FAQ, estimator, and navigation copy founder-led rather than
+suggesting an assigned coach or a pool of coaches. The founder’s story still
+refers to his previous coaches; those historical references are intentional.
+
 The Life Happens page has been removed from navigation and the footer.
 Existing `/life-happens` and `/#life-happens` links redirect to Programme,
 so previously shared links remain usable without restoring the removed content.

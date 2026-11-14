@@ -206,7 +206,7 @@ export function initializeWebsite(root: HTMLElement) {
         return "Pick the closest answer to the second question. There’s no wrong one.";
       }
       if (index === 2 && !value("first_name")) {
-        return "Add your first name, so your coach knows what to call you.";
+        return "Add your first name, so I know what to call you.";
       }
       return "";
     }
@@ -264,7 +264,7 @@ export function initializeWebsite(root: HTMLElement) {
 
     function whatsappText(name) {
       const lines = [
-        `Hi CERTAIN! I’m ${name}${value("city") ? ` from ${value("city")}` : ""}. I’d like to meet my CERTAIN coach.`,
+        `Hi Akshat! I’m ${name}${value("city") ? ` from ${value("city")}` : ""}. I’d like to work with you through CERTAIN.`,
       ];
       const why = whyText();
       if (why) {

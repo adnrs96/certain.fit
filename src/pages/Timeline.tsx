@@ -14,7 +14,7 @@ const Timeline = () => (
           <ul className="est-benefits">
             <li>Personal to your health and lifestyle</li>
             <li>Safe, steady pace with milestones to celebrate</li>
-            <li>Your coach’s support with your habits, built in</li>
+            <li>Akshat’s support with your habits, built in</li>
           </ul>
           <p className="est-trust">
             3 quick steps · No sign-up · Answers stay on this page

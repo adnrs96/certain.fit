@@ -4,7 +4,7 @@ const MobileCTA = () => (
       My timeline
     </Link>
     <Link className="sticky-primary" to="/start-journey">
-      Meet your coach
+      Talk to Akshat
     </Link>
   </div>
 );

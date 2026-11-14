@@ -4,7 +4,7 @@ const configuration = {
   settings: {
     // WhatsApp number with country code, digits only (e.g. "919800000000").
     // Used by the quiz's call to action AND the "Say hello on WhatsApp" button on the
-    // Meet your coach form. Leave empty and the quiz hands its estimate to that form,
+    // journey form. Leave empty and the quiz hands its estimate to that form,
     // which then sends nothing anywhere (no WhatsApp button is shown).
     whatsappNumber: "",
     // Short-term horizon, in weeks, for the first result stat and the shaded band on the chart
@@ -64,12 +64,12 @@ const configuration = {
   // Always listed under "How CERTAIN gets you there", after the person's own focus habits.
   support: [
     {
-      title: "A weekly check-in with your coach",
-      text: "Your plan is adjusted every week, based on how your week went.",
+      title: "A weekly check-in with Akshat",
+      text: "I adjust your plan every week, based on how your week went.",
     },
     {
       title: "WhatsApp support",
-      text: "A real person in your corner between check-ins, within agreed hours.",
+      text: "Message me between check-ins, within agreed hours.",
     },
     {
       title: "Return to Rhythm",
@@ -106,7 +106,7 @@ const configuration = {
     // Lifestyle step: {habits} lists the `focus` of each answer that has a better habit.
     lifestylePartner: {
       icon: "🤝",
-      text: "Your coach will help with {habits}. That support is built into your CERTAIN timeline.",
+      text: "I’ll help with {habits}. That support is built into your CERTAIN timeline.",
     },
     lifestyleStrong: {
       icon: "🌟",
@@ -149,7 +149,7 @@ const configuration = {
     programGoalStat: "within your first {months} months",
     programGoal: "Goal reached",
     paceStat: "a week to start",
-    cta: "Meet your CERTAIN coach",
+    cta: "Talk to Akshat",
     edit: "Edit my answers",
     chartTitle: "Your journey with CERTAIN",
     chartBand: "First {months} months",
@@ -159,23 +159,23 @@ const configuration = {
     resetPhaseText: "{items}, while habits start",
     lossPhase: "Steady fat loss",
     lossPhaseText:
-      "~{pace} kg a week to start, adjusted weekly with your coach",
+      "~{pace} kg a week to start, adjusted weekly with Akshat",
     lockPhase: "Make it last",
     lockPhaseText:
       "Your own plan for keeping it going, long after coaching ends",
     supportTitle: "How CERTAIN gets you there",
-    supportIntro: "Your timeline includes your coach’s support with:",
+    supportIntro: "Your timeline includes my support with:",
     supportIntroStrong:
-      "Your habits are already strong. Your coach keeps them steady with:",
+      "Your habits are already strong. I’ll help keep them steady with:",
     plannedAround: "Planned around",
     milestoneFirst: "First {kg} kg down",
     milestoneHealth: "{pct}% down · a meaningful health milestone",
     milestoneHalf: "Halfway there",
     milestoneGoal: "Goal: {kg} kg",
     disclaimer:
-      "An estimate based on published guidance on safe, steady weight loss (up to about 1% of body weight a week), assuming you build the habits above with your coach. It isn’t medical advice or a guarantee, and individual results vary.",
+      "An estimate based on published guidance on safe, steady weight loss (up to about 1% of body weight a week), assuming you build the habits above with my support. It isn’t medical advice or a guarantee, and individual results vary.",
     whatsappMessage:
-      "Hi CERTAIN! I tried the timeline estimator on your website ({summary}). I'd like to meet my CERTAIN coach.",
+      "Hi Akshat! I tried the timeline estimator on the CERTAIN website ({summary}). I'd like to work with you.",
   },
 
   questions: [
