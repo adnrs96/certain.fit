@@ -19,8 +19,7 @@
   border-bottom: 1px solid #dcdedb;
 }
 
-.founder-kicker,
-.founder-chapter-date {
+.founder-kicker {
   color: var(--cerulean);
   font-family: var(--font-sans);
   font-size: 10px;
@@ -155,11 +154,6 @@
   letter-spacing: -0.02em;
   line-height: 1.15;
   text-wrap: pretty;
-}
-
-.founder-chapter-date {
-  display: block;
-  margin-bottom: 12px;
 }
 
 .founder-chapter p,

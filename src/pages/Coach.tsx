@@ -66,7 +66,7 @@ const Coach = () => (
             quickly. Every fresh start ended with the same feeling.
           </p>
           <blockquote className="founder-pullquote">
-            I didn’t question the plan. I questioned myself.
+            What's wrong with me? Why am I not able to do it?
           </blockquote>
           <p>
             Each time, I gave it the same name: a lack of discipline, and knowledge.
@@ -95,8 +95,6 @@ const Coach = () => (
         </article>
 
         <article className="founder-chapter" data-reveal="">
-          <span className="founder-chapter-date">JUNE 2021</span>
-          <h2>When the answers conflicted</h2>
           <p>
             In June 2021, a friend recommended a keto coach who had helped him
             lose more than 40 kg. I promised myself: if this didn’t work,
@@ -175,12 +173,12 @@ const Coach = () => (
           You don’t have to do this alone.
         </h2>
         <p>
-          No snake oil. Scientifically grounded, evidence-based methods,
-          with support that adapts to your life.
+          We do not sell snake-oil methods of weight loss. Certain is based on
+          scientifically grounded, evidence-based methods, with support that
+          adapts to your life.
         </p>
         <p className="founder-mission-promise">
-          Weight loss is hard. But we are here to make the journey easier for
-          you.
+          Weight loss is hard. Our committment is to make the journey easier for you.
         </p>
         <p className="founder-signoff">With understanding,</p>
         <p className="founder-signature">Akshat</p>
