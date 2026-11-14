@@ -185,6 +185,15 @@
   line-height: 1.35;
 }
 
+.founder-quote-attribution {
+  display: block;
+  margin-top: 12px;
+  color: var(--ink-secondary);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-style: normal;
+}
+
 .founder-chapter .founder-emphasis {
   color: var(--ink-hand);
   font-style: italic;

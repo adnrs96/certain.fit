@@ -53,18 +53,17 @@ const Coach = () => (
         <article className="founder-chapter" data-reveal="">
           <h2>My Story</h2>
           <p className="founder-opening">
-            For more than 15 years, I lived with obesity, believing I wasn’t
-            trying hard enough. I avoided photographs and mirrors. Fit people
-            seemed like deities who had solved an equation I couldn’t figure out.
+            For 15 years, including most of my 20s, I lived with obesity.
+            I avoided photographs and mirrors, felt uncomfortable in my own
+            skin, and looked at fit people like deities who had solved an
+            equation I couldn’t figure out.
           </p>
           <p>
-            Nutritionists gave me diets I couldn’t sustain beyond two weeks.
-            At the gym, I gained muscle and lost weight, only to regain it
-            quickly. Every fresh start ended with the same feeling.
+            I went to nutritionists, who gave me diets I couldn’t sustain beyond
+            two weeks. At the gym, coaches helped me gain muscle and lose fat,
+            but the fat came back quickly. Every fresh start seemed to end with
+            the same feeling. I was slowly losing confidence in myself.
           </p>
-          <blockquote className="founder-pullquote">
-            What's wrong with me? Why am I not able to do it?
-          </blockquote>
           <p>
             Each time, I gave it the same name: a lack of discipline, and knowledge.
           </p>
@@ -93,45 +92,43 @@ const Coach = () => (
 
         <article className="founder-chapter" data-reveal="">
           <p>
-            In June 2021, a friend recommended a keto coach who had helped him
-            lose more than 40 kg. I promised myself: if this didn’t work,
-            I would stop trying.
+            In June 2021, I enrolled with a keto coach after a conversation with
+            a friend who had lost more than 40 kg with him. This time, I
+            promised myself: <em>I’m going to make this work.</em>
           </p>
           <p>
-            His message was simple: no carbs, only fats and protein. I saw
-            results, and believed him.
+            I was ecstatic to see results, but I was ignoring the signals my
+            body was sending. Six months later, severe gastrointestinal
+            problems led me to a doctor, who told me I had stage-2 NAFLD and
+            was close to liver cirrhosis.
           </p>
-          <p>
-            Six months later, severe gastrointestinal problems led me to a
-            doctor. He told me I had stage-2 NAFLD and was close to liver
-            cirrhosis. He compared my liver to someone drinking scotch daily;
-            my own bottle of whisky had sat untouched for months, a reminder
-            of my resolve.
-          </p>
+          <blockquote className="founder-pullquote">
+            “Akshat, your liver looks like you have been drinking a bottle of
+            scotch daily!”
+            <span className="founder-quote-attribution">— My doctor</span>
+          </blockquote>
           <p>
             The keto coach dismissed the findings and warned me against
-            nutritionists. My gym coach and doctor warned me against him.
-            I was caught between voices, with no clear answer.
+            listening to the doctor. My gym coach and doctor warned me against
+            the keto coach. The nutritionist was nowhere to be found. I was
+            caught between voices, with no clear answer.
           </p>
           <p className="founder-emphasis">
-            Enough. I had to take accountability for my own transformation:
-            understand the science, and learn to rely on myself.
+            Defeated and confused, I decided I had to take accountability for
+            my own transformation: understand the science, and learn to rely
+            on myself.
           </p>
         </article>
 
         <article className="founder-chapter" data-reveal="">
-          <h2>Why CERTAIN exists</h2>
+          <h2>CERTAIN is born</h2>
           <p>
-            Learning and experimenting with exercise science and nutrition
-            science helped. But the real difference was a mindset around
-            nutrition, science, and habits, shaped by hard-earned coping
-            strategies and the scars of failures I learnt from.
+            CERTAIN is a result of years of falling down and getting up again.
           </p>
           <p>
-            Food, movement, mindset, and habits aren’t separate answers.
-            They form a continuously evolving loop: learn, adjust, keep going.
+            The programme is built around food, movement, mindset, and habits.
             I built CERTAIN to offer the support I had needed, not another
-            rigid plan or another reason to blame yourself.
+            rigid plan or someone telling me I can’t eat biryani and lose weight.
           </p>
           <div className="founder-later-photos">
             <figure className="founder-memory founder-memory--portrait">
