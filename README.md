@@ -75,7 +75,7 @@ highlights the current page.
 | URL | Content | Page component |
 |---|---|---|
 | `/` | Introduction and starting points | `src/pages/Index.tsx` |
-| `/coach` | Your one-to-one coach | `src/pages/Coach.tsx` |
+| `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
 | `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
 | `/journal` | Journey Journal chapters and examples | `src/pages/Journal.tsx` |
 | `/life-happens` | Flexible weeks and Return to Rhythm | `src/pages/LifeHappens.tsx` |

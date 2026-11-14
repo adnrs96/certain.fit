@@ -11,7 +11,7 @@ const Footer = () => (
       <nav className="footer-links" aria-label="Footer">
         <div>
           <h2>Explore</h2>
-          <Link to="/coach">Your coach</Link>
+          <Link to="/coach">Our story</Link>
           <Link to="/how-it-works">How it works</Link>
           <Link to="/journal">Journey Journal</Link>
           <Link to="/life-happens">When life happens</Link>

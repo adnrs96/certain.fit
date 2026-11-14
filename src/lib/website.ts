@@ -458,6 +458,7 @@ export function initializeWebsite(root: HTMLElement) {
       "#timeline-estimator",
       "#start-journey",
       ".closing",
+      ".founder-mission",
       ".site-footer",
     ].forEach((selector) => {
       const element = $(selector);

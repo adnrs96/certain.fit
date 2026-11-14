@@ -1,5 +1,5 @@
 export const sitePages = [
-  { path: "/coach", label: "Your coach", title: "Your CERTAIN coach" },
+  { path: "/coach", label: "Our story", title: "The founder’s story" },
   { path: "/how-it-works", label: "How it works", title: "How CERTAIN works" },
   { path: "/journal", label: "Journal", title: "Your Journey Journal" },
   { path: "/life-happens", label: "Life happens", title: "When life happens" },
