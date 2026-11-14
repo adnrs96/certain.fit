@@ -1,23 +1,20 @@
 import type { CSSProperties } from "react";
+import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
 import CoachingLoop from "@/components/CoachingLoop";
 import "./HowItWorks.css";
 
 const HowItWorks = () => (
   <>
-    <section className="how" id="how-it-works">
+    <CoachingLoop />
+    <section className="how" id="coaching-cadence">
       <div className="container">
         <div className="section-head center" data-reveal="">
           <span className="eyebrow-pill">HOW IT WORKS</span>
-          <h1 className="section-title">
-            A clear rhythm.{" "}
-            <span className="serif-italic">A plan that learns with you.</span>
-          </h1>
-          <p className="section-lead">
-            We start by understanding your life, stay close while you find your
-            feet, and build the skills to keep going on your own. Here’s what
-            working with me actually looks like.
-          </p>
+          <h2 className="section-title">
+            Your programme,{" "}
+            <span className="serif-italic">step by step.</span>
+          </h2>
         </div>
         <div className="discovery-card" data-reveal="">
           <div className="discovery-intro">
@@ -80,9 +77,25 @@ const HowItWorks = () => (
           <span className="support-status" aria-hidden="true"></span>
           <div><strong>WhatsApp support, every day.</strong><p>9 AM–9 PM IST, including weekends. You can reach me between check-ins, too.</p></div>
         </div>
+        <div className="journal-bridge" data-reveal="">
+          <div>
+            <span className="eyebrow-pill">LEARNING FOR LIFE</span>
+            <h2>The journal isn’t homework. It’s how you learn to steer.</h2>
+            <p>
+              Each week, you reflect before we check in. Over time, you recognise
+              your own patterns, understand what helps, and practise making
+              decisions without needing someone to tell you what to do.
+            </p>
+            <Link to="/journal">Explore your Journey Journal →</Link>
+          </div>
+          <ol className="journal-feedback-steps">
+            <li><b>01 · Reflect</b>Journal your real week, not a perfect one.</li>
+            <li><b>02 · Connect</b>We spot patterns and adjust together.</li>
+            <li><b>03 · Practise</b>Try the next change. Build your own judgement.</li>
+          </ol>
+        </div>
       </div>
     </section>
-    <CoachingLoop />
     <section className="progress" id="progress">
       <div className="container">
         <div className="section-head center" data-reveal="">

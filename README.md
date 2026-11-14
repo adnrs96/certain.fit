@@ -123,11 +123,13 @@ for 14 days, then weekly video calls informed by the weekly journal. WhatsApp
 support is 9 AM–9 PM IST daily, including weekends. Keep the programme card,
 FAQ, and estimator support copy consistent when these service details change.
 
-`src/components/CoachingLoop.tsx` uses four selectable areas and illustrative
-feedback examples, not real client data or an automated recommendation engine.
+`src/components/CoachingLoop.tsx` opens How it works with the page's primary
+heading and a single nutrition/movement/habits/mindset diagram. The four areas
+are informational, not buttons; do not restore the removed example panel or
+selection controls. The programme cadence and journal follow the diagram.
 SVG data-flow animation is decorative; all meaning remains available in text.
-The pause control stops it, and reduced-motion preferences disable it.
-When editing, check all four examples by mouse and keyboard, pause/play,
+The keyboard-accessible pause control stops it, and reduced-motion preferences
+disable it. When editing, check the section order, single `h1`, pause/play,
 reduced motion, 320px mobile layout, and the Journey Journal and booking links.
 
 The Life Happens page has been removed from navigation and the footer.
