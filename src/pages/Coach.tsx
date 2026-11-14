@@ -65,7 +65,7 @@ const Coach = () => (
             the same feeling. I was slowly losing confidence in myself.
           </p>
           <p>
-            Each time, I gave it the same name: a lack of discipline, and knowledge.
+            Each time I tried, each time I failed. I felt like a loser.
           </p>
           <figure className="founder-memory founder-memory--pair">
             <div className="founder-memory-photos">
