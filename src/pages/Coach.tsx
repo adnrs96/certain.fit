@@ -97,8 +97,8 @@ const Coach = () => (
             promised myself: <em>I’m going to make this work.</em>
           </p>
           <p>
-            I was ecstatic to see results, but I was ignoring the signals my
-            body was sending. Six months later, severe gastrointestinal
+            I lost 12 kgs. I was ecstatic seeing results, but I was ignoring the
+            signals my body was sending. Six months later, severe gastrointestinal
             problems led me to a doctor, who told me I had stage-2 NAFLD and
             was close to liver cirrhosis.
           </p>
