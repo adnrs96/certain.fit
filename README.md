@@ -110,6 +110,22 @@ contact-form, FAQ, estimator, and navigation copy founder-led rather than
 suggesting an assigned coach or a pool of coaches. The founder’s story still
 refers to his previous coaches; those historical references are intentional.
 
+### Homepage focus and booking-button animation
+
+The homepage hero intentionally contains one headline, a short introduction,
+one primary booking button, a quiet How it works link, and a single founder
+portrait. Keep detailed service copy in the programme below; do not restore
+the hero's example-card collage, trust list, or separate timeline promotion.
+The timeline remains accessible through navigation and the closing section.
+
+`ConversationLink` supplies the shared `conversation-link` class. Styled booking
+buttons get two gentle halo pulses on entry, finishing within 4.7 seconds.
+Existing hover and keyboard-focus styling is retained. The animation uses a non-interactive
+pseudo-element, does not move the label, and is disabled for reduced motion.
+Plain footer links are not animated. Check the hero CTA above the fold at
+320px/375px, portrait loading, hover/focus, reduced motion, and the unchanged
+Calendly destination after edits.
+
 ### Coaching cadence and feedback-loop animation
 
 `src/pages/HowItWorks.tsx` explains the discovery agenda and programme cadence;

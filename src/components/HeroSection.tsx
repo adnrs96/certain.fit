@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
+import akshatHero from "@/assets/akshat-hero.webp";
 
 const HeroSection = () => (
   <section className="hero" id="top">
@@ -7,99 +8,35 @@ const HeroSection = () => (
       <div className="hero-copy">
         <span className="eyebrow-pill">
           FOUNDER-LED WEIGHT LOSS
-          <span className="eyebrow-more"> · SUPPORTED, NOT SUPERVISED</span>
         </span>
         <h1 className="hero-title">
           Weight loss.{" "}
           <span className="serif-italic">Built around your life.</span>
         </h1>
         <p className="hero-lead">
-          CERTAIN is a science-informed <strong>weight-loss programme</strong>{" "}
-          built on practical skills and everyday habits, not rigid food
-          rules. I’m Akshat, and I’ll personally guide your plan, check-ins, and
-          progress, helping you learn what works for you and adapt as life
-          changes.
+          A personalised <strong>weight-loss programme</strong>, guided by me,
+          Akshat. Simple habits. No rigid food rules.
         </p>
         <div className="hero-ctas">
           <ConversationLink className="btn-ocean-lg" />
-          <Link className="btn-ghost-lg" to="/how-it-works">
-            See how it works
+          <Link className="hero-secondary-link" to="/how-it-works">
+            How it works →
           </Link>
         </div>
-        <Link className="hero-timeline-link" to="/timeline">
-          <span className="htl-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="18" height="18">
-              <circle
-                cx="12"
-                cy="12"
-                r="9"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              ></circle>
-              <path
-                d="M12 7v5l3 2"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              ></path>
-            </svg>
-          </span>
-          <span>
-            <strong>How long will it take you?</strong> See your personal
-            timeline in 60 seconds →
-          </span>
-        </Link>
-        <ul className="hero-trust">
-          <li>Personally guided by Akshat</li>
-          <li>No crash diets</li>
-          <li>Built for weeks that don’t go to plan</li>
-        </ul>
       </div>
-      <div className="hero-visual" aria-hidden="true">
-        <div className="hv-orbit"></div>
-        <div className="hv-card hv-welcome">
-          <div className="hv-row">
-            <span className="hv-kicker">WELCOME TO CERTAIN</span>
-            <span className="hv-day">DAY 0</span>
-          </div>
-          <p className="hv-title">You’re not doing this alone.</p>
-          <p className="hv-text">Work directly with the founder.</p>
-          <div className="hv-partner">
-            <span className="hv-avatar avatar-photo"></span>
-            <span className="hv-partner-text">
-              <strong>Akshat</strong>
-              <small>Founder · Your guide throughout</small>
-            </span>
-          </div>
-          <p className="hv-promise">
-            Your journey. Your pace. Someone in your corner.
-          </p>
-        </div>
-        <div className="hv-card hv-journal">
-          <span className="hv-journal-kicker">MY WEEK · WEEK 03</span>
-          <span className="hv-q">01 · My wins</span>
-          <span className="hand">
-            Walked after dinner 4 times, even on Thursday!
-          </span>
-          <span className="hv-q">05 · My intention for next week</span>
-          <span className="hand">Pack lunch the night before.</span>
-        </div>
-        <div className="hv-card hv-rhythm">
-          <span className="hv-rhythm-kicker">
-            <i></i>RETURNING TO RHYTHM
-          </span>
-          <strong>Day 2 of 3 · Re-establish</strong>
-          <span className="hv-bars">
-            <i className="on"></i>
-            <i className="on"></i>
-            <i></i>
-          </span>
-          <small>Normal meals, groceries, an easy walk.</small>
-        </div>
-        <p className="hv-caption">Illustrative examples</p>
-      </div>
+      <figure className="hero-founder">
+        <img
+          src={akshatHero}
+          alt="Akshat, founder of CERTAIN"
+          width="600"
+          height="750"
+          fetchPriority="high"
+        />
+        <figcaption>
+          <strong>Akshat</strong>
+          <span>Founder of CERTAIN</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 );
