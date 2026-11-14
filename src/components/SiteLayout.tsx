@@ -52,7 +52,7 @@ const SiteLayout = () => {
   useEffect(() => {
     document.title = pageTitle
       ? `${pageTitle} | CERTAIN`
-      : "CERTAIN | Make this the last time you start over";
+      : "CERTAIN | Personalised weight-loss coaching";
   }, [pageTitle]);
 
   return (

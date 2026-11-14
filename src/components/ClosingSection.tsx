@@ -42,12 +42,12 @@ const ClosingSection = () => (
         ></circle>
       </svg>
       <h2 className="closing-title" id="closing-title">
-        Make this the last time{" "}
-        <span className="serif-italic">you start over.</span>
+        Your weight-loss journey.{" "}
+        <span className="serif-italic">Someone in your corner.</span>
       </h2>
       <p>
-        Supported, not supervised. Someone in your corner, throughout your
-        transformation.
+        A one-to-one weight-loss programme, built around your real life.
+        Supported, not supervised.
       </p>
       <div className="closing-ctas">
         <Link className="btn-ocean-lg on-dark" to="/start-journey">

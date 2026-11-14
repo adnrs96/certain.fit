@@ -9,13 +9,14 @@ const HeroSection = () => (
           <span className="eyebrow-more"> · SUPPORTED, NOT SUPERVISED</span>
         </span>
         <h1 className="hero-title">
-          Make this the last time you{" "}
-          <span className="serif-italic">start over.</span>
+          Weight loss.{" "}
+          <span className="serif-italic">Built around your life.</span>
         </h1>
         <p className="hero-lead">
-          CERTAIN gives you your own <strong>one-to-one coach</strong>: a real
-          person who gets to know you, builds a plan around your actual week,
-          and stays in your corner when life gets in the way.
+          CERTAIN is a personalised <strong>weight-loss programme</strong> with
+          your own <strong>one-to-one coach</strong>. We work on food, movement,
+          cravings, stress, sleep, and habits, with a plan built around your
+          actual life.
         </p>
         <div className="hero-ctas">
           <Link className="btn-ocean-lg" to="/start-journey">
