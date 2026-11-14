@@ -29,8 +29,9 @@ const ProgrammeSection = ({
             <li>Work directly with me, Akshat, from Day 0</li>
             <li>Your Journey Journal, from My Story to My Future</li>
             <li>A food and movement plan built around your real week</li>
-            <li>A weekly check-in with me, adjusted to how your week went</li>
-            <li>WhatsApp support between check-ins, within agreed hours</li>
+            <li>Daily check-ins for your first 14 days</li>
+            <li>Weekly video calls after that, guided by your journal</li>
+            <li>WhatsApp support, 9 AM–9 PM IST every day, including weekends</li>
             <li>A progress review every 4 weeks</li>
             <li>Your “making it last” plan for life on your own</li>
           </ul>

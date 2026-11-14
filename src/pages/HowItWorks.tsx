@@ -1,4 +1,7 @@
 import type { CSSProperties } from "react";
+import ConversationLink from "@/components/ConversationLink";
+import CoachingLoop from "@/components/CoachingLoop";
+import "./HowItWorks.css";
 
 const HowItWorks = () => (
   <>
@@ -7,96 +10,79 @@ const HowItWorks = () => (
         <div className="section-head center" data-reveal="">
           <span className="eyebrow-pill">HOW IT WORKS</span>
           <h1 className="section-title">
-            Not just a plan.{" "}
-            <span className="serif-italic">A way of living that lasts.</span>
+            A clear rhythm.{" "}
+            <span className="serif-italic">A plan that learns with you.</span>
           </h1>
           <p className="section-lead">
-            Most programmes only measure how well you follow the plan. CERTAIN
-            helps you build four skills that stay with you long after coaching
-            ends.
+            We start by understanding your life, stay close while you find your
+            feet, and build the skills to keep going on your own. Here’s what
+            working with me actually looks like.
           </p>
         </div>
-        <ol className="stage-track">
-          <li className="stage" data-reveal="">
-            <span className="stage-num">01</span>
-            <span className="stage-when">Days 0–3</span>
-            <h3>Understand yourself</h3>
+        <div className="discovery-card" data-reveal="">
+          <div className="discovery-intro">
+            <span className="discovery-kicker">BEFORE WE BEGIN · DISCOVERY CALL</span>
+            <h2>Your story first.<br />The plan comes later.</h2>
             <p>
-              I introduce your Journey Journal. Together we explore
-              your WHY, your past attempts, your strengths and the moments that
-              make healthy choices hard.
+              A proper conversation about what brought you here, what you’ve
+              tried, and what you need from me. We agree on expectations and
+              accountability before your programme starts.
+            </p>
+            <p className="discovery-duration">About 45 minutes, all about you.</p>
+            <ConversationLink className="btn-ocean-lg on-dark" />
+            <p className="discovery-booking-note">
+              Start with a free 30-minute introductory call. The full discovery
+              session is the deeper next step.
+            </p>
+          </div>
+          <ol className="discovery-agenda" aria-label="45-minute discovery call agenda">
+            <li><span>5 min</span><div><h3>A quick introduction</h3><p>Meet each other. Settle in.</p></div></li>
+            <li><span>15 min</span><div><h3>Your weight-loss history &amp; lifestyle</h3><p>Past attempts, your real routine, and what matters to you.</p></div></li>
+            <li><span>10 min</span><div><h3>Psychological &amp; behavioural barriers</h3><p>Stress, triggers, beliefs, and what tends to get in the way.</p></div></li>
+            <li><span>10 min</span><div><h3>Expectations &amp; accountability</h3><p>What support looks like, and how we work together.</p></div></li>
+            <li><span>5 min</span><div><h3>Your past medical history</h3><p>Health context and any advice from your doctor to plan around.</p></div></li>
+          </ol>
+        </div>
+        <h2 className="cadence-heading">Then we put it into practice.</h2>
+        <ol className="cadence-track">
+          <li data-reveal="">
+            <span className="cadence-number">01</span>
+            <span className="cadence-when">A couple of days after discovery</span>
+            <h3>Your programme begins</h3>
+            <p>
+              I bring together your starting food and movement plan, introduce
+              your Journey Journal, and help you choose the first changes worth
+              focusing on. Built around your life, not a template.
             </p>
           </li>
-          <li
-            className="stage"
-            data-reveal=""
-            style={{ "--d": " 1" } as CSSProperties}
-          >
-            <span className="stage-num">02</span>
-            <span className="stage-when">Every week</span>
-            <h3>Build your routines</h3>
+          <li data-reveal="">
+            <span className="cadence-number">02</span>
+            <span className="cadence-when">Your first 14 days</span>
+            <h3>Daily check-ins</h3>
             <p>
-              Food and movement that fit your actual week. A short reflection
-              before each weekly check-in, and a progress review every 4 weeks
-              to celebrate wins and recalibrate.
+              A short check-in every day to see what’s manageable, what’s
+              difficult, and how you’re feeling. We notice friction early and
+              adjust together while you settle into your new rhythm.
             </p>
           </li>
-          <li
-            className="stage"
-            data-reveal=""
-            style={{ "--d": " 2" } as CSSProperties}
-          >
-            <span className="stage-num">03</span>
-            <span className="stage-when">Whenever life happens</span>
-            <h3>Learn to recover</h3>
+          <li data-reveal="">
+            <span className="cadence-number">03</span>
+            <span className="cadence-when">Week 3 onwards</span>
+            <h3>Weekly video calls</h3>
             <p>
-              Holidays, festivals, deadlines, illness. You practise getting back
-              to your routine without guilt, with a plan for each situation.
-            </p>
-          </li>
-          <li
-            className="stage"
-            data-reveal=""
-            style={{ "--d": " 3" } as CSSProperties}
-          >
-            <span className="stage-num">04</span>
-            <span className="stage-when">When you’re ready</span>
-            <h3>Become independent</h3>
-            <p>
-              Spot your early warning signs, plan for busy seasons and write a
-              letter to your Day 0 self. You leave knowing how to run your own
-              journey.
+              Fill in your journal each week, then we check in on video. We
+              connect the dots, celebrate what’s working, and agree on the next
+              focus, with a broader progress review every 4 weeks.
             </p>
           </li>
         </ol>
-        <div className="rhythm-strip" data-reveal="">
-          <span className="rhythm-label">Your rhythm with Akshat</span>
-          <ol>
-            <li>
-              <b>Day 0</b>My Story
-            </li>
-            <li>
-              <b>Day 1</b>My WHY
-            </li>
-            <li>
-              <b>Days 2–3</b>Understanding Myself
-            </li>
-            <li>
-              <b>Week 1</b>First reflection
-            </li>
-            <li>
-              <b>Every week</b>Reflection and check-in
-            </li>
-            <li>
-              <b>Every 4 weeks</b>Progress review
-            </li>
-            <li>
-              <b>When you’re ready</b>My Future
-            </li>
-          </ol>
+        <div className="daily-support" data-reveal="">
+          <span className="support-status" aria-hidden="true"></span>
+          <div><strong>WhatsApp support, every day.</strong><p>9 AM–9 PM IST, including weekends. You can reach me between check-ins, too.</p></div>
         </div>
       </div>
     </section>
+    <CoachingLoop />
     <section className="progress" id="progress">
       <div className="container">
         <div className="section-head center" data-reveal="">

@@ -29,6 +29,26 @@ const FAQ = () => (
           </div>
         </details>
         <details className="faq-item">
+          <summary>How often will we check in?</summary>
+          <div className="faq-body">
+            <p>
+              Your programme starts a couple of days after discovery. For the
+              first 14 days, we check in daily. From week 3, we have weekly video
+              calls, with your weekly journal helping us decide what to focus
+              on next. We also take a broader look at progress every 4 weeks.
+            </p>
+          </div>
+        </details>
+        <details className="faq-item">
+          <summary>Can I message you at weekends?</summary>
+          <div className="faq-body">
+            <p>
+              Yes. WhatsApp support is available from 9 AM–9 PM IST every day,
+              including weekends, so you can reach me between check-ins.
+            </p>
+          </div>
+        </details>
+        <details className="faq-item">
           <summary>Is this a diet?</summary>
           <div className="faq-body">
             <p>

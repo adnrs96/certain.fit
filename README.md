@@ -110,6 +110,26 @@ contact-form, FAQ, estimator, and navigation copy founder-led rather than
 suggesting an assigned coach or a pool of coaches. The founder’s story still
 refers to his previous coaches; those historical references are intentional.
 
+### Coaching cadence and feedback-loop animation
+
+`src/pages/HowItWorks.tsx` explains the discovery agenda and programme cadence;
+its page-specific styles live in `src/pages/HowItWorks.css`.
+
+The discovery agenda totals 45 minutes (5 + 15 + 10 + 10 + 5). It is presented
+as the fuller discovery session after the free 30-minute Calendly introduction,
+not as a 45-minute appointment booked into the existing 30-minute event.
+The programme begins a couple of days after discovery, with daily check-ins
+for 14 days, then weekly video calls informed by the weekly journal. WhatsApp
+support is 9 AM–9 PM IST daily, including weekends. Keep the programme card,
+FAQ, and estimator support copy consistent when these service details change.
+
+`src/components/CoachingLoop.tsx` uses four selectable areas and illustrative
+feedback examples, not real client data or an automated recommendation engine.
+SVG data-flow animation is decorative; all meaning remains available in text.
+The pause control stops it, and reduced-motion preferences disable it.
+When editing, check all four examples by mouse and keyboard, pause/play,
+reduced motion, 320px mobile layout, and the Journey Journal and booking links.
+
 The Life Happens page has been removed from navigation and the footer.
 Existing `/life-happens` and `/#life-happens` links redirect to Programme,
 so previously shared links remain usable without restoring the removed content.

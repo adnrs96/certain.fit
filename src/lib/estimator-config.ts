@@ -64,12 +64,12 @@ const configuration = {
   // Always listed under "How CERTAIN gets you there", after the person's own focus habits.
   support: [
     {
-      title: "A weekly check-in with Akshat",
-      text: "I adjust your plan every week, based on how your week went.",
+      title: "Check-ins with Akshat",
+      text: "Daily for your first 14 days, then weekly video calls, guided by your journal.",
     },
     {
       title: "WhatsApp support",
-      text: "Message me between check-ins, within agreed hours.",
+      text: "Message me 9 AM–9 PM IST every day, including weekends.",
     },
     {
       title: "Return to Rhythm",
