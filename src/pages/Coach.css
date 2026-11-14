@@ -196,6 +196,68 @@
   font-style: italic;
 }
 
+.founder-memory {
+  width: min(100%, 300px);
+  margin: 36px auto 12px;
+  padding: 10px 10px 0;
+  border: 1px solid #e3e0d7;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(19, 34, 56, 0.07);
+  transform: rotate(-1.5deg);
+}
+
+.founder-memory img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.founder-memory figcaption {
+  padding: 14px 4px 18px;
+  color: var(--ink-hand);
+  font-family: var(--font-hand);
+  font-size: 23px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.founder-memory--pair {
+  width: min(100%, 480px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.founder-memory-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+.founder-memory-photos img {
+  padding: 8px;
+  border: 1px solid #e3e0d7;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(19, 34, 56, 0.07);
+  transform: rotate(-2deg);
+}
+
+.founder-memory-photos img:nth-child(2) {
+  transform: rotate(2deg) translateY(10px);
+}
+
+.founder-memory--pair figcaption {
+  padding-top: 26px;
+}
+
+.founder-memory--life {
+  width: min(100%, 360px);
+  transform: rotate(1deg);
+}
+
 .founder-mission {
   padding: 8px 0 56px;
 }
@@ -351,6 +413,18 @@
   .founder-pullquote {
     padding-left: 18px;
     font-size: 28px;
+  }
+
+  .founder-memory-photos {
+    gap: 14px;
+  }
+
+  .founder-memory-photos img {
+    padding: 5px;
+  }
+
+  .founder-memory figcaption {
+    font-size: 21px;
   }
 
   .founder-actions {

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import akshatThen from "@/assets/akshat-then.jpg";
 import akshatNow from "@/assets/akshat-now.jpg";
+import akshatEarlierStanding from "@/assets/akshat-earlier-standing.webp";
+import akshatEarlierSeated from "@/assets/akshat-earlier-seated.webp";
+import akshatPortrait from "@/assets/akshat-now-portrait.webp";
+import akshatMusic from "@/assets/akshat-now-music.webp";
 import "./Coach.css";
 
 const Coach = () => (
@@ -76,6 +80,27 @@ const Coach = () => (
           <p>
             Each time, I gave it the same name: a lack of discipline.
           </p>
+          <figure className="founder-memory founder-memory--pair">
+            <div className="founder-memory-photos">
+              <img
+                src={akshatEarlierStanding}
+                alt="Akshat, on the left, in an earlier photograph"
+                width="960"
+                height="1280"
+                loading="lazy"
+                decoding="async"
+              />
+              <img
+                src={akshatEarlierSeated}
+                alt="Akshat seated in a blue T-shirt in an earlier photograph"
+                width="768"
+                height="1024"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption>A few pages from the earlier years.</figcaption>
+          </figure>
         </article>
 
         <article className="founder-chapter" data-reveal="">
@@ -133,6 +158,17 @@ const Coach = () => (
             patterns. It wasn’t one perfect plan or one sudden breakthrough.
             It was learning, adjusting, and continuing.
           </p>
+          <figure className="founder-memory founder-memory--portrait">
+            <img
+              src={akshatPortrait}
+              alt="Akshat wearing sunglasses and a cap in a car after his transformation"
+              width="1050"
+              height="1400"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>A little further along. Still learning.</figcaption>
+          </figure>
         </article>
 
         <article className="founder-chapter" data-reveal="">
@@ -150,6 +186,17 @@ const Coach = () => (
             blame yourself, but a way to understand what isn’t working and
             find a way forward.
           </p>
+          <figure className="founder-memory founder-memory--life">
+            <img
+              src={akshatMusic}
+              alt="Akshat singing and playing an acoustic guitar after his transformation"
+              width="788"
+              height="1400"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Beyond the numbers.</figcaption>
+          </figure>
         </article>
       </div>
     </section>
