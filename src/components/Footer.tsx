@@ -14,7 +14,6 @@ const Footer = () => (
           <Link to="/coach">Our story</Link>
           <Link to="/how-it-works">How it works</Link>
           <Link to="/journal">Journey Journal</Link>
-          <Link to="/life-happens">When life happens</Link>
         </div>
         <div>
           <h2>Get started</h2>

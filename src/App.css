@@ -2496,7 +2496,7 @@ html.js .is-visible .trend-line {
   color: var(--ink-primary);
   font-size: 22px;
   font-weight: 800;
-  letter-spacing: 0.14em;
+  letter-spacing: -0.01em;
 }
 
 .method-title span {
@@ -2554,6 +2554,27 @@ html.js .is-visible .trend-line {
   display: block;
   color: var(--ink-primary);
   font-size: 15px;
+}
+
+.programme-learning {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--ice-blue);
+}
+
+.programme-learning h2 {
+  margin: 0 0 8px;
+  color: var(--ink-primary);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.programme-learning p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .honest {

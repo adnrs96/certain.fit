@@ -23,7 +23,6 @@ const Programme = () => (
             <li>A weekly check-in, adjusted to how your week went</li>
             <li>WhatsApp support between check-ins, within agreed hours</li>
             <li>A progress review every 4 weeks</li>
-            <li>Return to Rhythm, and a plan for every kind of interruption</li>
             <li>Your “making it last” plan for life on your own</li>
           </ul>
           <Link className="btn-ocean-lg on-dark" to="/start-journey">
@@ -39,59 +38,67 @@ const Programme = () => (
           style={{ "--d": " 1" } as CSSProperties}
         >
           <p className="method-title">
-            C·E·R·T·A·I·N <span>What you’ll work on together</span>
+            What we work on
+            <span>Six areas. One plan, built around you.</span>
           </p>
           <ol className="method-list">
             <li>
-              <b>C</b>
+              <b aria-hidden="true">01</b>
               <span>
-                <strong>Calibrated nutrition</strong>Meals that fit your taste
-                and your home kitchen.
+                <strong>Working through cravings</strong>
+                Understand your triggers and develop practical ways to respond,
+                without guilt or banning every food you enjoy.
               </span>
             </li>
             <li>
-              <b>E</b>
+              <b aria-hidden="true">02</b>
               <span>
-                <strong>Environment design</strong>Make the better choice the
-                easy one.
+                <strong>Stress and sleep strategies</strong>
+                Build ways to manage stress and improve sleep that fit the
+                demands of your real life.
               </span>
             </li>
             <li>
-              <b>R</b>
+              <b aria-hidden="true">03</b>
               <span>
-                <strong>Routines and rituals</strong>Anchors that survive busy
-                days.
+                <strong>Habits that help you</strong>
+                Develop helpful habits, recognise unhelpful patterns, and make
+                the better choice easier.
               </span>
             </li>
             <li>
-              <b>T</b>
+              <b aria-hidden="true">04</b>
               <span>
-                <strong>Thoughtful eating</strong>Listen to your hunger, without
-                guilt.
+                <strong>Blood markers and deficiencies</strong>
+                Nutrition support to work towards healthier blood markers and
+                address deficiencies, alongside your doctor.
               </span>
             </li>
             <li>
-              <b>A</b>
+              <b aria-hidden="true">05</b>
               <span>
-                <strong>Adaptive behaviour</strong>Small experiments, not rigid
-                rules.
+                <strong>A diet that works for you</strong>
+                A food plan designed around your tastes, routine, preferences,
+                and nutritional needs.
               </span>
             </li>
             <li>
-              <b>I</b>
+              <b aria-hidden="true">06</b>
               <span>
-                <strong>Individualised support</strong>A coach who knows your
-                story.
-              </span>
-            </li>
-            <li>
-              <b>N</b>
-              <span>
-                <strong>Nurturing autonomy</strong>The confidence to keep going
-                on your own.
+                <strong>Movement for your setup</strong>
+                A workout or movement plan matched to your space, equipment,
+                and schedule, whether at home, in a gym, or outdoors.
               </span>
             </li>
           </ol>
+          <div className="programme-learning">
+            <h2>Learn while you progress.</h2>
+            <p>
+              Along the way, we teach you the basics of nutrition and exercise,
+              so you understand your plan, make informed choices, and build the
+              confidence to keep going on your own.
+            </p>
+          </div>
         </div>
       </div>
       <div className="honest" data-reveal="">

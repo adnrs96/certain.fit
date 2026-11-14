@@ -78,9 +78,8 @@ highlights the current page.
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
 | `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
 | `/journal` | Journey Journal chapters and examples | `src/pages/Journal.tsx` |
-| `/life-happens` | Flexible weeks and Return to Rhythm | `src/pages/LifeHappens.tsx` |
 | `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
-| `/programme` | Programme details and the CERTAIN framework | `src/pages/Programme.tsx` |
+| `/programme` | Six coaching areas, included support, and learning as you progress | `src/pages/Programme.tsx` |
 | `/start-journey` | Meet your coach form and welcome card | `src/pages/Journey.tsx` |
 | `/faq` | Frequently asked questions | `src/pages/FAQ.tsx` |
 
@@ -88,6 +87,10 @@ highlights the current page.
 behavior, and initialization/cleanup of interactive sections.
 `src/lib/site-pages.ts` defines navigation labels and redirects old homepage
 section links such as `/#journal` to the corresponding page.
+
+The Life Happens page has been removed from navigation and the footer.
+Existing `/life-happens` and `/#life-happens` links redirect to Programme,
+so previously shared links remain usable without restoring the removed content.
 
 The estimator passes its summary to the coach form through browser history
 state, not a query string or persistent storage. Answers still remain in the
