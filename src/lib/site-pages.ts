@@ -1,4 +1,4 @@
-export const conversationUrl = "https://calendly.com/akshatpriyansh1769/30min";
+export const conversationUrl = "https://api.whatsapp.com/message/QCDBEWFGQI5HI1?autoload=1&app_absent=0";
 
 export const sitePages = [
   { path: "/coach", label: "Our story", title: "The founder’s story" },

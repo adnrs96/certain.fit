@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
-import akshatHero from "@/assets/akshat-hero-editorial.webp";
+import akshatHero from "@/assets/akshat-hero-cutout.webp";
 
 const HeroSection = () => (
   <section className="hero" id="top">
@@ -10,17 +10,19 @@ const HeroSection = () => (
         <span className="serif-italic">Built around your life.</span>
       </h1>
       <figure className="hero-founder">
-        <img
-          src={akshatHero}
-          alt="Akshat, founder of CERTAIN"
-          width="600"
-          height="800"
-          fetchPriority="high"
-        />
-        <figcaption>
-          <strong>Akshat</strong>
-          <span>Founder of CERTAIN</span>
-        </figcaption>
+        <Link className="hero-founder-link" to="/coach" aria-label="Meet Akshat: read our story">
+          <img
+            src={akshatHero}
+            alt="Akshat, founder of CERTAIN"
+            width="600"
+            height="792"
+            fetchPriority="high"
+          />
+          <span className="hero-founder-signature" aria-hidden="true">
+            <strong>Akshat</strong>
+            <span>My story →</span>
+          </span>
+        </Link>
       </figure>
       <p className="hero-lead">
         A personalised <strong>weight-loss programme</strong>, guided by me,

@@ -539,10 +539,25 @@ p {
 
 /* ========================================================== 2. HERO */
 
+.conversation-link-icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.conversation-link:is(.btn-ocean-lg, .header-cta) {
+  gap: 10px;
+}
+
+.conversation-link:is(.btn-ocean-lg, .header-cta) .conversation-link-icon {
+  display: block;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 56px 0 104px;
+  padding: 36px 0 56px;
   background:
     radial-gradient(55% 70% at 88% 18%, rgba(71, 148, 219, 0.16) 0%, rgba(71, 148, 219, 0) 70%),
     radial-gradient(40% 55% at 0% 100%, rgba(46, 155, 120, 0.08) 0%, rgba(46, 155, 120, 0) 70%),
@@ -553,6 +568,7 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   grid-template-areas: "title portrait" "intro portrait" "actions portrait";
+  grid-template-rows: 1fr auto 1fr;
   align-items: start;
   column-gap: 56px;
   row-gap: 22px;
@@ -563,37 +579,68 @@ p {
   grid-area: portrait;
   align-self: center;
   justify-self: center;
-  width: min(100%, 360px);
+  width: min(100%, 440px);
   margin: 0;
-  overflow: hidden;
-  border-radius: 180px 180px 24px 24px;
+  isolation: isolate;
+}
+
+.hero-founder::before,
+.hero-founder::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-founder::before {
+  inset: auto -3% 6% 3%;
+  aspect-ratio: 1;
+  background: linear-gradient(145deg, #E2EFFA, #A9CCE9);
+}
+
+.hero-founder::after {
+  inset: 14% -6% 3% 8%;
+  border: 1px solid var(--border-strong);
+  transform: rotate(-15deg);
+}
+
+.hero-founder-link {
+  display: block;
+  color: var(--ink-hand);
+  text-decoration: none;
+}
+
+.hero-founder-link:focus-visible {
+  outline: 3px solid var(--cerulean);
+  outline-offset: 6px;
+  border-radius: 24px;
 }
 
 .hero-founder img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  aspect-ratio: 25 / 33;
+  object-fit: contain;
+  mask-image: linear-gradient(#000 84%, transparent);
 }
 
-.hero-founder figcaption {
+.hero-founder-signature {
   position: absolute;
-  inset: auto 0 0;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 44px 24px 22px;
-  background: linear-gradient(transparent, rgba(14, 30, 43, 0.8));
-  color: #FFFFFF;
-  font-size: 11px;
+  right: 0;
+  bottom: 1%;
+  display: grid;
+  gap: 2px;
+  text-align: center;
+  transform: rotate(-5deg);
+  font-size: 12px;
 }
 
-.hero-founder figcaption strong {
+.hero-founder-signature strong {
   color: inherit;
   font-family: var(--font-hand);
-  font-size: 30px;
+  font-size: 42px;
   font-weight: 500;
   line-height: 1;
 }
@@ -3724,18 +3771,19 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-grid {
-    grid-template-columns: 132px minmax(0, 1fr);
-    grid-template-areas: "title title" "portrait intro" "actions actions";
+    grid-template-columns: minmax(0, 1fr) clamp(150px, 30vw, 230px);
+    grid-template-areas: "title title" "intro portrait" "actions actions";
+    grid-template-rows: auto auto auto;
     align-items: center;
-    column-gap: 24px;
+    column-gap: 18px;
+    row-gap: 16px;
   }
 
   .hero-founder {
     width: 100%;
-    border-radius: 80px 80px 14px 14px;
   }
 
-  .hero-founder figcaption {
+  .hero-founder-signature {
     display: none;
   }
 
@@ -3988,9 +4036,8 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-grid {
-    grid-template-columns: clamp(108px, 34vw, 148px) minmax(0, 1fr);
-    column-gap: 18px;
-    row-gap: 22px;
+    grid-template-columns: minmax(0, 1fr) clamp(150px, 45vw, 230px);
+    column-gap: 16px;
   }
 
   .hero-trust {

@@ -28,8 +28,8 @@ const HowItWorks = () => (
             <p className="discovery-duration">About 45 minutes, all about you.</p>
             <ConversationLink className="btn-ocean-lg on-dark" />
             <p className="discovery-booking-note">
-              Start with a free 30-minute introductory call. The full discovery
-              session is the deeper next step.
+              Start with a free conversation on WhatsApp. We’ll arrange an
+              introductory 30-minute call, then a deeper discovery session.
             </p>
           </div>
           <ol className="discovery-agenda" aria-label="45-minute discovery call agenda">

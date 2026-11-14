@@ -99,11 +99,14 @@ but is intentionally excluded from both desktop and mobile header navigation.
 
 All primary booking links use `src/components/ConversationLink.tsx`, labelled
 **Start a free conversation**. Update `conversationUrl` in
-`src/lib/site-pages.ts` to change the Calendly destination everywhere. These are
-normal external links; they do not pass estimator answers or form entries to
-Calendly. To verify a change, check the homepage's two programme actions, the
+`src/lib/site-pages.ts` to change the WhatsApp destination everywhere. The
+current destination is the supplied WhatsApp Business message link, including
+its `autoload` and `app_absent` parameters. These are normal external links;
+they do not append estimator answers, form entries, or prefilled health data.
+Styled conversation buttons display a WhatsApp icon; text-only footer links
+and the narrow sticky action remain compact. To verify a change, check the homepage's two programme actions, the
 standalone programme's booking action, desktop/mobile navigation, and the story
-page's booking link, then open the destination without submitting a booking.
+page's conversation link, then open the destination without sending a message.
 
 The current offering is personally delivered by Akshat. Keep programme,
 contact-form, FAQ, estimator, and navigation copy founder-led rather than
@@ -117,9 +120,15 @@ one primary booking button, a quiet How it works link, and a single founder
 portrait. Keep detailed service copy in the programme below; do not restore
 the hero's example-card collage, trust list, or separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
-The portrait uses an unframed arch and a wider, natural cafe photograph,
-not the tight headshot. At 880px and below, the headline leads, followed by
-the portrait beside the introduction and then booking actions on their own row.
+The hero uses a transparent cut-out of the existing founder photograph over a
+decorative blue backdrop, not a headshot card, arch, or screenshot of a website.
+The photo was edited locally with Apple's foreground-instance segmentation;
+the original face, physique, and source photographs are unchanged. The bundled
+`akshat-hero-cutout.webp` has transparency; do not flatten it onto a solid
+background. CSS supplies the backdrop and soft lower-edge fade.
+The portrait is also a direct link to Our story. At 880px and below, the
+headline leads, followed by the introduction beside the portrait and then
+conversation actions on their own row.
 Keep both the face and primary booking action visible on initial mobile load.
 The old founder-led eyebrow and “Skills for life” programme
 subtitle have been removed.
@@ -134,7 +143,9 @@ Existing hover and keyboard-focus styling is retained. The animation uses a non-
 pseudo-element, does not move the label, and is disabled for reduced motion.
 Plain footer links are not animated. Check the hero CTA above the fold at
 320px/375px, portrait loading, hover/focus, reduced motion, and the unchanged
-Calendly destination after edits.
+WhatsApp destination after edits. Check that the portrait opens Our story,
+the How it works action stays internal, and the mobile menu still closes on
+selection and Escape.
 
 ### Coaching cadence and feedback-loop animation
 
@@ -142,8 +153,9 @@ Calendly destination after edits.
 its page-specific styles live in `src/pages/HowItWorks.css`.
 
 The discovery agenda totals 45 minutes (5 + 15 + 10 + 10 + 5). It is presented
-as the fuller discovery session after the free 30-minute Calendly introduction,
-not as a 45-minute appointment booked into the existing 30-minute event.
+as the fuller discovery session after a free 30-minute introductory call. The initial
+conversation action now opens WhatsApp, where the introductory call is arranged;
+it must not imply that clicking the button books a calendar appointment.
 The programme begins a couple of days after discovery, with daily check-ins
 for 14 days, then weekly video calls informed by the weekly journal. WhatsApp
 support is 9 AM–9 PM IST daily, including weekends. Keep the programme card,
