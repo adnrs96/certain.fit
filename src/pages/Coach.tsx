@@ -100,7 +100,8 @@ const Coach = () => (
             I lost 12 kgs. I was ecstatic seeing results, but I was ignoring the
             signals my body was sending. Six months later, severe gastrointestinal
             problems led me to a doctor, who told me I had stage-2 NAFLD and
-            was close to liver cirrhosis.
+            was close to liver cirrhosis. But I was following my keto coach's
+            plan perfectly, so why was this happening?
           </p>
           <blockquote className="founder-pullquote">
             “Akshat, your liver looks like you have been drinking a bottle of
