@@ -16,8 +16,7 @@ const ProgrammeSection = ({
       <div className="section-head center" data-reveal="">
         <span className="eyebrow-pill">THE PROGRAMME</span>
         <Heading className="section-title">
-          Personally guided by Akshat.{" "}
-          <span className="serif-italic">Skills for life.</span>
+          Personally guided by Akshat.
         </Heading>
       </div>
       <div className="programme-grid">

@@ -3723,7 +3723,20 @@ html.js .role-card[data-reveal].is-visible:hover {
   }
 
   .hero-founder {
-    max-width: 280px;
+    grid-row: 1;
+    max-width: 168px;
+    padding: 6px;
+    border-radius: 20px;
+  }
+
+  .hero-founder img {
+    aspect-ratio: 1;
+    border-radius: 14px;
+    object-position: center 30%;
+  }
+
+  .hero-founder figcaption {
+    display: none;
   }
 
   .hero-visual {
@@ -3949,6 +3962,7 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-title {
     font-size: clamp(38px, 11vw, 46px);
+    margin-bottom: 16px;
   }
 
   .hero-title .serif-italic {
@@ -3966,15 +3980,20 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-ctas {
     justify-content: center;
+    row-gap: 6px;
+    margin-top: 24px;
+  }
+
+  .hero {
+    padding-top: 20px;
+  }
+
+  .hero-grid {
+    gap: 20px;
   }
 
   .hero-founder {
-    max-width: 240px;
-  }
-
-  .hero-founder img {
-    aspect-ratio: 1;
-    object-position: center 18%;
+    max-width: 144px;
   }
 
   .hero-trust {

@@ -6,9 +6,6 @@ const HeroSection = () => (
   <section className="hero" id="top">
     <div className="container hero-grid">
       <div className="hero-copy">
-        <span className="eyebrow-pill">
-          FOUNDER-LED WEIGHT LOSS
-        </span>
         <h1 className="hero-title">
           Weight loss.{" "}
           <span className="serif-italic">Built around your life.</span>

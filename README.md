@@ -117,6 +117,10 @@ one primary booking button, a quiet How it works link, and a single founder
 portrait. Keep detailed service copy in the programme below; do not restore
 the hero's example-card collage, trust list, or separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
+At 880px and below, the portrait becomes compact and appears before the
+headline; keep both the face and primary booking action visible on initial
+mobile load. The old founder-led eyebrow and “Skills for life” programme
+subtitle have been removed.
 
 `ConversationLink` supplies the shared `conversation-link` class. Styled booking
 buttons get two gentle halo pulses on entry, finishing within 4.7 seconds.
