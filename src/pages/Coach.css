@@ -36,7 +36,7 @@
 }
 
 .founder-hero-content {
-  padding-top: 54px;
+  padding-top: 36px;
 }
 
 .founder-intro {
@@ -80,8 +80,8 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 34px;
-  width: min(100%, 480px);
-  margin: 52px auto 0;
+  width: min(100%, 420px);
+  margin: 36px auto 0;
 }
 
 .founder-photo {
@@ -123,7 +123,7 @@
 }
 
 .founder-story {
-  padding: 64px 0 0;
+  padding: 48px 0 0;
 }
 
 .founder-reading-column {
@@ -133,14 +133,14 @@
 }
 
 .founder-chapter {
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
 
 .founder-chapter + .founder-chapter::before {
   display: block;
   width: 44px;
   height: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   background: #bbc8d0;
   content: "";
 }
@@ -256,6 +256,20 @@
 .founder-memory--life {
   width: min(100%, 360px);
   transform: rotate(1deg);
+}
+
+.founder-later-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  width: min(100%, 560px);
+  margin: 36px auto 0;
+}
+
+.founder-later-photos .founder-memory {
+  width: 100%;
+  margin: 0;
 }
 
 .founder-mission {
@@ -416,6 +430,10 @@
   }
 
   .founder-memory-photos {
+    gap: 14px;
+  }
+
+  .founder-later-photos {
     gap: 14px;
   }
 

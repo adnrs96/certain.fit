@@ -21,9 +21,7 @@ const Coach = () => (
             <span>that I was the problem</span>
           </h1>
           <p className="founder-lead">
-            This isn’t a story about finding more willpower. It’s about years
-            spent looking for answers, and slowly learning to ask different
-            questions.
+            How years of self-blame became the reason I built CERTAIN.
           </p>
           <p className="founder-byline">By Akshat · Founder of CERTAIN</p>
         </div>
@@ -58,29 +56,17 @@ const Coach = () => (
         <article className="founder-chapter" data-reveal="">
           <h2>My Story</h2>
           <p className="founder-opening">
-            For more than 15 years, I lived with obesity. And for much of that
-            time, every attempt to change came with the same explanation:
-            I wasn’t doing enough. Not consistent enough. Not eating the right
-            foods. Not training hard enough. Not taking the right fat burners
-            or supplements.
+            For more than 15 years, I lived with obesity, believing I wasn’t
+            trying hard enough. I avoided photographs and mirrors. Fit people
+            seemed like deities who had solved an equation I couldn’t figure out.
           </p>
           <p>
-            I avoided being photographed and looked away from mirrors. Fit
-            people seemed almost like deities, as though they had solved an
-            equation I couldn’t figure out.
-          </p>
-          <p>
-            A nutritionist would hand me a diet and the hope of a fresh start.
-            Two weeks later, I couldn’t keep going. I didn’t question the plan.
-            I questioned myself.
-          </p>
-          <p>
-            At the gym, I worked hard. I gained some muscle and lost some weight.
-            For a while, it felt like progress. But I couldn’t sustain it, and
-            the weight returned quickly.
+            Nutritionists gave me diets I couldn’t sustain beyond two weeks.
+            At the gym, I gained muscle and lost weight, only to regain it
+            quickly. Every fresh start ended with the same feeling.
           </p>
           <blockquote className="founder-pullquote">
-            The weight came back. And with it, the belief that I had failed.
+            I didn’t question the plan. I questioned myself.
           </blockquote>
           <p>
             Each time, I gave it the same name: a lack of discipline, and knowledge.
@@ -110,111 +96,72 @@ const Coach = () => (
 
         <article className="founder-chapter" data-reveal="">
           <span className="founder-chapter-date">JUNE 2021</span>
-          <h2>One last promise to myself</h2>
+          <h2>When the answers conflicted</h2>
           <p>
-            A friend told me about a keto coach who had helped him lose more than
-            40 kg. His results gave me hope. I decided to try again, with a
-            promise that felt final: if this didn’t work, I would stop trying
-            to lose weight.
+            In June 2021, a friend recommended a keto coach who had helped him
+            lose more than 40 kg. I promised myself: if this didn’t work,
+            I would stop trying.
           </p>
           <p>
-            The coach said humans weren’t optimised to eat carbohydrates and
-            should eat only fats and protein. I believed in results, and there
-            were results in front of me. So I trusted the explanation. Perhaps,
-            I thought, this was the answer I had been missing.
-          </p>
-        </article>
-
-        <article className="founder-chapter" data-reveal="">
-          <h2>When the answers stopped making sense</h2>
-          <p>
-            Six months later, my gastrointestinal issues had become severe
-            enough to send me to a doctor. He told me I had stage-2 NAFLD and
-            warned that I was close to liver cirrhosis. My liver, he said,
-            looked as though I had been drinking a bottle of scotch every day.
+            His message was simple: no carbs, only fats and protein. I saw
+            results, and believed him.
           </p>
           <p>
-            There was a bottle of whisky on my table. I hadn’t touched it for
-            months, not since I’d started the plan. I had left it there as a
-            reminder of my resolve.
+            Six months later, severe gastrointestinal problems led me to a
+            doctor. He told me I had stage-2 NAFLD and was close to liver
+            cirrhosis. He compared my liver to someone drinking scotch daily;
+            my own bottle of whisky had sat untouched for months, a reminder
+            of my resolve.
           </p>
           <p>
-            When I shared the doctor’s findings, the coach dismissed them and
-            told me to continue his plan. He wasn’t willing to believe what
-            the doctor had found.
-          </p>
-          <p>
-            The keto coach told me not to listen to the nutritionists. The gym
-            coach told me not to listen to the keto coach. My doctor, too,
-            told me not to listen to the keto coach.
-          </p>
-          <p>
-            Every direction came with another warning about whom not to trust.
-            I was caught in the middle, trying to make sense of advice that
-            kept cancelling itself out.
+            The keto coach dismissed the findings and warned me against
+            nutritionists. My gym coach and doctor warned me against him.
+            I was caught between voices, with no clear answer.
           </p>
           <p className="founder-emphasis">
-            Enough, I thought. I had to take accountability for my own
-            transformation. I needed to be able to rely on myself: to learn
-            the science, question what I was being told, and understand the
-            path I was following.
+            Enough. I had to take accountability for my own transformation:
+            understand the science, and learn to rely on myself.
           </p>
         </article>
 
         <article className="founder-chapter" data-reveal="">
-          <h2>Learning, rather than starting over</h2>
+          <h2>Why CERTAIN exists</h2>
           <p>
-            In the years that followed, I spent time learning and experimenting
-            with exercise science and nutrition science. They were helpful,
-            enormously so. But the real difference came from something I
-            hadn’t found in those lessons: a mindset around nutrition,
-            science, and habits.
+            Learning and experimenting with exercise science and nutrition
+            science helped. But the real difference was a mindset around
+            nutrition, science, and habits, shaped by hard-earned coping
+            strategies and the scars of failures I learnt from.
           </p>
           <p>
-            I carry the scars of that learning: hard-earned coping strategies,
-            failures I had to understand, and patterns I learnt to avoid.
-            It wasn’t one perfect plan or one sudden breakthrough. It was a
-            mindset that kept evolving as I learned to keep going.
+            Food, movement, mindset, and habits aren’t separate answers.
+            They form a continuously evolving loop: learn, adjust, keep going.
+            I built CERTAIN to offer the support I had needed, not another
+            rigid plan or another reason to blame yourself.
           </p>
-          <figure className="founder-memory founder-memory--portrait">
-            <img
-              src={akshatPortrait}
-              alt="Akshat wearing sunglasses and a cap in a car after his transformation"
-              width="1050"
-              height="1400"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption>A little further along. Still learning.</figcaption>
-          </figure>
-        </article>
-
-        <article className="founder-chapter" data-reveal="">
-          <h2>And that is where CERTAIN began</h2>
-          <p>
-            I came to believe that much of the health industry was looking at
-            only part of the picture. Weight loss isn’t just nutrition. It
-            isn’t just exercise, mindset, or habits. These things belong
-            together, in a continuously evolving loop. What we learn in one
-            area helps us adapt the others.
-          </p>
-          <p>
-            I founded CERTAIN because I wanted to offer the kind of support
-            I had needed: not another rigid plan, and not another reason to
-            blame yourself, but a way to understand what isn’t working and
-            find a way forward.
-          </p>
-          <figure className="founder-memory founder-memory--life">
-            <img
-              src={akshatMusic}
-              alt="Akshat singing and playing an acoustic guitar after his transformation"
-              width="788"
-              height="1400"
-              loading="lazy"
-              decoding="async"
-            />
-            <figcaption>Beyond the numbers.</figcaption>
-          </figure>
+          <div className="founder-later-photos">
+            <figure className="founder-memory founder-memory--portrait">
+              <img
+                src={akshatPortrait}
+                alt="Akshat wearing sunglasses and a cap in a car after his transformation"
+                width="1050"
+                height="1400"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>A little further along. Still learning.</figcaption>
+            </figure>
+            <figure className="founder-memory founder-memory--life">
+              <img
+                src={akshatMusic}
+                alt="Akshat singing and playing an acoustic guitar after his transformation"
+                width="788"
+                height="1400"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Beyond the numbers.</figcaption>
+            </figure>
+          </div>
         </article>
       </div>
     </section>
@@ -228,9 +175,8 @@ const Coach = () => (
           You don’t have to do this alone.
         </h2>
         <p>
-          There is no snake oil here. CERTAIN uses scientifically grounded,
-          evidence-based methods, bringing food, movement, mindset, and habits
-          together. We keep learning with you, and adapting around your real life.
+          No snake oil. Scientifically grounded, evidence-based methods,
+          with support that adapts to your life.
         </p>
         <p className="founder-mission-promise">
           Weight loss is hard. But we are here to make the journey easier for
