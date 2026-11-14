@@ -20,9 +20,6 @@ const Coach = () => (
             15 years of obesity made me think{" "}
             <span>that I was the problem</span>
           </h1>
-          <p className="founder-lead">
-            How years of self-blame became the reason I built CERTAIN.
-          </p>
           <p className="founder-byline">By Akshat · Founder of CERTAIN</p>
         </div>
         <div className="founder-photo-pair" data-reveal="">
