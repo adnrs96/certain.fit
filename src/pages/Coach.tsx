@@ -56,13 +56,18 @@ const Coach = () => (
     <section className="founder-story" aria-label="Akshat’s story">
       <div className="founder-reading-column">
         <article className="founder-chapter" data-reveal="">
-          <h2>The blame I carried</h2>
+          <h2>My Story</h2>
           <p className="founder-opening">
             For more than 15 years, I lived with obesity. And for much of that
             time, every attempt to change came with the same explanation:
             I wasn’t doing enough. Not consistent enough. Not eating the right
             foods. Not training hard enough. Not taking the right fat burners
             or supplements.
+          </p>
+          <p>
+            I avoided being photographed and looked away from mirrors. Fit
+            people seemed almost like deities, as though they had solved an
+            equation I couldn’t figure out.
           </p>
           <p>
             A nutritionist would hand me a diet and the hope of a fresh start.
@@ -78,7 +83,7 @@ const Coach = () => (
             The weight came back. And with it, the belief that I had failed.
           </blockquote>
           <p>
-            Each time, I gave it the same name: a lack of discipline.
+            Each time, I gave it the same name: a lack of discipline, and knowledge.
           </p>
           <figure className="founder-memory founder-memory--pair">
             <div className="founder-memory-photos">
@@ -114,9 +119,9 @@ const Coach = () => (
           </p>
           <p>
             The coach said humans weren’t optimised to eat carbohydrates and
-            should eat only fats. I believed in results, and there were results
-            in front of me. So I trusted the explanation. Perhaps, I thought,
-            this was the answer I had been missing.
+            should eat only fats and protein. I believed in results, and there
+            were results in front of me. So I trusted the explanation. Perhaps,
+            I thought, this was the answer I had been missing.
           </p>
         </article>
 
@@ -135,28 +140,41 @@ const Coach = () => (
           </p>
           <p>
             When I shared the doctor’s findings, the coach dismissed them and
-            told me to continue. I was left between two conflicting answers:
-            what my doctor was telling me, and the plan I had put so much
-            faith in.
+            told me to continue his plan. He wasn’t willing to believe what
+            the doctor had found.
+          </p>
+          <p>
+            The keto coach told me not to listen to the nutritionists. The gym
+            coach told me not to listen to the keto coach. My doctor, too,
+            told me not to listen to the keto coach.
+          </p>
+          <p>
+            Every direction came with another warning about whom not to trust.
+            I was caught in the middle, trying to make sense of advice that
+            kept cancelling itself out.
           </p>
           <p className="founder-emphasis">
-            Enough, I thought. I needed to understand this for myself.
+            Enough, I thought. I had to take accountability for my own
+            transformation. I needed to be able to rely on myself: to learn
+            the science, question what I was being told, and understand the
+            path I was following.
           </p>
         </article>
 
         <article className="founder-chapter" data-reveal="">
           <h2>Learning, rather than starting over</h2>
           <p>
-            In the years that followed, I studied exercise science and nutrition
-            science. That knowledge mattered enormously. But the change that
-            stayed with me was quieter: an evolving mindset, hard-earned coping
-            strategies, and a willingness to understand my failures instead of
-            treating them as a verdict on who I was.
+            In the years that followed, I spent time learning and experimenting
+            with exercise science and nutrition science. They were helpful,
+            enormously so. But the real difference came from something I
+            hadn’t found in those lessons: a mindset around nutrition,
+            science, and habits.
           </p>
           <p>
-            I began to learn what made me stumble, and how to avoid the same
-            patterns. It wasn’t one perfect plan or one sudden breakthrough.
-            It was learning, adjusting, and continuing.
+            I carry the scars of that learning: hard-earned coping strategies,
+            failures I had to understand, and patterns I learnt to avoid.
+            It wasn’t one perfect plan or one sudden breakthrough. It was a
+            mindset that kept evolving as I learned to keep going.
           </p>
           <figure className="founder-memory founder-memory--portrait">
             <img
