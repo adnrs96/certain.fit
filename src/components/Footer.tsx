@@ -1,3 +1,5 @@
+import ConversationLink from "@/components/ConversationLink";
+
 const Footer = () => (
   <footer className="site-footer">
     <div className="container footer-grid">
@@ -19,7 +21,7 @@ const Footer = () => (
           <h2>Get started</h2>
           <Link to="/timeline">Your timeline</Link>
           <Link to="/programme">Programme</Link>
-          <Link to="/start-journey">Work with Akshat</Link>
+          <ConversationLink />
           <Link to="/faq">Questions</Link>
         </div>
       </nav>

@@ -5,7 +5,7 @@ import ProgrammeSection from "@/components/ProgrammeSection";
 const Index = () => (
   <>
     <HeroSection />
-    <ProgrammeSection />
+    <ProgrammeSection showDetailsLink />
     <ClosingSection />
   </>
 );

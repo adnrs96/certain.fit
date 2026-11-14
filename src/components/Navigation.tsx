@@ -1,5 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import { sitePages } from "@/lib/site-pages";
+import ConversationLink from "@/components/ConversationLink";
+
+const navigationPages = sitePages.filter((page) => page.path !== "/programme");
 
 const Navigation = () => (
   <header className="site-header" id="site-header">
@@ -10,7 +13,7 @@ const Navigation = () => (
       </Link>
       <nav className="main-nav" aria-label="Main">
         <ul>
-          {sitePages.map((page) => (
+          {navigationPages.map((page) => (
             <li key={page.path}>
               <NavLink
                 to={page.path}
@@ -24,9 +27,7 @@ const Navigation = () => (
           ))}
         </ul>
       </nav>
-      <Link className="header-cta" to="/start-journey">
-        Work with Akshat
-      </Link>
+      <ConversationLink className="header-cta" />
       <button
         className="menu-toggle"
         type="button"
@@ -42,14 +43,12 @@ const Navigation = () => (
       <NavLink to="/" end>
         Home
       </NavLink>
-      {sitePages.map((page) => (
+      {navigationPages.map((page) => (
         <NavLink key={page.path} to={page.path}>
           {page.label}
         </NavLink>
       ))}
-      <Link className="btn-ocean-lg" to="/start-journey">
-        Work with Akshat
-      </Link>
+      <ConversationLink className="btn-ocean-lg" />
     </nav>
   </header>
 );

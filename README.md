@@ -80,7 +80,7 @@ and the header highlights the current page.
 | `/journal` | Journey Journal chapters and examples | `src/pages/Journal.tsx` |
 | `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
 | `/programme` | Six coaching areas, included support, and learning as you progress | `src/pages/Programme.tsx` |
-| `/start-journey` | Meet your coach form and welcome card | `src/pages/Journey.tsx` |
+| `/start-journey` | Private starting-point form, welcome card, and booking link | `src/pages/Journey.tsx` |
 | `/faq` | Frequently asked questions | `src/pages/FAQ.tsx` |
 
 `src/components/SiteLayout.tsx` owns the shared header, footer, page scroll
@@ -93,6 +93,18 @@ standalone Programme page. Update the offering in this component so both
 locations stay consistent. It uses an `h2` on the homepage and an `h1` on
 the standalone page, preserving one primary heading per page.
 
+The homepage passes `showDetailsLink` to show a **Know more** link to
+`/programme`. The programme route remains available directly and in the footer,
+but is intentionally excluded from both desktop and mobile header navigation.
+
+All primary booking links use `src/components/ConversationLink.tsx`, labelled
+**Start a free conversation**. Update `conversationUrl` in
+`src/lib/site-pages.ts` to change the Calendly destination everywhere. These are
+normal external links; they do not pass estimator answers or form entries to
+Calendly. To verify a change, check the homepage's two programme actions, the
+standalone programme's booking action, desktop/mobile navigation, and the story
+page's booking link, then open the destination without submitting a booking.
+
 The current offering is personally delivered by Akshat. Keep programme,
 contact-form, FAQ, estimator, and navigation copy founder-led rather than
 suggesting an assigned coach or a pool of coaches. The founder’s story still
@@ -102,7 +114,7 @@ The Life Happens page has been removed from navigation and the footer.
 Existing `/life-happens` and `/#life-happens` links redirect to Programme,
 so previously shared links remain usable without restoring the removed content.
 
-The estimator passes its summary to the coach form through browser history
+The estimator passes its summary to the starting-point form through browser history
 state, not a query string or persistent storage. Answers still remain in the
 browser: this page split does not introduce a backend or submit the form.
 

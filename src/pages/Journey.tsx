@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { getTimelineEstimate } from "@/lib/site-pages";
+import ConversationLink from "@/components/ConversationLink";
 
 const Journey = () => {
   const location = useLocation();
@@ -299,7 +300,7 @@ const Journey = () => {
                   ← Back
                 </button>
                 <button type="submit" className="btn-ocean-lg">
-                  Talk to Akshat →
+                  See my starting point →
                 </button>
               </div>
             </div>
@@ -335,6 +336,7 @@ const Journey = () => {
               </div>
             </div>
             <div className="wc-actions">
+              <ConversationLink className="btn-ocean-lg" />
               <a
                 className="btn-whatsapp hidden"
                 id="wc-whatsapp"

@@ -1,12 +1,15 @@
 import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
+import ConversationLink from "@/components/ConversationLink";
 
 interface ProgrammeSectionProps {
   headingLevel?: "h1" | "h2";
+  showDetailsLink?: boolean;
 }
 
 const ProgrammeSection = ({
   headingLevel: Heading = "h2",
+  showDetailsLink = false,
 }: ProgrammeSectionProps) => (
   <section className="programme" id="programme">
     <div className="container">
@@ -31,9 +34,14 @@ const ProgrammeSection = ({
             <li>A progress review every 4 weeks</li>
             <li>Your “making it last” plan for life on your own</li>
           </ul>
-          <Link className="btn-ocean-lg on-dark" to="/start-journey">
-            Work with Akshat →
-          </Link>
+          <div className="offer-actions">
+            {showDetailsLink && (
+              <Link className="btn-ghost-lg on-dark" to="/programme">
+                Know more
+              </Link>
+            )}
+            <ConversationLink className="btn-ocean-lg on-dark" />
+          </div>
           <p className="offer-small">
             Starting a conversation is free, with no obligation.
           </p>

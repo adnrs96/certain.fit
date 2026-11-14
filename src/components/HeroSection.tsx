@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ConversationLink from "@/components/ConversationLink";
 
 const HeroSection = () => (
   <section className="hero" id="top">
@@ -20,19 +21,7 @@ const HeroSection = () => (
           changes.
         </p>
         <div className="hero-ctas">
-          <Link className="btn-ocean-lg" to="/start-journey">
-            Work with Akshat
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-              <path
-                d="M5 12h14M13 6l6 6-6 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></path>
-            </svg>
-          </Link>
+          <ConversationLink className="btn-ocean-lg" />
           <Link className="btn-ghost-lg" to="/how-it-works">
             See how it works
           </Link>

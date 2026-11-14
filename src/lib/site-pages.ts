@@ -1,3 +1,5 @@
+export const conversationUrl = "https://calendly.com/akshatpriyansh1769/30min";
+
 export const sitePages = [
   { path: "/coach", label: "Our story", title: "The founder’s story" },
   { path: "/how-it-works", label: "How it works", title: "How CERTAIN works" },

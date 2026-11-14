@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ConversationLink from "@/components/ConversationLink";
 import akshatThen from "@/assets/akshat-then.jpg";
 import akshatNow from "@/assets/akshat-now.jpg";
 import akshatEarlierStanding from "@/assets/akshat-earlier-standing.webp";
@@ -42,6 +43,24 @@ const Coach = () => (
             <figcaption>Me, a little further along.</figcaption>
           </figure>
         </div>
+        <aside className="founder-milestone" aria-label="My weight-loss transformation">
+          <svg
+            className="founder-milestone-arrow"
+            viewBox="0 0 90 75"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 5C-3 52 34 71 77 48M61 45l18 2-8 17"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <strong>~40 kg</strong>
+          <span>lost. A lot of life gained.</span>
+        </aside>
         <p className="founder-photo-note">
           Two photographs. Years of learning in between.
         </p>
@@ -178,9 +197,7 @@ const Coach = () => (
         <p className="founder-signoff">With understanding,</p>
         <p className="founder-signature">Akshat</p>
         <div className="founder-actions">
-          <Link className="btn-ocean-lg" to="/start-journey">
-            Start a conversation →
-          </Link>
+          <ConversationLink className="btn-ocean-lg" />
           <Link className="btn-ghost-lg" to="/programme">
             Explore the programme
           </Link>
