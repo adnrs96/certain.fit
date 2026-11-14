@@ -68,13 +68,13 @@ status is successful before checking the public website.
 
 ### Website pages
 
-The homepage is a short introduction with links to the detailed pages. React
-Router handles navigation without reloading the application, and the header
-highlights the current page.
+The homepage combines the introduction, programme offering, and closing
+invitation. React Router handles navigation without reloading the application,
+and the header highlights the current page.
 
 | URL | Content | Page component |
 |---|---|---|
-| `/` | Introduction and starting points | `src/pages/Index.tsx` |
+| `/` | Introduction, programme offering, and closing invitation | `src/pages/Index.tsx` |
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
 | `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
 | `/journal` | Journey Journal chapters and examples | `src/pages/Journal.tsx` |
@@ -87,6 +87,11 @@ highlights the current page.
 behavior, and initialization/cleanup of interactive sections.
 `src/lib/site-pages.ts` defines navigation labels and redirects old homepage
 section links such as `/#journal` to the corresponding page.
+
+`src/components/ProgrammeSection.tsx` is shared by the homepage and the
+standalone Programme page. Update the offering in this component so both
+locations stay consistent. It uses an `h2` on the homepage and an `h1` on
+the standalone page, preserving one primary heading per page.
 
 The Life Happens page has been removed from navigation and the footer.
 Existing `/life-happens` and `/#life-happens` links redirect to Programme,
