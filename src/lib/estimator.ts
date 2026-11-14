@@ -6,7 +6,10 @@ import type {
 } from "./estimator-types";
 import { createWebsiteScope } from "./website-scope";
 
-export function initializeEstimator(root: HTMLElement) {
+export function initializeEstimator(
+  root: HTMLElement,
+  onStartConversation: (summary: string) => void,
+) {
   const { $, listen, cleanup } = createWebsiteScope(root);
   const S = CONFIG.settings;
   const TEXT = CONFIG.text;
@@ -863,27 +866,7 @@ export function initializeEstimator(root: HTMLElement) {
       );
       return;
     }
-    // Without a WhatsApp number, hand the estimate to the journey form.
-    const journey = document.getElementById("journey-form");
-    if (journey) {
-      let field = journey.querySelector<HTMLInputElement>(
-        'input[name="timeline_estimate"]',
-      );
-      if (!field) {
-        field = document.createElement("input");
-        field.type = "hidden";
-        field.name = "timeline_estimate";
-        journey.appendChild(field);
-      }
-      field.value = summary;
-      journey.dispatchEvent(
-        new CustomEvent("certain:estimate", { detail: { summary } }),
-      );
-    }
-    const section = document.getElementById("start-journey");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    onStartConversation(summary);
   }
 
   // --------------------------------------------------------------------- UI

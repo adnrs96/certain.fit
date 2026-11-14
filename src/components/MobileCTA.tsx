@@ -1,12 +1,13 @@
 const MobileCTA = () => (
   <div className="sticky-cta-bar" id="sticky-cta">
-    <a className="sticky-ghost" href="#timeline-estimator">
+    <Link className="sticky-ghost" to="/timeline">
       My timeline
-    </a>
-    <a className="sticky-primary" href="#start-journey">
+    </Link>
+    <Link className="sticky-primary" to="/start-journey">
       Meet your coach
-    </a>
+    </Link>
   </div>
 );
 
 export default MobileCTA;
+import { Link } from "react-router-dom";

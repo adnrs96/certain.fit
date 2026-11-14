@@ -2,30 +2,26 @@ const Footer = () => (
   <footer className="site-footer">
     <div className="container footer-grid">
       <div className="footer-brand">
-        <a
-          className="brand light"
-          href="#top"
-          aria-label="CERTAIN Fitness, back to top"
-        >
+        <Link className="brand light" to="/" aria-label="CERTAIN Fitness, home">
           <span className="brand-script">Certain</span>
           <span className="brand-sub">FITNESS</span>
-        </a>
+        </Link>
         <p>Someone in your corner, throughout your transformation.</p>
       </div>
       <nav className="footer-links" aria-label="Footer">
         <div>
           <h2>Explore</h2>
-          <a href="#coach">Your coach</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#journal">Journey Journal</a>
-          <a href="#life-happens">When life happens</a>
+          <Link to="/coach">Your coach</Link>
+          <Link to="/how-it-works">How it works</Link>
+          <Link to="/journal">Journey Journal</Link>
+          <Link to="/life-happens">When life happens</Link>
         </div>
         <div>
           <h2>Get started</h2>
-          <a href="#timeline-estimator">Your timeline</a>
-          <a href="#programme">Programme</a>
-          <a href="#start-journey">Meet your coach</a>
-          <a href="#faq">Questions</a>
+          <Link to="/timeline">Your timeline</Link>
+          <Link to="/programme">Programme</Link>
+          <Link to="/start-journey">Meet your coach</Link>
+          <Link to="/faq">Questions</Link>
         </div>
       </nav>
     </div>
@@ -48,3 +44,4 @@ const Footer = () => (
 );
 
 export default Footer;
+import { Link } from "react-router-dom";

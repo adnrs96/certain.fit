@@ -1,39 +1,32 @@
+import { Link, NavLink } from "react-router-dom";
+import { sitePages } from "@/lib/site-pages";
+
 const Navigation = () => (
   <header className="site-header" id="site-header">
     <div className="container header-inner">
-      <a
-        className="brand"
-        href="#top"
-        aria-label="CERTAIN Fitness, back to top"
-      >
+      <Link className="brand" to="/" aria-label="CERTAIN Fitness, home">
         <span className="brand-script">Certain</span>
         <span className="brand-sub">FITNESS</span>
-      </a>
+      </Link>
       <nav className="main-nav" aria-label="Main">
         <ul>
-          <li>
-            <a href="#coach">Your coach</a>
-          </li>
-          <li>
-            <a href="#how-it-works">How it works</a>
-          </li>
-          <li>
-            <a href="#journal">Journal</a>
-          </li>
-          <li>
-            <a href="#life-happens">When life happens</a>
-          </li>
-          <li>
-            <a href="#timeline-estimator">Your timeline</a>
-          </li>
-          <li>
-            <a href="#programme">Programme</a>
-          </li>
+          {sitePages.map((page) => (
+            <li key={page.path}>
+              <NavLink
+                to={page.path}
+                className={({ isActive }) =>
+                  isActive ? "is-current" : undefined
+                }
+              >
+                {page.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
-      <a className="header-cta" href="#start-journey">
+      <Link className="header-cta" to="/start-journey">
         Meet your coach
-      </a>
+      </Link>
       <button
         className="menu-toggle"
         type="button"
@@ -46,16 +39,17 @@ const Navigation = () => (
       </button>
     </div>
     <nav className="mobile-menu" id="mobile-menu" aria-label="Mobile" hidden>
-      <a href="#coach">Your coach</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#journal">Journey Journal</a>
-      <a href="#life-happens">When life happens</a>
-      <a href="#timeline-estimator">Your timeline</a>
-      <a href="#programme">Programme</a>
-      <a href="#faq">Questions</a>
-      <a className="btn-ocean-lg" href="#start-journey">
+      <NavLink to="/" end>
+        Home
+      </NavLink>
+      {sitePages.map((page) => (
+        <NavLink key={page.path} to={page.path}>
+          {page.label}
+        </NavLink>
+      ))}
+      <Link className="btn-ocean-lg" to="/start-journey">
         Meet your coach
-      </a>
+      </Link>
     </nav>
   </header>
 );

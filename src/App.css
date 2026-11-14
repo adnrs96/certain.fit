@@ -3400,6 +3400,92 @@ html.js .role-card[data-reveal].is-visible:hover {
 
 /* ===================================================== Smaller screens */
 
+.home-explore {
+  padding: 80px 0;
+  background: var(--bg-card);
+}
+
+.home-explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.home-explore-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-canvas);
+  color: var(--ink-primary);
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-explore-card:hover {
+  border-color: var(--cerulean);
+  transform: translateY(-3px);
+}
+
+.home-explore-card h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.home-explore-card p {
+  color: var(--ink-secondary);
+}
+
+.home-explore-card > span {
+  margin-top: auto;
+  color: var(--cerulean);
+  font-weight: 700;
+}
+
+.page-context {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: var(--ink-secondary);
+  font-size: 13px;
+}
+
+.page-context a {
+  color: var(--cerulean);
+  text-decoration: none;
+}
+
+.page-context a:hover {
+  text-decoration: underline;
+}
+
+.page-main > section:first-of-type {
+  padding-top: 64px;
+}
+
+.mobile-menu a[aria-current="page"] {
+  color: var(--cerulean);
+  font-weight: 800;
+}
+
+@media (max-width: 680px) {
+  .home-explore {
+    padding: 56px 0;
+  }
+
+  .home-explore-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .page-main > section:first-of-type {
+    padding-top: 40px;
+  }
+}
+
 @media (max-width: 1080px) {
   .main-nav {
     display: none;

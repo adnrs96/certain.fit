@@ -3,7 +3,6 @@ import { createWebsiteScope } from "./website-scope";
 
 export function initializeWebsite(root: HTMLElement) {
   const { $, $$, listen, observe, cleanup } = createWebsiteScope(root);
-  const controller = new AbortController();
   document.documentElement.classList.add("js");
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
@@ -33,6 +32,7 @@ export function initializeWebsite(root: HTMLElement) {
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       menu.hidden = !open;
     };
+    setOpen(false);
     listen(toggle, "click", () => setOpen(menu.hidden));
     listen(menu, "click", (event) => {
       if (!(event.target instanceof HTMLElement)) return;
@@ -54,33 +54,6 @@ export function initializeWebsite(root: HTMLElement) {
       }
     };
     listen(wide, "change", closeWhenWide);
-  }
-
-  // Underlines the menu item for the section in the middle of the screen.
-  function initNavHighlight() {
-    const links = $$(".main-nav a[href^='#']");
-    if (!links.length || !("IntersectionObserver" in window)) {
-      return;
-    }
-    const byId = new Map(
-      links.map((link) => [link.getAttribute("href").slice(1), link]),
-    );
-    const observer = observe(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
-          links.forEach((link) => link.classList.remove("is-current"));
-          const link = byId.get(entry.target.id);
-          if (link) {
-            link.classList.add("is-current");
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" },
-    );
-    $$("main > section[id]").forEach((section) => observer.observe(section));
   }
 
   // ------------------------------------------------------------------ reveal
@@ -442,10 +415,6 @@ export function initializeWebsite(root: HTMLElement) {
       });
     }
 
-    // The timeline estimator's call to action fills timeline_estimate and announces it here.
-    form.addEventListener("certain:estimate", renderEstimate, {
-      signal: controller.signal,
-    });
     if (estimateField && estimateField.value) {
       renderEstimate();
     }
@@ -460,18 +429,20 @@ export function initializeWebsite(root: HTMLElement) {
   function initStickyCta() {
     const bar = $("#sticky-cta");
     const hero = $(".hero");
-    if (!bar || !hero || !("IntersectionObserver" in window)) {
+    if (!bar || !("IntersectionObserver" in window)) {
       return;
     }
-    let pastHero = false;
+    let pastHero = !hero;
     const nearby = new Set<Element>();
     const update = () =>
       bar.classList.toggle("is-visible", pastHero && nearby.size === 0);
 
-    observe(([entry]) => {
-      pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-      update();
-    }).observe(hero);
+    if (hero) {
+      observe(([entry]) => {
+        pastHero = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+        update();
+      }).observe(hero);
+    }
 
     const observer = observe((entries) => {
       entries.forEach((entry) => {
@@ -494,11 +465,11 @@ export function initializeWebsite(root: HTMLElement) {
         observer.observe(element);
       }
     });
+    update();
   }
 
   function start() {
     initHeader();
-    initNavHighlight();
     initReveal();
     $$("[data-tabs]").forEach(initTabs);
     initJourneyForm();
@@ -510,7 +481,6 @@ export function initializeWebsite(root: HTMLElement) {
 
   start();
   return () => {
-    controller.abort();
     cleanup();
     document.documentElement.classList.remove("js");
   };

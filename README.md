@@ -62,7 +62,56 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The GitHub repository's `main` branch is connected to Vercel. Pushing a commit
+to `main` triggers a production deployment. Confirm that the Vercel commit
+status is successful before checking the public website.
+
+### Website pages
+
+The homepage is a short introduction with links to the detailed pages. React
+Router handles navigation without reloading the application, and the header
+highlights the current page.
+
+| URL | Content | Page component |
+|---|---|---|
+| `/` | Introduction and starting points | `src/pages/Index.tsx` |
+| `/coach` | Your one-to-one coach | `src/pages/Coach.tsx` |
+| `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
+| `/journal` | Journey Journal chapters and examples | `src/pages/Journal.tsx` |
+| `/life-happens` | Flexible weeks and Return to Rhythm | `src/pages/LifeHappens.tsx` |
+| `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
+| `/programme` | Programme details and the CERTAIN framework | `src/pages/Programme.tsx` |
+| `/start-journey` | Meet your coach form and welcome card | `src/pages/Journey.tsx` |
+| `/faq` | Frequently asked questions | `src/pages/FAQ.tsx` |
+
+`src/components/SiteLayout.tsx` owns the shared header, footer, page scroll
+behavior, and initialization/cleanup of interactive sections.
+`src/lib/site-pages.ts` defines navigation labels and redirects old homepage
+section links such as `/#journal` to the corresponding page.
+
+The estimator passes its summary to the coach form through browser history
+state, not a query string or persistent storage. Answers still remain in the
+browser: this page split does not introduce a backend or submit the form.
+
+### Direct links and reloads on Vercel
+
+Keep the rewrite in `vercel.json`. This serves the Vite application's
+`index.html` for page URLs so React Router can resolve them. Without the SPA
+fallback, clicking an in-app link may work while opening or refreshing the
+same page directly fails.
+
+When adding a page:
+
+1. Add its React component under `src/pages` and its route in `src/App.tsx`.
+2. Add it to `src/lib/site-pages.ts` if it belongs in the main navigation.
+3. Use React Router `Link` or `NavLink` for internal page links. Reserve hash
+   links for elements on the current page.
+4. Run `npm run build` and `npx tsc --noEmit -p tsconfig.app.json`.
+5. Run `npm run preview`, open the new URL directly, reload it, and check
+   navigation in both desktop and mobile layouts.
+6. After pushing, wait for Vercel's successful deployment status. Open and
+   reload the public page directly, and check that JS, CSS, and favicon assets
+   still load rather than receiving the HTML fallback.
 
 ## Can I connect a custom domain to my Lovable project?
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const HeroSection = () => (
   <section className="hero" id="top">
     <div className="container hero-grid">
@@ -16,7 +18,7 @@ const HeroSection = () => (
           and stays in your corner when life gets in the way.
         </p>
         <div className="hero-ctas">
-          <a className="btn-ocean-lg" href="#start-journey">
+          <Link className="btn-ocean-lg" to="/start-journey">
             Meet your coach
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path
@@ -28,12 +30,12 @@ const HeroSection = () => (
                 strokeLinejoin="round"
               ></path>
             </svg>
-          </a>
-          <a className="btn-ghost-lg" href="#how-it-works">
+          </Link>
+          <Link className="btn-ghost-lg" to="/how-it-works">
             See how it works
-          </a>
+          </Link>
         </div>
-        <a className="hero-timeline-link" href="#timeline-estimator">
+        <Link className="hero-timeline-link" to="/timeline">
           <span className="htl-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="18" height="18">
               <circle
@@ -57,7 +59,7 @@ const HeroSection = () => (
             <strong>How long will it take you?</strong> See your personal
             timeline in 60 seconds →
           </span>
-        </a>
+        </Link>
         <ul className="hero-trust">
           <li>A real person, never a bot</li>
           <li>No crash diets</li>
