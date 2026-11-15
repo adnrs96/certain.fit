@@ -14,7 +14,7 @@ const HomeStoryIntro = () => (
         </p>
         <h1 id="home-story-title">
           I lost ~40 kgs{" "}
-          <span className="serif-italic">All while managing a hectic schedule</span>
+          <span className="serif-italic">While managing a hectic career</span>
         </h1>
         <p className="home-story-summary">
           After struggling with obesity for 15 years, I learnt sustainable
