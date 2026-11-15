@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
 import HeroProgrammeVisual from "@/components/HeroProgrammeVisual";
+import ExpertiseSummary from "@/components/ExpertiseSummary";
 
 const HeroSection = () => (
   <section className="hero" id="top">
@@ -9,7 +10,10 @@ const HeroSection = () => (
         Weight loss.{" "}
         <span className="serif-italic">Built around your life.</span>
       </h1>
-      <HeroProgrammeVisual />
+      <div className="hero-top-right">
+        <ExpertiseSummary />
+        <HeroProgrammeVisual />
+      </div>
       <p className="hero-lead">
         A personalised <strong>weight-loss programme</strong>, guided by me,
         Akshat. Simple habits. No rigid food rules.

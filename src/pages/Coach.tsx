@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
+import { coachCredentials } from "@/lib/coach-credentials";
 import akshatThen from "@/assets/akshat-then.jpg";
 import akshatNow from "@/assets/akshat-now.jpg";
 import akshatEarlierStanding from "@/assets/akshat-earlier-standing.webp";
@@ -205,22 +206,16 @@ const Coach = () => (
       </div>
     </section>
 
-    <section className="founder-learning" aria-labelledby="founder-learning-title">
+    <section className="founder-learning" id="qualifications" aria-labelledby="founder-learning-title">
       <div className="founder-reading-column">
         <h2 id="founder-learning-title">The study behind the story</h2>
         <div className="founder-credentials">
-          <article className="founder-credential">
-            <h3>Diploma in Nutrition &amp; Dietetics</h3>
-            <p>National Fitness &amp; Nutrition Academy</p>
-          </article>
-          <article className="founder-credential">
-            <h3>Certified Nutrition Coach</h3>
-            <p>Precision Nutrition, Canada</p>
-          </article>
-          <article className="founder-credential">
-            <h3>Certified Sleep, Stress &amp; Recovery Coach</h3>
-            <p>Precision Nutrition, Canada</p>
-          </article>
+          {coachCredentials.map((credential) => (
+            <article className="founder-credential" key={credential.title}>
+              <h3>{credential.title}</h3>
+              <p>{credential.provider}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

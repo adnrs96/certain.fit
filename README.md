@@ -97,6 +97,8 @@ learning promise. It is a separate section before Programme on the homepage
 and after the offer on the standalone Programme page. Keep those six areas in
 this shared component rather than duplicating them inside the offer card.
 The old Honest by design section has been removed from both locations.
+Diet and movement lead the coaching cards; cravings, stress/sleep, habits,
+and blood markers follow in that order.
 
 The homepage passes `showDetailsLink` to show a **Know more** link to
 `/programme`. The programme route remains available directly and in the footer,
@@ -149,6 +151,13 @@ mobile, tablet, and desktop widths.
 The journal is consistently called The Growth Journal in its page title,
 cover, hero preview, offering, footer, discovery flow, and starting-point copy.
 Its chapters and keyboard-accessible tab navigation are unchanged.
+
+`src/components/ExpertiseSummary.tsx` displays the compact Globally Recognised
+Expertise section above the preview in the desktop hero's right column.
+On mobile it follows the conversation actions, keeping the WhatsApp action
+visible without scrolling. `src/lib/coach-credentials.ts` is the shared source
+for its summary and the full qualifications on Our story. The summary links
+to `/coach#qualifications`; preserve that anchor when changing the story layout.
 
 The story's `founder-photo-pair` is a three-column grid: before photo, compact
 ~40 kg marker, after photo. Keep the marker inside the gap at all widths;

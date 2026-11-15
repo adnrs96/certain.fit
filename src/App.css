@@ -574,7 +574,7 @@ p {
   row-gap: 22px;
 }
 
-.hero-grid > :not(.hero-programme-visual) {
+.hero-grid > :not(.hero-programme-visual):not(.hero-top-right) {
   animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
@@ -3557,8 +3557,8 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "title" "intro" "visual" "actions";
-    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "title" "intro" "visual" "actions" "expertise";
+    grid-template-rows: auto auto auto auto auto;
     align-items: center;
     column-gap: 18px;
     row-gap: 16px;

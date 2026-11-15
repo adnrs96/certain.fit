@@ -5,8 +5,18 @@ import "./WorkAreasSection.css";
 
 const areas = [
   {
+    title: "A diet that works for you",
+    description: "Your coach has achieved his journey while eating Biryani. You are in good hands!",
+    Icon: Utensils,
+  },
+  {
+    title: "Movement for your setup",
+    description: "A workout or movement plan matched to your space, equipment, and schedule, whether at home, in a gym, or outdoors.",
+    Icon: Footprints,
+  },
+  {
     title: "Working through cravings",
-    description: "Understand your triggers and develop practical ways to respond, without guilt or banning every food you enjoy.",
+    description: "Build awareness, and develop practical ways to respond, without guilt or banning every food you enjoy.",
     Icon: Cookie,
   },
   {
@@ -23,16 +33,6 @@ const areas = [
     title: "Blood markers and deficiencies",
     description: "Nutrition support to work towards healthier blood markers and address deficiencies, alongside your doctor.",
     Icon: HeartPulse,
-  },
-  {
-    title: "A diet that works for you",
-    description: "A food plan designed around your tastes, routine, preferences, and nutritional needs.",
-    Icon: Utensils,
-  },
-  {
-    title: "Movement for your setup",
-    description: "A workout or movement plan matched to your space, equipment, and schedule, whether at home, in a gym, or outdoors.",
-    Icon: Footprints,
   },
 ];
 
