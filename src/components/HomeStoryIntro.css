@@ -29,9 +29,6 @@
 .home-story h1 span {
   display: block;
   color: var(--ink-hand);
-  font-size: clamp(14px, 1.8vw, 26px);
-  line-height: 1.3;
-  white-space: nowrap;
 }
 
 .home-story-summary {
@@ -75,10 +72,6 @@
     font-size: clamp(36px, 7vw, 48px);
   }
 
-  .home-story h1 span {
-    font-size: clamp(13px, 4vw, 24px);
-  }
-
   .home-story .founder-photo-pair {
     grid-area: photos;
     width: min(100%, 380px);
@@ -103,11 +96,7 @@
   }
 
   .home-story-grid {
-    gap: 6px;
-  }
-
-  .home-story .founder-photo-pair {
-    margin: 4px auto 0;
+    gap: 12px;
   }
 
   .home-story-summary {
