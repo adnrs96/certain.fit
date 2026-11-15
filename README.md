@@ -123,7 +123,7 @@ refers to his previous coaches; those historical references are intentional.
 ### Homepage focus and booking-button animation
 
 The homepage hero intentionally contains one headline, a short introduction,
-one primary conversation button, a quiet How it works link, and a compact
+one primary conversation button, a quiet link down to What we work on, and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
@@ -172,8 +172,22 @@ The non-interactive pseudo-element does not move or obstruct the label.
 Check the glow both on entry and after several cycles, then the hero CTA above the fold at
 320px/375px, preview layout, hover/focus, reduced motion, and the unchanged
 WhatsApp destination after edits. Check that the preview links work,
-the How it works action stays internal, and the mobile menu still closes on
+the scroll cue stays on the homepage at `/#work-on`, and the mobile menu still closes on
 selection and Escape.
+
+### Initial page visibility
+
+Content is visible on initial render, including sections below the viewport.
+`src/lib/website.ts` marks all `[data-reveal]` elements as visible immediately
+for existing decorative hooks; no scroll observer or opacity rule hides them.
+The hero has no text-entry fade, and journal handwriting and example messages
+do not wait for reveal animations. Keep deliberate `[hidden]` states for inactive
+tabs, form steps, and menus; those are interaction controls, not scroll reveals.
+The homepage has less empty space between the hero and coaching areas and a
+direct scroll cue. Verify every page without scrolling first, the next-section
+heading on typical desktop/mobile screens, and both the cue and primary action
+on a small 320px by 568px screen. Floating previews, coaching-card motion,
+WhatsApp glow, and sticky-action scroll behaviour remain independent.
 
 ### Coaching cadence and feedback-loop animation
 

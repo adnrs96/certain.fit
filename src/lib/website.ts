@@ -56,26 +56,10 @@ export function initializeWebsite(root: HTMLElement) {
     listen(wide, "change", closeWhenWide);
   }
 
-  // ------------------------------------------------------------------ reveal
+  // -------------------------------------------------------- content visibility
 
-  function initReveal() {
-    const items = $$("[data-reveal]");
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-      items.forEach((item) => item.classList.add("is-visible"));
-      return;
-    }
-    const observer = observe(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
-    );
-    items.forEach((item) => observer.observe(item));
+  function initContentVisibility() {
+    $$("[data-reveal]").forEach((item) => item.classList.add("is-visible"));
   }
 
   // -------------------------------------------------------------------- tabs
@@ -471,7 +455,7 @@ export function initializeWebsite(root: HTMLElement) {
 
   function start() {
     initHeader();
-    initReveal();
+    initContentVisibility();
     $$("[data-tabs]").forEach(initTabs);
     initJourneyForm();
     initStickyCta();

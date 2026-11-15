@@ -20,8 +20,8 @@ const HeroSection = () => (
       </p>
       <div className="hero-ctas">
         <ConversationLink className="btn-ocean-lg" />
-        <Link className="hero-secondary-link" to="/how-it-works">
-          How it works →
+        <Link className="hero-secondary-link" to="/#work-on">
+          Explore what we work on ↓
         </Link>
       </div>
     </div>
