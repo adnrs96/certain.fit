@@ -132,7 +132,7 @@ The Growth Journal, and a small check-in note using HTML/CSS rather than a
 founder photo. The app is an illustrative programme preview, not a live
 application, download, or new data-storage feature. Its link opens How it works;
 the journal opens `/journal`. Keep the foreground objects sparse and their
-labels unobscured. The old photo assets remain unchanged for the story.
+labels unobscured. Founder photographs remain on the story page, not in the hero.
 At 880px and below, the headline, introduction, preview, and conversation
 actions stack in that order. Keep the primary WhatsApp action visible on
 initial mobile load, including a 320px by 568px viewport.
@@ -162,6 +162,17 @@ to `/coach#qualifications`; preserve that anchor when changing the story layout.
 The story's `founder-photo-pair` is a three-column grid: before photo, compact
 ~40 kg marker, after photo. Keep the marker inside the gap at all widths;
 it must not add another row below the photographs or obscure either image.
+
+The current story uses the selected IMG_9672 photograph for the transformation's
+after image (`akshat-transformation-after.webp`, 1200 by 1600) and IMG_9669 for the
+later coach portrait (`akshat-coach-portrait.webp`, 1050 by 1400). Both are
+non-generative crops with modest colour/exposure correction and sharpening,
+exported as sRGB WebP without source EXIF metadata. Preserve real facial detail,
+skin texture, and body proportions; do not reshape the transformation images.
+Keep the existing before photograph, other story memories, and the permanently
+blurred face in `akshat-earlier-standing.webp` unchanged. Do not regenerate that
+asset from its original. Verify the actual photographs, correct intrinsic image
+dimensions, loaded assets, and the between-photo marker on desktop and mobile.
 
 `ConversationLink` supplies the shared `conversation-link` class. Styled
 conversation buttons have an always-visible blue halo with a continuous gentle

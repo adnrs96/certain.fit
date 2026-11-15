@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
 import { coachCredentials } from "@/lib/coach-credentials";
 import akshatThen from "@/assets/akshat-then.jpg";
-import akshatNow from "@/assets/akshat-now.jpg";
+import akshatNow from "@/assets/akshat-transformation-after.webp";
 import akshatEarlierStanding from "@/assets/akshat-earlier-standing.webp";
 import akshatEarlierSeated from "@/assets/akshat-earlier-seated.webp";
-import akshatPortrait from "@/assets/akshat-now-portrait.webp";
+import akshatPortrait from "@/assets/akshat-coach-portrait.webp";
 import akshatMusic from "@/assets/akshat-now-music.webp";
 import "./Coach.css";
 
@@ -55,7 +55,7 @@ const Coach = () => (
           <figure className="founder-photo">
             <img
               src={akshatNow}
-              alt="Akshat after his transformation, at a hillside café"
+              alt="Akshat in a black vest after his transformation"
               width="1200"
               height="1600"
             />
@@ -155,7 +155,7 @@ const Coach = () => (
             <figure className="founder-memory founder-memory--portrait">
               <img
                 src={akshatPortrait}
-                alt="Akshat wearing sunglasses and a cap in a car after his transformation"
+                alt="Akshat in a black vest, photographed indoors"
                 width="1050"
                 height="1400"
                 loading="lazy"
