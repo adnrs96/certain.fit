@@ -23,6 +23,9 @@ const HeroSection = () => (
         <Link className="hero-secondary-link" to="/coach">
           Before and after →
         </Link>
+        <Link className="hero-secondary-link" to="/how-it-works">
+          How it works →
+        </Link>
       </div>
     </div>
   </section>

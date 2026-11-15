@@ -142,7 +142,7 @@ refers to his previous coaches; those historical references are intentional.
 ### Homepage focus and booking-button animation
 
 The homepage hero intentionally contains one headline, a short introduction,
-one primary conversation button, a secondary Before and after button, and a compact
+one primary conversation button, secondary Before and after and How it works buttons, and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.

@@ -610,7 +610,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-top: 0;
 }
 
@@ -619,12 +619,12 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: 10px 16px;
+  padding: 10px 12px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.6);
   color: var(--ink-secondary);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -3772,6 +3772,7 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-ctas {
     justify-content: center;
+    column-gap: 8px;
     row-gap: 6px;
   }
 
