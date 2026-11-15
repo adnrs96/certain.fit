@@ -299,24 +299,85 @@
 
 .loop-hub {
   grid-area: 2 / 2;
+  position: relative;
   border-radius: 50%;
   background: #eaf3fc;
   box-shadow: 0 0 0 7px #eaf3fc;
 }
 
-.loop-hub span {
-  color: var(--ink-secondary);
-  font-size: 11px;
+.transformation-figure {
+  display: block;
+  width: min(100%, 100px);
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
 }
 
-.loop-hub strong {
+.transformation-orbit,
+.transformation-progress {
+  fill: none;
+  stroke-width: 2;
+}
+
+.transformation-orbit {
+  stroke: #c9daeb;
+}
+
+.transformation-progress {
+  stroke: var(--mint-teal);
+  stroke-linecap: round;
+  stroke-dasharray: 327;
+  transform: rotate(-90deg);
+  transform-origin: 60px 68px;
+  animation: transformation-progress 9s ease-in-out infinite;
+}
+
+.transformation-person {
+  fill: var(--cerulean);
+  opacity: 0;
+  animation: transformation-stage 9s ease-in-out infinite;
+}
+
+.transformation-person--starting {
+  fill: #809bb5;
+}
+
+.transformation-person--building {
+  animation-delay: -6s;
+}
+
+.transformation-person--thriving {
+  fill: var(--mint-ink);
+  animation-delay: -3s;
+}
+
+.transformation-ground {
+  fill: none;
+  stroke: #b6ccdf;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.loop-hub .transformation-label {
   display: block;
-  margin-top: 8px;
   color: var(--ink-hand);
   font-family: var(--font-serif);
-  font-size: clamp(24px, 2.4vw, 32px);
+  font-size: 19px;
   font-weight: 500;
-  line-height: 1.1;
+  font-style: italic;
+  line-height: 1.2;
+}
+
+@keyframes transformation-stage {
+  0%, 27% { opacity: 1; }
+  33%, 94% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes transformation-progress {
+  0% { stroke-dashoffset: 285; }
+  90% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 285; }
 }
 
 .loop-caption {
@@ -429,7 +490,11 @@
 
   .loop-diagram {
     gap: 8px;
-    min-height: 340px;
+    min-height: 380px;
+  }
+
+  .transformation-figure {
+    width: min(100%, 70px);
   }
 
   .loop-node {
@@ -445,11 +510,21 @@
     font-size: 10px;
   }
 
-  .loop-hub strong {
-    font-size: 22px;
+  .loop-hub .transformation-label {
+    font-size: 15px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .loop-data { animation: none; }
+  .transformation-person,
+  .transformation-progress {
+    animation: none;
+  }
+  .transformation-person--thriving {
+    opacity: 1;
+  }
+  .transformation-progress {
+    stroke-dashoffset: 0;
+  }
 }

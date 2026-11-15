@@ -229,6 +229,11 @@ heading and a single nutrition/movement/habits/mindset diagram. The four areas
 are informational, not buttons; do not restore the removed example panel or
 selection controls. The programme cadence and journal follow the diagram.
 SVG data-flow animation is decorative; all meaning remains available in text.
+The centre shows an SVG person moving through resting, building, and celebratory
+poses on a nine-second loop, with a filling progress ring. This illustrates the
+person's transformation as feedback adapts the plan, not a measured weight-loss
+forecast. Keep the static accessible description and explanatory caption.
+Reduced motion shows the final pose and complete ring without animation.
 There is no pause/play control; reduced-motion preferences
 disable it. When editing, check the section order, single `h1`, continuous motion,
 reduced motion, 320px mobile layout, and the Growth Journal and conversation links.
