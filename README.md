@@ -139,12 +139,11 @@ initial mobile load, including a 320px by 568px viewport.
 The old founder-led eyebrow and “Skills for life” programme
 subtitle have been removed.
 
-`src/components/FloatingMotion.tsx` supplies independent pause/resume controls
-for the hero preview and coaching-area cards. The controls are keyboard
-accessible and expose their paused state. `FloatingMotion.css` supplies gentle
+`src/components/FloatingMotion.tsx` wraps the hero preview and coaching-area cards.
+There are no visible pause/play controls. `FloatingMotion.css` supplies gentle
 vertical motion; the card styles add hover treatment without hiding content.
-Reduced-motion preferences stop the animation and hide unnecessary controls.
-When editing, check pause/resume in each section, keyboard focus on both
+Reduced-motion preferences stop the animation.
+When editing, check continuous motion in each section, keyboard focus on both
 preview links, hover treatment, reduced motion, and non-overlapping cards at
 mobile, tablet, and desktop widths.
 
@@ -230,8 +229,8 @@ heading and a single nutrition/movement/habits/mindset diagram. The four areas
 are informational, not buttons; do not restore the removed example panel or
 selection controls. The programme cadence and journal follow the diagram.
 SVG data-flow animation is decorative; all meaning remains available in text.
-The keyboard-accessible pause control stops it, and reduced-motion preferences
-disable it. When editing, check the section order, single `h1`, pause/play,
+There is no pause/play control; reduced-motion preferences
+disable it. When editing, check the section order, single `h1`, continuous motion,
 reduced motion, 320px mobile layout, and the Growth Journal and conversation links.
 
 The Life Happens page has been removed from navigation and the footer.

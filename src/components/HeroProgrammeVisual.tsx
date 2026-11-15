@@ -8,7 +8,7 @@ const HeroProgrammeVisual = () => (
     className="hero-programme-visual"
     aria-label="A preview of your daily plan, The Growth Journal, and check-ins with Akshat"
   >
-    <FloatingMotion className="hero-programme-stage" label="programme preview">
+    <FloatingMotion className="hero-programme-stage">
       <div className="hero-programme-canvas">
         <div className="hero-float hero-float--app floating-item">
           <Link className="hero-app hero-product-link" to="/how-it-works" aria-label="Explore how your daily plan works">

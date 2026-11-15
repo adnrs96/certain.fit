@@ -43,7 +43,7 @@ const WorkAreasSection = () => (
         <h2 className="section-title" id="work-areas-title">What we work on</h2>
         <p className="section-lead">Learn as you progress. Build the confidence to steer your own journey.</p>
       </div>
-      <FloatingMotion className="work-areas-grid" label="coaching areas">
+      <FloatingMotion className="work-areas-grid">
         {areas.map(({ title, description, Icon }, index) => (
           <article
             className="work-area floating-item"

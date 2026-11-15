@@ -95,11 +95,6 @@
   .work-areas-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
-    padding-top: 28px;
-  }
-
-  .work-areas-grid .float-motion-toggle {
-    top: -24px;
   }
 
   .work-area-surface {

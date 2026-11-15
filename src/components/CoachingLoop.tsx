@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Brain, Footprints, Pause, Play, Repeat2, Utensils } from "lucide-react";
+import { Brain, Footprints, Repeat2, Utensils } from "lucide-react";
 
 const areas = [
   { id: "nutrition", label: "Nutrition", signal: "Hunger & energy", Icon: Utensils },
@@ -9,8 +8,6 @@ const areas = [
 ] as const;
 
 const CoachingLoop = () => {
-  const [paused, setPaused] = useState(false);
-
   return (
     <section className="coaching-system" id="how-it-works" aria-labelledby="coaching-system-title">
       <div className="container coaching-system-grid">
@@ -29,17 +26,8 @@ const CoachingLoop = () => {
         <figure className="loop-panel">
           <div className="loop-toolbar">
             <span>THE FEEDBACK LOOP</span>
-            <button
-              type="button"
-              className="loop-motion-toggle"
-              onClick={() => setPaused(!paused)}
-              aria-label={paused ? "Play animation" : "Pause animation"}
-            >
-              {paused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
-              {paused ? "Play" : "Pause"}
-            </button>
           </div>
-          <div className={`loop-diagram${paused ? " is-paused" : ""}`}>
+          <div className="loop-diagram">
             <svg className="loop-connections" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
               <path className="loop-track" d="M300 83Q500 83 500 250T300 417T100 250T300 83" />
               <path className="loop-track" d="M300 83V417M100 250H500" />

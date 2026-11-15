@@ -213,20 +213,6 @@
   color: var(--ink-muted);
 }
 
-.loop-motion-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 6px 9px;
-  border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  background: #fff;
-  color: var(--ink-secondary);
-  font: inherit;
-  font-size: 11px;
-  cursor: pointer;
-}
-
 .loop-diagram {
   position: relative;
   display: grid;
@@ -267,10 +253,6 @@
   stroke: var(--mint-teal);
   animation-direction: reverse;
   animation-delay: -1s;
-}
-
-.is-paused .loop-data {
-  animation-play-state: paused;
 }
 
 .loop-node,
@@ -470,5 +452,4 @@
 
 @media (prefers-reduced-motion: reduce) {
   .loop-data { animation: none; }
-  .loop-motion-toggle { display: none; }
 }
