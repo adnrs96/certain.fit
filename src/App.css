@@ -3256,8 +3256,10 @@ html.js .closing .is-visible .sig-mark {
 }
 
 .sticky-ghost {
+  padding: 6px 8px;
   background: var(--bg-elevated);
   color: var(--ink-primary);
+  text-align: center;
 }
 
 .sticky-cta-bar .sticky-primary {

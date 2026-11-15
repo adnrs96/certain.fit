@@ -347,7 +347,7 @@ const Journey = () => {
                 Say hello on WhatsApp
               </a>
               <Link className="btn-ghost-lg" id="wc-timeline" to="/timeline">
-                See how long it might take →
+                How long will it take? →
               </Link>
               <button type="button" className="jf-back" id="wc-edit">
                 Edit my answers

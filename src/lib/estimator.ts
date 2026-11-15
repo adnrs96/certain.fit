@@ -278,17 +278,22 @@ export function initializeEstimator(
     let weight = p.start;
     while (weight > p.target && path.length <= S.maxSimWeeks) {
       const week = path.length - 1;
-      let rate =
-        lookup(S.baseRateByBmi, "minBmi", weight / p.m2).rate *
+      let weeklyKg =
+        S.targetWeeklyKg *
         p.multiplier *
         lookup(S.slowdownByShareLost, "minShare", (p.start - weight) / p.start)
           .factor *
         pace;
-      rate = Math.min(rate, S.maxWeeklyRate);
+      weeklyKg = Math.min(
+        weeklyKg,
+        S.targetWeeklyKg,
+        weight * S.maxWeeklyRate,
+        p.maxKgPerWeek,
+      );
       if (week < p.prepWeeks) {
-        rate *= S.resetPace;
+        weeklyKg *= S.resetPace;
       }
-      weight -= Math.min(weight * rate, p.maxKgPerWeek);
+      weight -= weeklyKg;
       path.push(weight);
     }
     return path;
@@ -338,7 +343,6 @@ export function initializeEstimator(
     const params = {
       start,
       target,
-      m2: (heightCm(answers) / 100) ** 2,
       multiplier,
       prepWeeks,
       maxKgPerWeek: caps.length ? Math.min(...caps) : Infinity,

@@ -53,7 +53,7 @@ const ClosingSection = () => (
       <div className="closing-ctas">
         <ConversationLink className="btn-ocean-lg on-dark" />
         <Link className="btn-ghost-lg on-dark" to="/timeline">
-          See my timeline
+          How long will it take?
         </Link>
       </div>
     </div>

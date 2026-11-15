@@ -105,6 +105,23 @@ The homepage passes `showDetailsLink` to show a **Know more** link to
 but is intentionally excluded from both desktop and mobile header navigation.
 Journal is also excluded from header navigation; its route, footer link,
 and clickable Growth Journal programme preview remain available.
+The estimator's navigation and entry actions are labelled **How long will it take?**;
+keep the existing `/timeline` route so shared links continue working.
+
+### Timeline calculation
+
+The calculator targets a baseline 0.5–1 kg per week: `targetWeeklyKg: 1`
+and `relaxedPace: 0.5` in `src/lib/estimator-config.ts`. The simulation in
+`src/lib/estimator.ts` uses kilograms per week rather than BMI-tier percentages.
+Retain the 1%-of-current-weight ceiling, health-specific caps, preparation phases,
+age/lifestyle adjustments, and slowdown as weight is lost. No scenario may exceed
+1 kg per week; individual estimates may be slower than the baseline target.
+For an otherwise unadjusted 100 kg adult aiming for 96 kg, the estimate is
+4–8 weeks, not a guaranteed maximum of one month. Lower starting weights can take
+longer because of the percentage ceiling. The chart, milestones, near-term totals,
+and private form handoff must all use the same simulation result.
+Verify both ends of a 4 kg estimate, health gates and caps, long-goal projections,
+and the unchanged privacy-preserving handoff after modifying the calculation.
 
 All primary booking links use `src/components/ConversationLink.tsx`, labelled
 **Start a free conversation**. Update `conversationUrl` in

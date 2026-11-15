@@ -9,7 +9,8 @@ const Timeline = () => (
           </h1>
           <p className="est-intro-sub">
             A realistic, no-crash-diet timeline to your goal weight, built
-            around your body, your health and your week.
+            around your body, your health and your week. We target 0.5–1 kg
+            per week, adapting the pace to you.
           </p>
           <ul className="est-benefits">
             <li>Personal to your health and lifestyle</li>

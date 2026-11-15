@@ -11,18 +11,12 @@ const configuration = {
     // (13 weeks is about 3 months; the text shows it in months). It is not a programme length:
     // the website states no programme length.
     programWeeks: 13,
-    // Steady weekly loss as a share of current body weight, chosen by current BMI.
-    baseRateByBmi: [
-      { minBmi: 35, rate: 0.009 },
-      { minBmi: 30, rate: 0.008 },
-      { minBmi: 25, rate: 0.007 },
-      { minBmi: 23, rate: 0.0055 },
-      { minBmi: 0, rate: 0.0045 },
-    ],
+    // Baseline target: 0.5–1 kg/week before individual adjustments and safety caps.
+    targetWeeklyKg: 1,
     // Safety ceiling: never project more than 1% of body weight a week.
     maxWeeklyRate: 0.01,
-    // The slower end of every range assumes 85% of the steady pace.
-    relaxedPace: 0.85,
+    // The slower end starts at 0.5 kg/week.
+    relaxedPace: 0.5,
     // true: the estimate assumes each lifestyle answer improves to its `better` habit with the
     // coach's support (shown under "How CERTAIN gets you there"). false: use answers as given.
     includePartnerHabits: true,
@@ -140,8 +134,8 @@ const configuration = {
       "Thank you for answering honestly. Based on what you shared, your doctor is the right first step, so we can’t offer an estimate or a place on our programme right now.",
     gateEdit: "Edit my answers",
     resultKicker: "Your CERTAIN timeline",
-    goalLead: "With CERTAIN, reach {weight} in",
-    milestoneLead: "With CERTAIN, lose your first {weight} in",
+    goalLead: "Your estimated time to reach {weight}",
+    milestoneLead: "Your estimated time to lose your first {weight}",
     goalSub: "As early as {date} · steady pace, no crash diets",
     milestoneSub:
       "As early as {date} · full goal of {kg} kg in about {duration}",
@@ -173,7 +167,7 @@ const configuration = {
     milestoneHalf: "Halfway there",
     milestoneGoal: "Goal: {kg} kg",
     disclaimer:
-      "An estimate based on published guidance on safe, steady weight loss (up to about 1% of body weight a week), assuming you build the habits above with my support. It isn’t medical advice or a guarantee, and individual results vary.",
+      "We target 0.5–1 kg per week, with a ceiling of 1% of current body weight per week. This estimate adjusts for your health, preparation phases and progress, assuming you build the habits above with my support. Your pace may be slower. It isn’t medical advice or a guaranteed deadline.",
     whatsappMessage:
       "Hi Akshat! I tried the timeline estimator on the CERTAIN website ({summary}). I'd like to work with you.",
   },
