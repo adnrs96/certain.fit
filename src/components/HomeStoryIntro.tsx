@@ -12,9 +12,12 @@ const HomeStoryIntro = () => (
           <span className="serif-italic">Not my love for biryani.</span>
         </h1>
         <p className="home-story-summary">
-          For 15 years, I thought getting fit meant changing who I was. I just
-          needed an approach that fit my life. Now I want to help you achieve
-          the same results.
+          After struggling with obesity for 15 years, I learnt sustainable
+          weight loss is not determined by a diet chart, or an exercise plan.
+          <span className="home-story-invitation">
+            Now I want to help you achieve the same results by teaching you my
+            system.
+          </span>
         </p>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>

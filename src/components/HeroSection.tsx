@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
-import PersonalApproachVisual from "@/components/PersonalApproachVisual";
+import HeroProgrammeVisual from "@/components/HeroProgrammeVisual";
 import ExpertiseSummary from "@/components/ExpertiseSummary";
 
 const HeroSection = () => (
   <section className="hero" id="programme-introduction">
     <div className="container hero-grid">
       <h2 className="hero-title">
-        Lasting weight loss.{" "}
-        <span className="serif-italic">Uniquely yours.</span>
+        <span className="hero-system-description">
+          A hyper-personalised approach to sustainable weight management
+        </span>
+        The CERTAIN <span className="serif-italic">System</span>
       </h2>
       <div className="hero-top-right">
         <ExpertiseSummary />
-        <PersonalApproachVisual />
+        <HeroProgrammeVisual />
         <div className="hero-preview-action">
           <Link className="hero-secondary-link" to="/how-it-works">
             How it works →
@@ -20,10 +22,9 @@ const HeroSection = () => (
         </div>
       </div>
       <p className="hero-lead">
-        <strong>Built around your life, not the other way round.</strong> We use
-        the principles behind my transformation to discover what works for
-        you, then keep adapting. You’ll learn the habits and skills to lose
-        weight, maintain it, and make the approach your own.
+        <strong>Built around your life.</strong> Nutrition, exercise and
+        psychology come together in a plan that adapts to your food preferences,
+        routine and progress.
       </p>
       <div className="hero-ctas">
         <ConversationLink className="btn-ocean-lg" />

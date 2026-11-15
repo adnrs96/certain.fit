@@ -43,6 +43,11 @@
   margin: 0 auto;
 }
 
+.home-story-invitation {
+  display: block;
+  margin-top: 12px;
+}
+
 @media (max-width: 880px) {
   .home-story {
     padding: 24px 0 32px;
