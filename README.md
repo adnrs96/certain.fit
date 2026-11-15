@@ -103,6 +103,8 @@ and blood markers follow in that order.
 The homepage passes `showDetailsLink` to show a **Know more** link to
 `/programme`. The programme route remains available directly and in the footer,
 but is intentionally excluded from both desktop and mobile header navigation.
+Journal is also excluded from header navigation; its route, footer link,
+and clickable Growth Journal programme preview remain available.
 
 All primary booking links use `src/components/ConversationLink.tsx`, labelled
 **Start a free conversation**. Update `conversationUrl` in

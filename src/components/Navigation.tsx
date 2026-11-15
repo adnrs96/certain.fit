@@ -2,7 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import { sitePages } from "@/lib/site-pages";
 import ConversationLink from "@/components/ConversationLink";
 
-const navigationPages = sitePages.filter((page) => page.path !== "/programme");
+const navigationPages = sitePages.filter(
+  (page) => page.path !== "/programme" && page.path !== "/journal",
+);
 
 const Navigation = () => (
   <header className="site-header" id="site-header">
