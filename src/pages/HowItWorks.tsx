@@ -2,11 +2,13 @@ import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
 import CoachingLoop from "@/components/CoachingLoop";
+import WorkAreasSection from "@/components/WorkAreasSection";
 import "./HowItWorks.css";
 
 const HowItWorks = () => (
   <>
     <CoachingLoop />
+    <WorkAreasSection />
     <section className="how" id="coaching-cadence">
       <div className="container">
         <div className="section-head center" data-reveal="">

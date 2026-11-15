@@ -12,6 +12,7 @@ export const sitePages = [
 export const legacySectionRoutes: Record<string, string> = {
   "#coach": "/coach",
   "#how-it-works": "/how-it-works",
+  "#work-on": "/how-it-works",
   "#journal": "/journal",
   "#life-happens": "/programme",
   "#progress": "/how-it-works",

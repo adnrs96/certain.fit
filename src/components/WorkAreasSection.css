@@ -4,10 +4,6 @@
   background: linear-gradient(#FFFFFF, var(--bg-canvas));
 }
 
-.hero + .work-areas {
-  padding-top: 32px;
-}
-
 .work-areas .section-lead {
   margin: 16px auto 0;
 }
@@ -88,10 +84,6 @@
 }
 
 @media (max-width: 600px) {
-  .hero + .work-areas {
-    padding-top: 16px;
-  }
-
   .work-areas-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;

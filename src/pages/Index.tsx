@@ -1,14 +1,12 @@
 import HeroSection from "@/components/HeroSection";
 import ClosingSection from "@/components/ClosingSection";
 import ProgrammeSection from "@/components/ProgrammeSection";
-import WorkAreasSection from "@/components/WorkAreasSection";
 import HomeStoryIntro from "@/components/HomeStoryIntro";
 
 const Index = () => (
   <>
     <HomeStoryIntro />
     <HeroSection />
-    <WorkAreasSection />
     <ProgrammeSection showDetailsLink />
     <ClosingSection />
   </>

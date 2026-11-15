@@ -28,9 +28,6 @@ const HeroSection = () => (
       </p>
       <div className="hero-ctas">
         <ConversationLink className="btn-ocean-lg" />
-        <Link className="hero-secondary-link" to="/coach">
-          Before and after →
-        </Link>
       </div>
     </div>
   </section>

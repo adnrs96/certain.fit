@@ -69,15 +69,15 @@ status is successful before checking the public website.
 ### Website pages
 
 The homepage combines a personal transformation introduction, programme introduction,
-coaching areas, programme offering, and closing
-invitation. React Router handles navigation without reloading the application,
+Personally guided by Akshat offering, and closing invitation.
+React Router handles navigation without reloading the application,
 and the header highlights the current page.
 
 | URL | Content | Page component |
 |---|---|---|
-| `/` | Story and transformation preview, floating programme preview, coaching areas, programme offering, and closing invitation | `src/pages/Index.tsx` |
+| `/` | Story and transformation preview, floating programme preview, Personally guided by Akshat offering, and closing invitation | `src/pages/Index.tsx` |
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
-| `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
+| `/how-it-works` | Feedback loop, six coaching areas, coaching stages, and both kinds of progress | `src/pages/HowItWorks.tsx` |
 | `/journal` | The Growth Journal chapters and examples | `src/pages/Journal.tsx` |
 | `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
 | `/programme` | Six coaching areas, included support, and learning as you progress | `src/pages/Programme.tsx` |
@@ -94,8 +94,10 @@ standalone Programme page. Update the offering in this component so both
 locations stay consistent. It uses an `h2` on the homepage and an `h1` on
 the standalone page, preserving one primary heading per page.
 `src/components/WorkAreasSection.tsx` owns the six coaching areas and the
-learning promise. It is a separate section before Programme on the homepage
-and after the offer on the standalone Programme page. Keep those six areas in
+learning promise. It appears after the feedback loop on How it works
+and after the offer on the standalone Programme page, not on the homepage.
+Old `/#work-on` links redirect to `/how-it-works#work-on` and scroll to the
+moved section. Keep those six areas in
 this shared component rather than duplicating them inside the offer card.
 The old Honest by design section has been removed from both locations.
 Diet and movement lead the coaching cards; cravings, stress/sleep, habits,
@@ -131,7 +133,7 @@ current destination is the supplied WhatsApp Business message link, including
 its `autoload` and `app_absent` parameters. These are normal external links;
 they do not append estimator answers, form entries, or prefilled health data.
 Styled conversation buttons display a WhatsApp icon; text-only footer links
-and the narrow sticky action remain compact. To verify a change, check the homepage's two programme actions, the
+and the narrow sticky action remain compact. To verify a change, check the homepage's programme conversation action, the
 standalone programme's booking action, desktop/mobile navigation, and the story
 page's conversation link, then open the destination without sending a message.
 
@@ -153,7 +155,7 @@ photo markup or regenerate the images when changing either placement.
 
 The existing programme hero follows this personal introduction, with an `h2`,
 and keeps its short introduction,
-one primary conversation button, a secondary Before and after button, and a compact
+one primary conversation button and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
@@ -166,7 +168,10 @@ labels unobscured. Founder photographs belong in the opening story preview and
 full story, not among the floating programme objects.
 The How it works button sits separately below the programme preview on desktop,
 and after the expertise card on mobile. Do not crowd it into the main conversation
-and Before and after button row.
+button row. The programme hero intentionally has no secondary Before and after
+button; the opening Read my story action and shared navigation still reach `/coach`.
+The Personally guided by Akshat offering is the homepage's third section,
+immediately after the story and programme introduction.
 At 880px and below, the headline, introduction, preview, and conversation
 actions stack in that order. The new story preview intentionally comes first;
 do not force the entire programme introduction into the initial mobile viewport.
@@ -217,7 +222,7 @@ The non-interactive pseudo-element does not move or obstruct the label.
 Check the glow both on entry and after several cycles, then the programme CTA at
 320px/375px, preview layout, hover/focus, reduced motion, and the unchanged
 WhatsApp destination after edits. Check that the preview links work,
-the Before and after button opens `/coach`, and the mobile menu still closes on
+the Read my story button opens `/coach`, and the mobile menu still closes on
 selection and Escape.
 
 ### Initial page visibility
@@ -228,9 +233,10 @@ for existing decorative hooks; no scroll observer or opacity rule hides them.
 The hero has no text-entry fade, and journal handwriting and example messages
 do not wait for reveal animations. Keep deliberate `[hidden]` states for inactive
 tabs, form steps, and menus; those are interaction controls, not scroll reveals.
-The homepage has less empty space between the hero and coaching areas and a
-Before and after action leading to the transformation photographs at `/coach`.
-Header, mobile-menu, footer, and hero links use the same Before and after label;
+The homepage moves straight from the story preview to the programme introduction
+and Personally guided by Akshat offering. The Read my story action leads to the
+transformation photographs at `/coach`. Header, mobile-menu, and footer links
+use the Before and after label;
 the existing `/coach` route is preserved. Verify every page without scrolling first,
 both transformation photos on initial desktop/mobile load, and the story link
 and programme actions on a small 320px by 568px screen. Floating previews, coaching-card motion,
