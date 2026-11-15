@@ -21,10 +21,8 @@ const HomeStoryIntro = () => (
           weight loss is not determined by a diet chart, or an exercise plan.
           <span className="home-story-invitation">
             Now I help <strong>tech professionals</strong> achieve their dream transformation
-            while juggling a demanding career.
-          </span>
-          <span className="home-story-system">
-            All with a simple system.
+            while juggling a demanding career.{" "}
+            <span className="home-story-system">All with a simple system.</span>
           </span>
         </p>
         <div className="home-story-action">
