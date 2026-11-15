@@ -6,17 +6,15 @@ const HomeStoryIntro = () => (
   <section className="home-story" id="top" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
       <div className="home-story-copy">
-        <p className="home-story-intro">Hi, I’m Akshat.</p>
+        <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
         <h1 id="home-story-title">
-          Yes, that’s me.{" "}
+          And yes, that&apos;s me.{" "}
           <span className="serif-italic">
-            I wasn’t always sure I could change, either.
+            I wasn&apos;t sure I could do it either!
           </span>
         </h1>
         <p className="home-story-summary">
-          Trust me, I know how it feels to be the guy on the left. And I know
-          what it takes to be the guy on the right. And no - it&apos;s not
-          quitting biryani or eating salad!
+          I know how it feels. And that&apos;s precisely why I&apos;m your guy!
         </p>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>
