@@ -550,11 +550,11 @@ p {
   flex-shrink: 0;
 }
 
-.conversation-link:is(.btn-ocean-lg, .header-cta) {
+.conversation-link:is(.btn-ocean-lg, .btn-ghost-lg, .header-cta) {
   gap: 10px;
 }
 
-.conversation-link:is(.btn-ocean-lg, .header-cta) .conversation-link-icon {
+.conversation-link:is(.btn-ocean-lg, .btn-ghost-lg, .header-cta) .conversation-link-icon {
   display: block;
 }
 
