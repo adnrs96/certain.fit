@@ -15,8 +15,8 @@ const HeroSection = () => (
         <HeroProgrammeVisual />
       </div>
       <p className="hero-lead">
-        A personalised <strong>weight-loss programme</strong>, guided by me,
-        Akshat. Simple habits. No rigid food rules.
+        A realistic <strong>weight-loss programme</strong>, backed by Nutrition,
+        Exercise and Psychology.
       </p>
       <div className="hero-ctas">
         <ConversationLink className="btn-ocean-lg" />
