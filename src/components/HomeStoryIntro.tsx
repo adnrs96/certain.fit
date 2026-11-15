@@ -8,12 +8,13 @@ const HomeStoryIntro = () => (
       <div className="home-story-copy">
         <p className="home-story-intro">Hi, I’m Akshat.</p>
         <h1 id="home-story-title">
-          I lost ~40 kg.{" "}
-          <span className="serif-italic">I found a different way.</span>
+          Yes, that’s me.{" "}
+          <span className="serif-italic">In both photos.</span>
         </h1>
         <p className="home-story-summary">
-          For 15 years, I thought I was the problem. Turns out, I was
-          approaching it incorrectly.
+          Trust me, I know how it feels to be the guy on the left. And I know
+          what it takes to be the guy on the right. And no - it&apos;s not
+          quitting biryani or eating salad!
         </p>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>
