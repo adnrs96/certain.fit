@@ -7,8 +7,10 @@ const HeroSection = () => (
   <section className="hero" id="programme-introduction">
     <div className="container hero-grid">
       <h2 className="hero-title">
-        Weight loss.{" "}
-        <span className="serif-italic">Built around your life.</span>
+        <span className="hero-system-description">
+          A hyper-personalised approach to sustainable weight management
+        </span>
+        The CERTAIN <span className="serif-italic">System</span>
       </h2>
       <div className="hero-top-right">
         <ExpertiseSummary />
@@ -20,8 +22,9 @@ const HeroSection = () => (
         </div>
       </div>
       <p className="hero-lead">
-        A realistic <strong>weight-loss programme</strong>, backed by Nutrition,
-        Exercise and Psychology.
+        <strong>Built around your life.</strong> Nutrition, exercise and
+        psychology come together in a plan that adapts to your food preferences,
+        routine and progress.
       </p>
       <div className="hero-ctas">
         <ConversationLink className="btn-ocean-lg" />
