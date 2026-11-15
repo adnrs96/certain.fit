@@ -9,11 +9,12 @@ const HomeStoryIntro = () => (
         <p className="home-story-intro">Hi, I’m Akshat.</p>
         <h1 id="home-story-title">
           I lost ~40 kg.{" "}
-          <span className="serif-italic">I found a different way.</span>
+          <span className="serif-italic">Not my love for biryani.</span>
         </h1>
         <p className="home-story-summary">
-          For 15 years, I thought I was the problem. Turns out, I was
-          approaching it incorrectly.
+          For 15 years, I thought getting fit meant becoming a completely
+          different person. Turns out, I didn’t need to stop being me. I needed
+          an approach I could actually live with.
         </p>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>

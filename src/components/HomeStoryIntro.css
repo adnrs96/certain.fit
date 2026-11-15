@@ -96,11 +96,15 @@
   }
 
   .home-story-grid {
-    gap: 12px;
+    gap: 6px;
+  }
+
+  .home-story .founder-photo-pair {
+    margin: 4px auto 0;
   }
 
   .home-story-summary {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 }
