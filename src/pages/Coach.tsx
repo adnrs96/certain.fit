@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import ConversationLink from "@/components/ConversationLink";
 import { coachCredentials } from "@/lib/coach-credentials";
-import akshatThen from "@/assets/akshat-then.jpg";
-import akshatNow from "@/assets/akshat-transformation-after.webp";
+import TransformationPhotos from "@/components/TransformationPhotos";
 import akshatEarlierStanding from "@/assets/akshat-earlier-standing.webp";
 import akshatEarlierSeated from "@/assets/akshat-earlier-seated.webp";
 import akshatPortrait from "@/assets/akshat-coach-portrait.webp";
@@ -22,46 +21,9 @@ const Coach = () => (
             15 years of obesity made me think{" "}
             <span>that I was the problem</span>
           </h1>
-          <p className="founder-byline">By Akshat · Founder of CERTAIN</p>
+          <p className="founder-byline">Turns out... I was approaching it incorrectly!</p>
         </div>
-        <div className="founder-photo-pair" data-reveal="">
-          <figure className="founder-photo">
-            <img
-              src={akshatThen}
-              alt="Akshat on his 27th birthday, before his transformation"
-              width="900"
-              height="1200"
-            />
-            <figcaption>Me, on my 27th birthday.</figcaption>
-          </figure>
-          <aside className="founder-milestone" aria-label="My weight-loss transformation">
-            <strong>~40 kg</strong>
-            <span>lost</span>
-            <svg
-              className="founder-milestone-arrow"
-              viewBox="0 0 40 14"
-              aria-hidden="true"
-            >
-              <path
-                d="M2 7h34m-6-5 6 5-6 5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </aside>
-          <figure className="founder-photo">
-            <img
-              src={akshatNow}
-              alt="Akshat in a black vest after his transformation"
-              width="1200"
-              height="1600"
-            />
-            <figcaption>Me, a little further along.</figcaption>
-          </figure>
-        </div>
+        <TransformationPhotos />
         <p className="founder-photo-note">
           Two photographs. Years of learning in between.
         </p>

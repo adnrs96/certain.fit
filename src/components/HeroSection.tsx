@@ -4,12 +4,12 @@ import HeroProgrammeVisual from "@/components/HeroProgrammeVisual";
 import ExpertiseSummary from "@/components/ExpertiseSummary";
 
 const HeroSection = () => (
-  <section className="hero" id="top">
+  <section className="hero" id="programme-introduction">
     <div className="container hero-grid">
-      <h1 className="hero-title">
+      <h2 className="hero-title">
         Weight loss.{" "}
         <span className="serif-italic">Built around your life.</span>
-      </h1>
+      </h2>
       <div className="hero-top-right">
         <ExpertiseSummary />
         <HeroProgrammeVisual />

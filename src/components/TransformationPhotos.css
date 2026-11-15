@@ -1,0 +1,87 @@
+.founder-photo-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 500px);
+  margin: 36px auto 0;
+}
+
+.founder-photo {
+  margin: 0;
+  padding: 10px 10px 0;
+  border: 1px solid #e3e0d7;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(19, 34, 56, 0.09);
+  transform: rotate(-3deg);
+}
+
+.founder-photo:last-child {
+  transform: rotate(3deg) translateY(10px);
+}
+
+.founder-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+}
+
+.founder-photo figcaption {
+  padding: 12px 0 16px;
+  color: var(--ink-hand);
+  font-family: var(--font-hand);
+  font-size: 21px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.founder-milestone {
+  color: var(--ink-hand);
+  text-align: center;
+}
+
+.founder-milestone strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.founder-milestone span {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.founder-milestone-arrow {
+  display: block;
+  width: 38px;
+  height: 14px;
+  margin: 6px auto 0;
+}
+
+@media (max-width: 520px) {
+  .founder-photo-pair {
+    grid-template-columns: minmax(0, 1fr) 48px minmax(0, 1fr);
+    gap: 6px;
+    margin-top: 38px;
+  }
+
+  .founder-photo {
+    padding: 6px 6px 0;
+  }
+
+  .founder-photo figcaption {
+    font-size: 17px;
+  }
+
+  .founder-milestone strong {
+    font-size: 19px;
+  }
+}

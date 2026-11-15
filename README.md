@@ -68,13 +68,14 @@ status is successful before checking the public website.
 
 ### Website pages
 
-The homepage combines the introduction, coaching areas, programme offering, and closing
+The homepage combines a personal transformation introduction, programme introduction,
+coaching areas, programme offering, and closing
 invitation. React Router handles navigation without reloading the application,
 and the header highlights the current page.
 
 | URL | Content | Page component |
 |---|---|---|
-| `/` | Floating programme preview, coaching areas, programme offering, and closing invitation | `src/pages/Index.tsx` |
+| `/` | Story and transformation preview, floating programme preview, coaching areas, programme offering, and closing invitation | `src/pages/Index.tsx` |
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
 | `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
 | `/journal` | The Growth Journal chapters and examples | `src/pages/Journal.tsx` |
@@ -141,7 +142,17 @@ refers to his previous coaches; those historical references are intentional.
 
 ### Homepage focus and booking-button animation
 
-The homepage hero intentionally contains one headline, a short introduction,
+`HomeStoryIntro.tsx` opens the homepage with Akshat's story and the actual before
+and after photographs. Its title is the page's only `h1`. On mobile, the photos
+come before the supporting paragraph so both photographs are visible on initial
+load, including 320 by 568 screens. The Read my story action opens `/coach`.
+`TransformationPhotos.tsx` shares the photo pair, descriptive alt text, intrinsic
+dimensions, and compact between-photo ~40 kg marker with the full story.
+Its CSS preserves the story's existing framed-photo design. Do not duplicate the
+photo markup or regenerate the images when changing either placement.
+
+The existing programme hero follows this personal introduction, with an `h2`,
+and keeps its short introduction,
 one primary conversation button, a secondary Before and after button, and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
@@ -151,13 +162,15 @@ The Growth Journal, and a small check-in note using HTML/CSS rather than a
 founder photo. The app is an illustrative programme preview, not a live
 application, download, or new data-storage feature. Its link opens How it works;
 the journal opens `/journal`. Keep the foreground objects sparse and their
-labels unobscured. Founder photographs remain on the story page, not in the hero.
+labels unobscured. Founder photographs belong in the opening story preview and
+full story, not among the floating programme objects.
 The How it works button sits separately below the programme preview on desktop,
 and after the expertise card on mobile. Do not crowd it into the main conversation
 and Before and after button row.
 At 880px and below, the headline, introduction, preview, and conversation
-actions stack in that order. Keep the primary WhatsApp action visible on
-initial mobile load, including a 320px by 568px viewport.
+actions stack in that order. The new story preview intentionally comes first;
+do not force the entire programme introduction into the initial mobile viewport.
+Keep its primary WhatsApp action visible and unobstructed when scrolled into view.
 The old founder-led eyebrow and “Skills for life” programme
 subtitle have been removed.
 
@@ -201,7 +214,7 @@ glow cycle. The glow never fades to zero, has no delayed start or finite run,
 and remains visible in hover/focus states. Reduced motion retains the steady
 halo without the cycle. Text-only conversation links use a static text glow.
 The non-interactive pseudo-element does not move or obstruct the label.
-Check the glow both on entry and after several cycles, then the hero CTA above the fold at
+Check the glow both on entry and after several cycles, then the programme CTA at
 320px/375px, preview layout, hover/focus, reduced motion, and the unchanged
 WhatsApp destination after edits. Check that the preview links work,
 the Before and after button opens `/coach`, and the mobile menu still closes on
@@ -218,9 +231,9 @@ tabs, form steps, and menus; those are interaction controls, not scroll reveals.
 The homepage has less empty space between the hero and coaching areas and a
 Before and after action leading to the transformation photographs at `/coach`.
 Header, mobile-menu, footer, and hero links use the same Before and after label;
-the existing `/coach` route is preserved. Verify every page without scrolling first, the next-section
-heading on typical desktop/mobile screens, and both the story and primary action
-on a small 320px by 568px screen. Floating previews, coaching-card motion,
+the existing `/coach` route is preserved. Verify every page without scrolling first,
+both transformation photos on initial desktop/mobile load, and the story link
+and programme actions on a small 320px by 568px screen. Floating previews, coaching-card motion,
 WhatsApp glow, and sticky-action scroll behaviour remain independent.
 
 The compact Globally Recognised Expertise card uses two locally bundled official
