@@ -3,7 +3,7 @@ export const coachCredentials = [
     title: "Diploma in Nutrition & Dietetics",
     provider: "National Fitness & Nutrition Academy",
     summary: "Nutrition & Dietetics",
-    providerLabel: "NFNA",
+    providerLabel: "National Fitness & Nutrition Academy",
   },
   {
     title: "Certified Nutrition Coach",

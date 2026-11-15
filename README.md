@@ -163,11 +163,13 @@ The story's `founder-photo-pair` is a three-column grid: before photo, compact
 ~40 kg marker, after photo. Keep the marker inside the gap at all widths;
 it must not add another row below the photographs or obscure either image.
 
-`ConversationLink` supplies the shared `conversation-link` class. Styled booking
-buttons get two gentle halo pulses on entry, finishing within 4.7 seconds.
-Existing hover and keyboard-focus styling is retained. The animation uses a non-interactive
-pseudo-element, does not move the label, and is disabled for reduced motion.
-Plain footer links are not animated. Check the hero CTA above the fold at
+`ConversationLink` supplies the shared `conversation-link` class. Styled
+conversation buttons have an always-visible blue halo with a continuous gentle
+glow cycle. The glow never fades to zero, has no delayed start or finite run,
+and remains visible in hover/focus states. Reduced motion retains the steady
+halo without the cycle. Text-only conversation links use a static text glow.
+The non-interactive pseudo-element does not move or obstruct the label.
+Check the glow both on entry and after several cycles, then the hero CTA above the fold at
 320px/375px, preview layout, hover/focus, reduced motion, and the unchanged
 WhatsApp destination after edits. Check that the preview links work,
 the How it works action stays internal, and the mobile menu still closes on

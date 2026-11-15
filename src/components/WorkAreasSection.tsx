@@ -11,27 +11,27 @@ const areas = [
   },
   {
     title: "Movement for your setup",
-    description: "A workout or movement plan matched to your space, equipment, and schedule, whether at home, in a gym, or outdoors.",
+    description: "A gym, your living room, or the space next to your desk. We build movement around your setup, not the other way round.",
     Icon: Footprints,
   },
   {
     title: "Working through cravings",
-    description: "Build awareness, and develop practical ways to respond, without guilt or banning every food you enjoy.",
+    description: "Cravings happen. The guilt trip doesn't have to. Build awareness and practical ways to respond, without banning every food you enjoy.",
     Icon: Cookie,
   },
   {
     title: "Stress and sleep strategies",
-    description: "Build ways to manage stress and improve sleep that fit the demands of your real life.",
+    description: "Your brain has enough tabs open. Let's build stress and sleep strategies that help you switch off, without adding another job to your day.",
     Icon: Moon,
   },
   {
     title: "Habits that help you",
-    description: "Develop helpful habits, recognise unhelpful patterns, and make the better choice easier.",
+    description: "Less heroic willpower. More helpful autopilot. Build good habits, spot the sneaky unhelpful ones, and make the better choice easier.",
     Icon: Repeat2,
   },
   {
     title: "Blood markers and deficiencies",
-    description: "Nutrition support to work towards healthier blood markers and address deficiencies, alongside your doctor.",
+    description: "The bathroom scale doesn't get the whole story. We work towards healthier blood markers and address nutritional gaps, alongside your doctor.",
     Icon: HeartPulse,
   },
 ];
@@ -41,7 +41,7 @@ const WorkAreasSection = () => (
     <div className="container">
       <div className="section-head center" data-reveal="">
         <h2 className="section-title" id="work-areas-title">What we work on</h2>
-        <p className="section-lead">Six areas. One plan, built around you.</p>
+        <p className="section-lead">Learn as you progress. Build the confidence to steer your own journey.</p>
       </div>
       <FloatingMotion className="work-areas-grid" label="coaching areas">
         {areas.map(({ title, description, Icon }, index) => (

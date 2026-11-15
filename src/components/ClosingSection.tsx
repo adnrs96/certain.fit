@@ -48,7 +48,7 @@ const ClosingSection = () => (
       </h2>
       <p>
         A weight-loss programme personally guided by Akshat, built around your
-        real life. Supported, not supervised.
+        real life.
       </p>
       <div className="closing-ctas">
         <ConversationLink className="btn-ocean-lg on-dark" />
