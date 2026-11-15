@@ -48,7 +48,7 @@ const HowItWorks = () => (
             <h3>Your programme begins</h3>
             <p>
               I bring together your starting food and movement plan, introduce
-              your Journey Journal, and help you choose the first changes worth
+              your Growth Journal, and help you choose the first changes worth
               focusing on. Built around your life, not a template.
             </p>
           </li>
@@ -86,7 +86,7 @@ const HowItWorks = () => (
               your own patterns, understand what helps, and practise making
               decisions without needing someone to tell you what to do.
             </p>
-            <Link to="/journal">Explore your Journey Journal →</Link>
+            <Link to="/journal">Explore your Growth Journal →</Link>
           </div>
           <ol className="journal-feedback-steps">
             <li><b>01 · Reflect</b>Journal your real week, not a perfect one.</li>

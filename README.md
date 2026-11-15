@@ -68,16 +68,16 @@ status is successful before checking the public website.
 
 ### Website pages
 
-The homepage combines the introduction, programme offering, and closing
+The homepage combines the introduction, coaching areas, programme offering, and closing
 invitation. React Router handles navigation without reloading the application,
 and the header highlights the current page.
 
 | URL | Content | Page component |
 |---|---|---|
-| `/` | Introduction, programme offering, and closing invitation | `src/pages/Index.tsx` |
+| `/` | Floating programme preview, coaching areas, programme offering, and closing invitation | `src/pages/Index.tsx` |
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
 | `/how-it-works` | Coaching stages and both kinds of progress | `src/pages/HowItWorks.tsx` |
-| `/journal` | Journey Journal chapters and examples | `src/pages/Journal.tsx` |
+| `/journal` | The Growth Journal chapters and examples | `src/pages/Journal.tsx` |
 | `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
 | `/programme` | Six coaching areas, included support, and learning as you progress | `src/pages/Programme.tsx` |
 | `/start-journey` | Private starting-point form, welcome card, and booking link | `src/pages/Journey.tsx` |
@@ -92,6 +92,11 @@ section links such as `/#journal` to the corresponding page.
 standalone Programme page. Update the offering in this component so both
 locations stay consistent. It uses an `h2` on the homepage and an `h1` on
 the standalone page, preserving one primary heading per page.
+`src/components/WorkAreasSection.tsx` owns the six coaching areas and the
+learning promise. It is a separate section before Programme on the homepage
+and after the offer on the standalone Programme page. Keep those six areas in
+this shared component rather than duplicating them inside the offer card.
+The old Honest by design section has been removed from both locations.
 
 The homepage passes `showDetailsLink` to show a **Know more** link to
 `/programme`. The programme route remains available directly and in the footer,
@@ -116,22 +121,34 @@ refers to his previous coaches; those historical references are intentional.
 ### Homepage focus and booking-button animation
 
 The homepage hero intentionally contains one headline, a short introduction,
-one primary booking button, a quiet How it works link, and a single founder
-portrait. Keep detailed service copy in the programme below; do not restore
-the hero's example-card collage, trust list, or separate timeline promotion.
+one primary conversation button, a quiet How it works link, and a compact
+programme illustration. Keep detailed service copy below the hero; do not
+add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
-The hero uses a transparent cut-out of the existing founder photograph over a
-decorative blue backdrop, not a headshot card, arch, or screenshot of a website.
-The photo was edited locally with Apple's foreground-instance segmentation;
-the original face, physique, and source photographs are unchanged. The bundled
-`akshat-hero-cutout.webp` has transparency; do not flatten it onto a solid
-background. CSS supplies the backdrop and soft lower-edge fade.
-The portrait is also a direct link to Our story. At 880px and below, the
-headline leads, followed by the introduction beside the portrait and then
-conversation actions on their own row.
-Keep both the face and primary booking action visible on initial mobile load.
+`src/components/HeroProgrammeVisual.tsx` renders a daily-plan app preview,
+The Growth Journal, and a small check-in note using HTML/CSS rather than a
+founder photo. The app is an illustrative programme preview, not a live
+application, download, or new data-storage feature. Its link opens How it works;
+the journal opens `/journal`. Keep the foreground objects sparse and their
+labels unobscured. The old photo assets remain unchanged for the story.
+At 880px and below, the headline, introduction, preview, and conversation
+actions stack in that order. Keep the primary WhatsApp action visible on
+initial mobile load, including a 320px by 568px viewport.
 The old founder-led eyebrow and “Skills for life” programme
 subtitle have been removed.
+
+`src/components/FloatingMotion.tsx` supplies independent pause/resume controls
+for the hero preview and coaching-area cards. The controls are keyboard
+accessible and expose their paused state. `FloatingMotion.css` supplies gentle
+vertical motion; the card styles add hover treatment without hiding content.
+Reduced-motion preferences stop the animation and hide unnecessary controls.
+When editing, check pause/resume in each section, keyboard focus on both
+preview links, hover treatment, reduced motion, and non-overlapping cards at
+mobile, tablet, and desktop widths.
+
+The journal is consistently called The Growth Journal in its page title,
+cover, hero preview, offering, footer, discovery flow, and starting-point copy.
+Its chapters and keyboard-accessible tab navigation are unchanged.
 
 The story's `founder-photo-pair` is a three-column grid: before photo, compact
 ~40 kg marker, after photo. Keep the marker inside the gap at all widths;
@@ -142,8 +159,8 @@ buttons get two gentle halo pulses on entry, finishing within 4.7 seconds.
 Existing hover and keyboard-focus styling is retained. The animation uses a non-interactive
 pseudo-element, does not move the label, and is disabled for reduced motion.
 Plain footer links are not animated. Check the hero CTA above the fold at
-320px/375px, portrait loading, hover/focus, reduced motion, and the unchanged
-WhatsApp destination after edits. Check that the portrait opens Our story,
+320px/375px, preview layout, hover/focus, reduced motion, and the unchanged
+WhatsApp destination after edits. Check that the preview links work,
 the How it works action stays internal, and the mobile menu still closes on
 selection and Escape.
 
@@ -168,7 +185,7 @@ selection controls. The programme cadence and journal follow the diagram.
 SVG data-flow animation is decorative; all meaning remains available in text.
 The keyboard-accessible pause control stops it, and reduced-motion preferences
 disable it. When editing, check the section order, single `h1`, pause/play,
-reduced motion, 320px mobile layout, and the Journey Journal and booking links.
+reduced motion, 320px mobile layout, and the Growth Journal and conversation links.
 
 The Life Happens page has been removed from navigation and the footer.
 Existing `/life-happens` and `/#life-happens` links redirect to Programme,

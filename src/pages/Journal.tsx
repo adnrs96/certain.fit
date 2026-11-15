@@ -5,16 +5,14 @@ const Journal = () => (
     <div className="container">
       <div className="journal-intro">
         <div className="section-head" data-reveal="">
-          <span className="eyebrow-pill">THE CERTAIN JOURNEY JOURNAL</span>
+          <span className="eyebrow-pill">YOUR JOURNAL</span>
           <h1 className="section-title left">
-            A journal, not a workbook.{" "}
-            <span className="serif-italic">It belongs to you.</span>
+            The <span className="serif-italic">Growth Journal</span>
           </h1>
           <p className="section-lead">
-            A workbook is something you complete. Your Journey Journal is a
-            personal record of how you finally learned to move forward. I
-            read it and bring it into our conversations, so it never
-            feels like homework.
+            A personal record of how you learn to move forward towards the
+            path of self-independence from obesity. So you can gain or lose
+            weight on your terms without needing help from anyone ever again.
           </p>
         </div>
         <ul
@@ -44,7 +42,7 @@ const Journal = () => (
       <div className="journal-book" data-tabs="" data-reveal="">
         <div className="journal-cover">
           <p className="journal-cover-title">
-            <span>My</span> Journey Journal
+            <span>My</span> Growth Journal
           </p>
           <div
             className="journal-tabs"

@@ -1,0 +1,57 @@
+.floating-motion {
+  position: relative;
+}
+
+.floating-item {
+  animation: gentle-float 6s ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+
+.is-paused .floating-item,
+.hero-float:focus-within {
+  animation-play-state: paused;
+}
+
+.float-motion-toggle {
+  position: absolute;
+  top: -48px;
+  right: 0;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--ink-secondary);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.float-motion-toggle:hover {
+  color: var(--cerulean);
+  border-color: var(--border-strong);
+}
+
+.float-motion-toggle:focus-visible {
+  outline: 3px solid var(--cerulean);
+  outline-offset: 3px;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-item {
+    animation: none !important;
+  }
+
+  .float-motion-toggle {
+    display: none;
+  }
+}

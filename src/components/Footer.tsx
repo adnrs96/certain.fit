@@ -15,7 +15,7 @@ const Footer = () => (
           <h2>Explore</h2>
           <Link to="/coach">Our story</Link>
           <Link to="/how-it-works">How it works</Link>
-          <Link to="/journal">Journey Journal</Link>
+          <Link to="/journal">Growth Journal</Link>
         </div>
         <div>
           <h2>Get started</h2>

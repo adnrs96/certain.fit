@@ -3,7 +3,7 @@ export const conversationUrl = "https://api.whatsapp.com/message/QCDBEWFGQI5HI1?
 export const sitePages = [
   { path: "/coach", label: "Our story", title: "The founder’s story" },
   { path: "/how-it-works", label: "How it works", title: "How CERTAIN works" },
-  { path: "/journal", label: "Journal", title: "Your Journey Journal" },
+  { path: "/journal", label: "Journal", title: "The Growth Journal" },
   { path: "/timeline", label: "Timeline", title: "Your personal timeline" },
   { path: "/programme", label: "Programme", title: "The CERTAIN programme" },
   { path: "/faq", label: "FAQs", title: "Your questions answered" },

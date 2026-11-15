@@ -35,7 +35,7 @@ const Journey = () => {
             <li>
               <b>Day 0</b>
               <span>
-                If it feels right, we open your Journey Journal and build your
+                If it feels right, we open your Growth Journal and build your
                 starting plan together.
               </span>
             </li>

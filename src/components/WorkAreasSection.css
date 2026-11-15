@@ -1,0 +1,107 @@
+.work-areas {
+  padding: var(--section-pad) 0;
+  background: linear-gradient(#FFFFFF, var(--bg-canvas));
+}
+
+.work-areas .section-lead {
+  margin: 16px auto 0;
+}
+
+.work-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding-top: 12px;
+}
+
+.work-area {
+  min-width: 0;
+}
+
+.work-area-surface {
+  height: 100%;
+  padding: 28px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(143, 193, 232, 0.14), transparent 60%),
+    #FFFFFF;
+  box-shadow: 0 12px 30px rgba(19, 34, 56, 0.045);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-area-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  background: var(--ice-blue);
+  color: var(--cerulean);
+}
+
+.work-area:nth-child(even) .work-area-icon {
+  background: #EAF5EF;
+  color: var(--mint-ink);
+}
+
+.work-area h3 {
+  margin: 0 0 12px;
+  color: var(--ink-primary);
+  font-size: 19px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.work-area p {
+  margin: 0;
+  color: var(--ink-secondary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.work-areas .programme-learning {
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 24px 32px;
+  text-align: center;
+}
+
+@media (hover: hover) {
+  .work-area:hover .work-area-surface {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    box-shadow: 0 22px 40px rgba(19, 34, 56, 0.085);
+  }
+}
+
+@media (max-width: 1080px) {
+  .work-areas-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .work-areas-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding-top: 28px;
+  }
+
+  .work-areas-grid .float-motion-toggle {
+    top: -24px;
+  }
+
+  .work-area-surface {
+    padding: 24px;
+  }
+
+  .work-area-icon {
+    margin-bottom: 18px;
+  }
+
+  .work-areas .programme-learning {
+    padding: 24px;
+  }
+}
