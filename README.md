@@ -154,42 +154,51 @@ photo markup or regenerate the images when changing either placement.
 The existing programme hero follows this personal introduction, with an `h2`,
 and keeps its short introduction,
 one primary conversation button, a secondary Before and after button, and a compact
-programme illustration. Keep detailed service copy below the hero; do not
+personal-approach illustration. The headline, "Lasting weight loss. Uniquely yours.",
+is the main readable message, not a small label above a branded system name.
+Explain that the founder's transformation supplies principles to learn from,
+not a fixed plan to copy: food, movement and habits are individual, and the
+approach adapts to feedback and changing circumstances. The goal includes
+learning to maintain weight loss independently, not only following instructions.
+Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
-`src/components/HeroProgrammeVisual.tsx` renders a daily-plan app preview,
-The Growth Journal, and a small check-in note using HTML/CSS rather than a
-founder photo. The app is an illustrative programme preview, not a live
-application, download, or new data-storage feature. Its link opens How it works;
-the journal opens `/journal`. Keep the foreground objects sparse and their
-labels unobscured. Founder photographs belong in the opening story preview and
-full story, not among the floating programme objects.
+`src/components/PersonalApproachVisual.tsx` renders a readable, HTML/CSS
+three-step illustration: start with your life, find your habits, and keep making
+it yours. A repeat icon and caption explain that a changing life leads to an
+evolving approach. The steps are illustrative, not an interactive plan, form,
+or new data-storage feature. Keep the text at readable sizes rather than
+scaling down the entire illustration on mobile. Check that the numbered
+connector does not overlap its text and all three descriptions remain visible.
+Founder photographs remain in the opening story preview and full story.
 The How it works button sits separately below the programme preview on desktop,
 and after the expertise card on mobile. Do not crowd it into the main conversation
 and Before and after button row.
-At 880px and below, the headline, introduction, preview, and conversation
-actions stack in that order. The new story preview intentionally comes first;
+At 880px and below, the headline, introduction, conversation actions, and
+personal-approach illustration stack in that order. Keep the primary action
+ahead of the taller, readable illustration rather than scaling the latter down.
+The new story preview intentionally comes first;
 do not force the entire programme introduction into the initial mobile viewport.
 Keep its primary WhatsApp action visible and unobstructed when scrolled into view.
 The old founder-led eyebrow and “Skills for life” programme
 subtitle have been removed.
 
-`src/components/FloatingMotion.tsx` wraps the hero preview and coaching-area cards.
+`src/components/FloatingMotion.tsx` wraps the personal-approach steps and coaching-area cards.
 There are no visible pause/play controls. `FloatingMotion.css` supplies gentle
 vertical motion; the card styles add hover treatment without hiding content.
 Reduced-motion preferences stop the animation.
-When editing, check continuous motion in each section, keyboard focus on both
-preview links, hover treatment, reduced motion, and non-overlapping cards at
-mobile, tablet, and desktop widths.
+When editing, check continuous motion in each section, keyboard focus on the
+programme actions and How it works link, hover treatment, reduced motion,
+readable headings, and non-overlapping content at mobile, tablet, and desktop widths.
 
 The journal is consistently called The Growth Journal in its page title,
-cover, hero preview, offering, footer, discovery flow, and starting-point copy.
+cover, offering, footer, discovery flow, and starting-point copy.
 Its chapters and keyboard-accessible tab navigation are unchanged.
 
 `src/components/ExpertiseSummary.tsx` displays the compact Globally Recognised
 Expertise section above the preview in the desktop hero's right column.
-On mobile it follows the conversation actions, keeping the WhatsApp action
-visible without scrolling. `src/lib/coach-credentials.ts` is the shared source
+On mobile it follows the personal-approach illustration; the WhatsApp action
+stays before that illustration. `src/lib/coach-credentials.ts` is the shared source
 for its summary and the full qualifications on Our story. The summary links
 to `/coach#qualifications`; preserve that anchor when changing the story layout.
 

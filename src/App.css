@@ -592,17 +592,6 @@ p {
   white-space: nowrap;
 }
 
-.hero-system-description {
-  display: block;
-  max-width: 480px;
-  margin-bottom: 14px;
-  color: var(--ink-hand);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 0;
-}
-
 .hero-lead {
   grid-area: intro;
   max-width: 540px;
@@ -3536,7 +3525,7 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "title" "intro" "visual" "actions" "expertise" "preview-action";
+    grid-template-areas: "title" "intro" "actions" "visual" "expertise" "preview-action";
     grid-template-rows: auto auto auto auto auto auto;
     align-items: center;
     column-gap: 18px;
