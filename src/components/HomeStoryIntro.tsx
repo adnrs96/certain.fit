@@ -20,10 +20,10 @@ const HomeStoryIntro = () => (
           After struggling with obesity for 15 years, I learnt sustainable
           weight loss is not determined by a diet chart, or an exercise plan.
           <span className="home-story-invitation">
-            Now I help tech professionals achieve their dream transformation
+            Now I help <strong>tech professionals</strong> achieve their dream transformation
             while juggling a demanding career.
           </span>
-          <span className="home-story-invitation">
+          <span className="home-story-system">
             All with a simple system.
           </span>
         </p>

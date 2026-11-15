@@ -60,6 +60,25 @@
   margin-top: 12px;
 }
 
+.home-story-invitation strong {
+  color: var(--ink-primary);
+  font-weight: 800;
+}
+
+.home-story-system {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 12px;
+  border-left: 3px solid var(--cerulean);
+  border-radius: 0 8px 8px 0;
+  background: var(--ice-blue);
+  color: var(--ink-hand);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
 @media (max-width: 880px) {
   .home-story {
     padding: 24px 0 32px;
