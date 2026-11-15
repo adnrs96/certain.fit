@@ -38,7 +38,7 @@
   border-radius: 3px;
 }
 
-.hero-expertise ul {
+.hero-expertise > ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
@@ -72,6 +72,19 @@
   line-height: 1.45;
 }
 
+.hero-expertise .expertise-topics {
+  margin: 7px 0 0;
+  padding-left: 13px;
+  color: var(--ink-secondary);
+  font-size: 10px;
+  line-height: 1.45;
+  list-style: disc;
+}
+
+.expertise-topics li + li {
+  margin-top: 2px;
+}
+
 @media (max-width: 880px) {
   .hero-top-right {
     display: contents;
@@ -87,8 +100,7 @@
     padding: 16px 14px;
   }
 
-  .hero-expertise ul {
+  .hero-expertise > ul {
     gap: 10px;
   }
-
 }

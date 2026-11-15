@@ -17,13 +17,16 @@ const ExpertiseSummary = () => (
         <div className="expertise-logo">
           <img src={nfnaLogo} alt="National Fitness & Nutrition Academy" width="1080" height="455" />
         </div>
-        <p>My foundation in nutrition &amp; dietetics.</p>
+        <p>Diploma from National Fitness &amp; Nutrition Academy</p>
       </li>
       <li>
         <div className="expertise-logo">
           <img src={precisionNutritionLogo} alt="Precision Nutrition" width="615" height="93" />
         </div>
-        <p>My training in nutrition, sleep, stress &amp; recovery.</p>
+        <ul className="expertise-topics">
+          <li>Nutrition coaching</li>
+          <li>Sleep, stress &amp; recovery</li>
+        </ul>
       </li>
     </ul>
   </aside>
