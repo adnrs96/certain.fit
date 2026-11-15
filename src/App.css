@@ -610,7 +610,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   margin-top: 0;
 }
 
@@ -619,12 +619,12 @@ p {
   align-items: center;
   justify-content: center;
   min-height: 44px;
-  padding: 10px 12px;
+  padding: 10px 16px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.6);
   color: var(--ink-secondary);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -3525,8 +3525,8 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "title" "intro" "visual" "actions" "expertise";
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "title" "intro" "visual" "actions" "expertise" "preview-action";
+    grid-template-rows: auto auto auto auto auto auto;
     align-items: center;
     column-gap: 18px;
     row-gap: 16px;
@@ -3772,7 +3772,6 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-ctas {
     justify-content: center;
-    column-gap: 8px;
     row-gap: 6px;
   }
 

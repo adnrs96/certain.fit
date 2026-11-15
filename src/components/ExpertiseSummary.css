@@ -4,6 +4,12 @@
   min-width: 0;
 }
 
+.hero-preview-action {
+  display: flex;
+  justify-content: center;
+  grid-area: preview-action;
+}
+
 .hero-expertise {
   grid-area: expertise;
   padding: 16px 18px;
