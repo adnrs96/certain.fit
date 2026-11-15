@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, BadgeCheck } from "lucide-react";
-import { coachCredentials } from "@/lib/coach-credentials";
+import { ArrowUpRight } from "lucide-react";
+import nfnaLogo from "@/assets/nfna-logo.png";
+import precisionNutritionLogo from "@/assets/precision-nutrition-logo.png";
 import "./ExpertiseSummary.css";
 
 const ExpertiseSummary = () => (
@@ -12,15 +13,18 @@ const ExpertiseSummary = () => (
       </Link>
     </h2>
     <ul>
-      {coachCredentials.map((credential) => (
-        <li key={credential.title} title={`${credential.title} · ${credential.provider}`}>
-          <BadgeCheck size={18} aria-hidden="true" />
-          <span>
-            <strong>{credential.summary}</strong>
-            <small>{credential.providerLabel}</small>
-          </span>
-        </li>
-      ))}
+      <li>
+        <div className="expertise-logo">
+          <img src={nfnaLogo} alt="National Fitness & Nutrition Academy" width="1080" height="455" />
+        </div>
+        <p>My foundation in nutrition &amp; dietetics.</p>
+      </li>
+      <li>
+        <div className="expertise-logo">
+          <img src={precisionNutritionLogo} alt="Precision Nutrition" width="615" height="93" />
+        </div>
+        <p>My training in nutrition, sleep, stress &amp; recovery.</p>
+      </li>
     </ul>
   </aside>
 );

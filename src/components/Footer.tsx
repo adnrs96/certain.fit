@@ -13,7 +13,7 @@ const Footer = () => (
       <nav className="footer-links" aria-label="Footer">
         <div>
           <h2>Explore</h2>
-          <Link to="/coach">Our story</Link>
+          <Link to="/coach">Before and after</Link>
           <Link to="/how-it-works">How it works</Link>
           <Link to="/journal">Growth Journal</Link>
         </div>

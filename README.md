@@ -123,7 +123,7 @@ refers to his previous coaches; those historical references are intentional.
 ### Homepage focus and booking-button animation
 
 The homepage hero intentionally contains one headline, a short introduction,
-one primary conversation button, a quiet link down to What we work on, and a compact
+one primary conversation button, a secondary Before and after button, and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
@@ -183,7 +183,7 @@ The non-interactive pseudo-element does not move or obstruct the label.
 Check the glow both on entry and after several cycles, then the hero CTA above the fold at
 320px/375px, preview layout, hover/focus, reduced motion, and the unchanged
 WhatsApp destination after edits. Check that the preview links work,
-the scroll cue stays on the homepage at `/#work-on`, and the mobile menu still closes on
+the Before and after button opens `/coach`, and the mobile menu still closes on
 selection and Escape.
 
 ### Initial page visibility
@@ -195,10 +195,21 @@ The hero has no text-entry fade, and journal handwriting and example messages
 do not wait for reveal animations. Keep deliberate `[hidden]` states for inactive
 tabs, form steps, and menus; those are interaction controls, not scroll reveals.
 The homepage has less empty space between the hero and coaching areas and a
-direct scroll cue. Verify every page without scrolling first, the next-section
-heading on typical desktop/mobile screens, and both the cue and primary action
+Before and after action leading to the transformation photographs at `/coach`.
+Header, mobile-menu, footer, and hero links use the same Before and after label;
+the existing `/coach` route is preserved. Verify every page without scrolling first, the next-section
+heading on typical desktop/mobile screens, and both the story and primary action
 on a small 320px by 568px screen. Floating previews, coaching-card motion,
 WhatsApp glow, and sticky-action scroll behaviour remain independent.
+
+The compact Globally Recognised Expertise card uses two locally bundled official
+provider logos, not three certificate titles. Its text explains Akshat's training
+with each provider; it does not imply programme endorsement or partnership.
+Full qualification titles remain at `/coach#qualifications`. Logo sources:
+`https://www.nfna.in/wp-content/uploads/2026/01/cropped-final_logo_coloured.png`
+and `https://assets.precisionnutrition.com/2020/09/pn-logo-mark-blue-text-gray-small.png`.
+Keep each logo's proportions and colours, readable provider alt text, and the
+qualifications link. Check both image loading and small-screen layout after edits.
 
 ### Coaching cadence and feedback-loop animation
 

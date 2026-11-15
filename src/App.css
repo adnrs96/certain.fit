@@ -615,15 +615,23 @@ p {
 }
 
 .hero-secondary-link {
-  padding: 12px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
   color: var(--ink-secondary);
   font-size: 14px;
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
 }
 
 .hero-secondary-link:hover {
+  border-color: var(--cerulean);
+  background: #FFFFFF;
   color: var(--cerulean);
 }
 
