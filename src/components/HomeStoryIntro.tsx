@@ -12,15 +12,10 @@ const HomeStoryIntro = () => (
           <span className="serif-italic">While managing a hectic tech career</span>
         </h1>
         <p className="home-story-summary">
-          On-calls. Back-to-back meetings. Family time. Days when you feel like
-          you have no energy and no time for yourself. I&apos;ve been through it
-          all.
-          <span className="home-story-invitation">
-            With globally recognised training in nutrition, exercise and stress
-            management, I help <strong>tech professionals</strong> lose weight,
-            while managing a stressful career, through a{" "}
-            <strong>simple system</strong> that fits real chaotic life.
-          </span>
+          With globally recognised training in nutrition, exercise and stress
+          management, I help <strong>tech professionals</strong> lose weight,
+          while managing a stressful career, through a{" "}
+          <strong>simple system</strong> that fits real chaotic life.
         </p>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>
