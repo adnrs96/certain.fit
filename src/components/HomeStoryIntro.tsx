@@ -9,10 +9,12 @@ const HomeStoryIntro = () => (
         <p className="home-story-intro">Hi, I’m Akshat.</p>
         <h1 id="home-story-title">
           Yes, that’s me.{" "}
-          <span className="serif-italic">In both photos.</span>
+          <span className="serif-italic">
+            I wasn’t always sure I could change, either.
+          </span>
         </h1>
         <p className="home-story-summary">
-          I wasn’t always sure I could change, either. And I know
+          Trust me, I know how it feels to be the guy on the left. And I know
           what it takes to be the guy on the right. And no - it&apos;s not
           quitting biryani or eating salad!
         </p>

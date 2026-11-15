@@ -72,6 +72,11 @@
     font-size: clamp(36px, 7vw, 48px);
   }
 
+  .home-story h1 span {
+    font-size: clamp(24px, 4.6vw, 36px);
+    line-height: 1.15;
+  }
+
   .home-story .founder-photo-pair {
     grid-area: photos;
     width: min(100%, 380px);
@@ -96,7 +101,11 @@
   }
 
   .home-story-grid {
-    gap: 8px;
+    gap: 6px;
+  }
+
+  .home-story .founder-photo-pair {
+    margin: 4px auto 0;
   }
 
   .home-story-summary {
