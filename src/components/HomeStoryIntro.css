@@ -51,6 +51,13 @@
   font-weight: 800;
 }
 
+.home-story-action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
 @media (max-width: 880px) {
   .home-story {
     padding: 24px 0 32px;
@@ -99,6 +106,18 @@
 
   .home-story-action {
     grid-area: action;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-story-action {
+    gap: 10px;
+  }
+
+  .home-story-action a {
+    padding: 12px 14px;
+    font-size: 13px;
   }
 }
 

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import TransformationPhotos from "@/components/TransformationPhotos";
+import ConversationLink from "@/components/ConversationLink";
 import "./HomeStoryIntro.css";
 
 const HomeStoryIntro = () => (
@@ -19,6 +20,7 @@ const HomeStoryIntro = () => (
         </p>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>
+          <ConversationLink className="btn-ghost-lg" label="Get in touch" />
         </div>
       </div>
       <TransformationPhotos beforeCaption="Before" afterCaption="Now" />

@@ -126,11 +126,15 @@ and private form handoff must all use the same simulation result.
 Verify both ends of a 4 kg estimate, health gates and caps, long-goal projections,
 and the unchanged privacy-preserving handoff after modifying the calculation.
 
-All primary booking links use `src/components/ConversationLink.tsx`, labelled
-**Start a free conversation**. Update `conversationUrl` in
+All booking links use `src/components/ConversationLink.tsx`, normally labelled
+**Start a free conversation**; the opening story uses its `label` prop for
+**Get in touch** beside Read my story. Update `conversationUrl` in
 `src/lib/site-pages.ts` to change the WhatsApp destination everywhere. The
-current destination is the supplied WhatsApp Business message link, including
-its `autoload` and `app_absent` parameters. These are normal external links;
+current destination is a direct `wa.me` chat link to the same account verified
+from the supplied WhatsApp Business short link. Keep one shared destination,
+not separate hard-coded URLs in each button. Verify the landing page shows the
+intended contact and the correct app/Web chat destination on desktop and mobile;
+an HTTP 200 alone does not prove a chat link works. These are normal external links;
 they do not append estimator answers, form entries, or prefilled health data.
 Styled conversation buttons display a WhatsApp icon; text-only footer links
 and the narrow sticky action remain compact. To verify a change, check the homepage's programme conversation action, the
@@ -147,7 +151,9 @@ refers to his previous coaches; those historical references are intentional.
 `HomeStoryIntro.tsx` opens the homepage with Akshat's story and the actual before
 and after photographs. Its title is the page's only `h1`. On mobile, the photos
 come before the supporting paragraph so both photographs are visible on initial
-load, including 320 by 568 screens. The Read my story action opens `/coach`.
+load, including 320 by 568 screens. The Read my story action opens `/coach`;
+Get in touch opens the shared WhatsApp destination. Keep both buttons side by
+side on small screens with readable labels, adequate tap targets, and no overflow.
 `TransformationPhotos.tsx` shares the photo pair, descriptive alt text, intrinsic
 dimensions, and compact between-photo ~40 kg marker with the full story.
 Its CSS preserves the story's existing framed-photo design. Do not duplicate the

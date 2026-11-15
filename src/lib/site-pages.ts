@@ -1,4 +1,4 @@
-export const conversationUrl = "https://api.whatsapp.com/message/QCDBEWFGQI5HI1?autoload=1&app_absent=0";
+export const conversationUrl = "https://wa.me/917488644426";
 
 export const sitePages = [
   { path: "/coach", label: "Before and after", title: "Before and after · Akshat’s story" },
