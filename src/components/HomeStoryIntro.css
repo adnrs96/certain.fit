@@ -26,15 +26,6 @@
   line-height: 1.08;
 }
 
-.home-story-role {
-  display: block;
-  margin-top: 6px;
-  color: var(--ink-secondary);
-  font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.5;
-}
-
 .home-story h1 span {
   display: block;
   color: var(--ink-hand);
