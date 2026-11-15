@@ -17,12 +17,13 @@ const HomeStoryIntro = () => (
           <span className="serif-italic">While managing a hectic tech career</span>
         </h1>
         <p className="home-story-summary">
-          After struggling with obesity for 15 years, I learnt sustainable
-          weight loss is not determined by a diet chart, or an exercise plan.
+          On-calls. Back-to-back meetings. Family time. Another day with no
+          time for yourself.
           <span className="home-story-invitation">
-            Now I help <strong>tech professionals</strong> achieve their dream transformation
-            while juggling on-calls, review meetings and stressful workdays.{" "}
-            <span className="home-story-system">All with a simple system.</span>
+            I’ve been there. With globally recognised training in nutrition,
+            exercise, stress and sleep management, I help{" "}
+            <strong>tech professionals</strong> lose weight through a simple
+            system that fits real life—even when plans change.
           </span>
         </p>
         <div className="home-story-action">
