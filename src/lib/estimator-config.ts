@@ -7,26 +7,17 @@ const configuration = {
     // journey form. Leave empty and the quiz hands its estimate to that form,
     // which then sends nothing anywhere (no WhatsApp button is shown).
     whatsappNumber: "",
-    // Short-term horizon, in weeks, for the first result stat and the shaded band on the chart
-    // (13 weeks is about 3 months; the text shows it in months). It is not a programme length:
+    // Short-term horizon for the first result stat (13 weeks is about 3 months).
+    // It is not a programme length:
     // the website states no programme length.
     programWeeks: 13,
-    // Baseline target: 0.5–1 kg/week before individual adjustments and safety caps.
+    // Constant normal-conditions planning target, not a predicted or minimum loss.
+    // Health/profile adjustments, health-specific caps and preparation phases still apply.
     targetWeeklyKg: 1,
-    // Safety ceiling: never project more than 1% of body weight a week.
-    maxWeeklyRate: 0.01,
-    // The slower end starts at 0.5 kg/week.
-    relaxedPace: 0.5,
     // true: the estimate assumes each lifestyle answer improves to its `better` habit with the
     // coach's support (shown under "How CERTAIN gets you there"). false: use answers as given.
     includePartnerHabits: true,
-    // Loss slows as more weight comes off (metabolic adaptation and plateaus).
-    slowdownByShareLost: [
-      { minShare: 0.2, factor: 0.7 },
-      { minShare: 0.1, factor: 0.85 },
-      { minShare: 0, factor: 1 },
-    ],
-    // During a Phase 1 reset, loss continues at half the steady pace.
+    // During a Phase 1 reset, planning uses half the adjusted target.
     resetPace: 0.5,
     ageFactors: [
       { minAge: 65, factor: 0.88 },
@@ -39,8 +30,6 @@ const configuration = {
     profileMin: 0.7,
     multiplierMin: 0.5,
     multiplierMax: 1.3,
-    // When the full goal is more than this many weeks away, lead with the first 10%.
-    longGoalWeeks: 52,
     firstWinKg: 2,
     healthMilestoneShare: 0.05,
     // People under minAge, or with a current or goal BMI under minBmi, see text.gateTitle.
@@ -135,6 +124,10 @@ const configuration = {
     gateEdit: "Edit my answers",
     resultKicker: "Your CERTAIN timeline",
     goalLead: "Your estimated time to reach {weight}",
+    planningNote:
+      "Based on a steady 1 kg/week planning target. Actual progress varies.",
+    adjustedPlanningNote:
+      "Planning target adjusted for your profile, health or preparation needs. Actual progress varies.",
     programStat: "estimated in your first {months} months",
     programGoalStat: "within your first {months} months (estimated)",
     programGoal: "Goal in view",
@@ -159,7 +152,7 @@ const configuration = {
     milestoneHalf: "Halfway there",
     milestoneGoal: "Goal: {kg} kg",
     disclaimer:
-      "This is a planning estimate based on your answers, not a promised result. It assumes the planned habits are in place; building them takes time. Your actual pace may vary. It isn’t medical advice or a guaranteed deadline.",
+      "This calculator uses a constant 1 kg/week planning target in normal conditions, adjusted for your profile, health and preparation needs. It assumes the planned habits are in place and does not model plateaus or pauses. This is a target-based illustration, not a prediction of fat loss or a promised result. It isn’t medical advice or a guaranteed deadline.",
     whatsappMessage:
       "Hi Akshat! I tried the timeline estimator on the CERTAIN website ({summary}). I'd like to work with you.",
   },

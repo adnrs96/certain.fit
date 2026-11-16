@@ -87,27 +87,15 @@ export function initializeEstimator(
     return date.toLocaleDateString("en-IN", options);
   }
 
-  function formatRange(
-    lowWeeks: number | null,
-    highWeeks: number | null,
-  ) {
-    if (lowWeeks === null) {
-      return `more than ${Math.round(S.maxSimWeeks / WEEKS_PER_YEAR)} years`;
-    }
-    const high = highWeeks === null ? S.maxSimWeeks : highWeeks;
-    const openEnd = highWeeks === null ? "+" : "";
-    if (high <= 10) {
-      const a = Math.max(1, Math.round(lowWeeks));
-      return `${a}–${Math.max(a + 1, Math.round(high))}${openEnd} weeks`;
-    }
-    const a = Math.max(1, Math.round(lowWeeks / WEEKS_PER_MONTH));
-    const b = Math.max(a + 1, Math.round(high / WEEKS_PER_MONTH));
-    if (b <= 24) {
-      return `${a}–${b}${openEnd} months`;
-    }
-    const ya = Math.max(1, roundHalf(lowWeeks / WEEKS_PER_YEAR));
-    const yb = Math.max(ya + 0.5, roundHalf(high / WEEKS_PER_YEAR));
-    return `${ya}–${yb}${openEnd} years`;
+  function formatDuration(weeks: number | null) {
+    const count = weeks ?? S.maxSimWeeks;
+    const unit = count <= 10 ? "week" : count <= 104 ? "month" : "year";
+    const value = unit === "week"
+      ? Math.max(1, Math.ceil(count))
+      : unit === "month"
+        ? Math.max(1, Math.round(count / WEEKS_PER_MONTH))
+        : roundHalf(count / WEEKS_PER_YEAR);
+    return `${weeks === null ? "More than" : "About"} ${value} ${unit}${value === 1 ? "" : "s"}`;
   }
 
   // ----------------------------------------------------------------- engine
@@ -267,23 +255,12 @@ export function initializeEstimator(
     return reasons;
   }
 
-  function simulate(p, pace) {
+  function simulate(p) {
     const path = [p.start];
     let weight = p.start;
     while (weight > p.target && path.length <= S.maxSimWeeks) {
       const week = path.length - 1;
-      let weeklyKg =
-        S.targetWeeklyKg *
-        p.multiplier *
-        lookup(S.slowdownByShareLost, "minShare", (p.start - weight) / p.start)
-          .factor *
-        pace;
-      weeklyKg = Math.min(
-        weeklyKg,
-        S.targetWeeklyKg,
-        weight * S.maxWeeklyRate,
-        p.maxKgPerWeek,
-      );
+      let weeklyKg = p.weeklyKg;
       if (week < p.prepWeeks) {
         weeklyKg *= S.resetPace;
       }
@@ -337,12 +314,14 @@ export function initializeEstimator(
     const params = {
       start,
       target,
-      multiplier,
       prepWeeks,
-      maxKgPerWeek: caps.length ? Math.min(...caps) : Infinity,
+      weeklyKg: Math.min(
+        S.targetWeeklyKg * multiplier,
+        S.targetWeeklyKg,
+        ...caps,
+      ),
     };
-    const steady = simulate(params, 1);
-    const relaxed = simulate(params, S.relaxedPace);
+    const path = simulate(params);
     return {
       start,
       target,
@@ -350,10 +329,9 @@ export function initializeEstimator(
       multiplier,
       prepItems,
       prepWeeks,
-      steady,
-      relaxed,
-      steadyWeeks: weeksUntil(steady, target),
-      relaxedWeeks: weeksUntil(relaxed, target),
+      path,
+      weeks: weeksUntil(path, target),
+      planningAdjusted: params.weeklyKg < S.targetWeeklyKg || prepWeeks > 0,
     };
   }
 
@@ -398,36 +376,11 @@ export function initializeEstimator(
     const base = project(withPartner);
     const { start, target } = base;
     const loseKg = start - target;
-    const goalDuration = formatRange(base.steadyWeeks, base.relaxedWeeks);
-
-    let headline;
-    const firstTenthKg = start * 0.9;
-    if (
-      (base.steadyWeeks === null || base.steadyWeeks > S.longGoalWeeks) &&
-      firstTenthKg > target + 0.5
-    ) {
-      const steadyWeeks = weeksUntil(base.steady, firstTenthKg);
-      headline = {
-        type: "milestone",
-        loseKg: roundHalf(start - firstTenthKg),
-        duration: formatRange(
-          steadyWeeks,
-          weeksUntil(base.relaxed, firstTenthKg),
-        ),
-        date: addWeeks(now, steadyWeeks),
-      };
-    } else {
-      headline = {
-        type: "goal",
-        kg: target,
-        duration: goalDuration,
-        date: addWeeks(now, base.steadyWeeks),
-      };
-    }
+    const goalDuration = formatDuration(base.weeks);
 
     const milestones = [];
     const addMilestone = (key, label, kg) => {
-      const weeks = weeksUntil(base.steady, kg);
+      const weeks = weeksUntil(base.path, kg);
       if (weeks !== null) {
         milestones.push({ key, label, kg, weeks, date: addWeeks(now, weeks) });
       }
@@ -463,17 +416,10 @@ export function initializeEstimator(
       Math.max(path[Math.min(week, path.length - 1)], target);
     const program = {
       weeks: S.programWeeks,
-      lowKg: roundHalf(start - weightAt(base.relaxed, S.programWeeks)),
-      highKg: roundHalf(start - weightAt(base.steady, S.programWeeks)),
+      lossKg: roundHalf(start - weightAt(base.path, S.programWeeks)),
       reachesGoal:
-        base.steadyWeeks !== null && base.steadyWeeks <= S.programWeeks,
+        base.weeks !== null && base.weeks <= S.programWeeks,
     };
-
-    const paceWeek = Math.min(base.prepWeeks, base.steady.length - 2);
-    const startPaceKg = Math.max(
-      0.1,
-      Math.round((base.steady[paceWeek] - base.steady[paceWeek + 1]) * 10) / 10,
-    );
 
     return {
       status: "ok" as const,
@@ -483,10 +429,9 @@ export function initializeEstimator(
       loseKg,
       multiplier: base.multiplier,
       prep: { weeks: base.prepWeeks, items: base.prepItems },
-      weeks: { steady: base.steadyWeeks, relaxed: base.relaxedWeeks },
+      weeks: base.weeks,
       goalDuration,
-      headline,
-      startPaceKg,
+      planningAdjusted: base.planningAdjusted,
       program,
       milestones,
       habits: habits.map((habit) => ({ focus: habit.focus, text: habit.text })),
@@ -496,7 +441,7 @@ export function initializeEstimator(
       notes: base.effects
         .filter((effect) => effect.note)
         .map((effect) => effect.note),
-      paths: { steady: base.steady, relaxed: base.relaxed },
+      path: base.path,
     };
   }
 
@@ -698,9 +643,7 @@ export function initializeEstimator(
     const p = r.program;
     const programValue = p.reachesGoal
       ? esc(TEXT.programGoal)
-      : p.lowKg === p.highKg
-        ? `&minus;${formatKg(p.highKg)} kg`
-        : `&minus;${formatKg(p.lowKg)} to &minus;${formatKg(p.highKg)} kg`;
+      : `&minus;${formatKg(p.lossKg)} kg`;
 
     const phases = [];
     if (r.prep.weeks) {
@@ -752,7 +695,7 @@ export function initializeEstimator(
           <div><strong>${programValue}</strong><span>${fill(p.reachesGoal ? TEXT.programGoalStat : TEXT.programStat, { weeks: p.weeks, months: Math.round(p.weeks / WEEKS_PER_MONTH) })}</span></div>
           <div><strong>&minus;${formatKg(r.loseKg)} kg</strong><span>your overall goal</span></div>
         </div>
-        <p class="est-hero-model">An estimated timeframe, not a fixed deadline.</p>
+        <p class="est-hero-model">${esc(r.planningAdjusted ? TEXT.adjustedPlanningNote : TEXT.planningNote)}</p>
         <button type="button" class="est-cta" data-est-action="cta">${esc(TEXT.cta)} &rarr;</button>
         <button type="button" class="est-link" data-est-action="edit">${esc(TEXT.edit)}</button>
         </div>

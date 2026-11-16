@@ -146,32 +146,47 @@ keep the existing `/timeline` route so shared links continue working.
 
 ### Timeline calculation
 
-The calculator targets a baseline 0.5–1 kg per week: `targetWeeklyKg: 1`
-and `relaxedPace: 0.5` in `src/lib/estimator-config.ts`. The simulation in
-`src/lib/estimator.ts` uses kilograms per week rather than BMI-tier percentages.
-Retain the 1%-of-current-weight ceiling, health-specific caps, preparation phases,
-age/lifestyle adjustments, and slowdown as weight is lost. No scenario may exceed
-1 kg per week; individual estimates may be slower than the baseline target.
-For an otherwise unadjusted 100 kg adult aiming for 96 kg, the estimate is
-4–8 weeks, not a guaranteed maximum of one month. Lower starting weights can take
-longer because of the percentage ceiling. The duration, milestones, near-term totals,
-and private form handoff must all use the same simulation result.
-Verify both ends of a 4 kg estimate, health gates and caps, long-goal projections,
-and the unchanged privacy-preserving handoff after modifying the calculation.
+The calculator is a **target-based planner**, not a metabolic or fat-loss
+prediction. Under normal conditions it uses a constant `targetWeeklyKg: 1` from
+`src/lib/estimator-config.ts`. There is one planning path: no half-speed upper
+bound, automatic slowdown schedule, or percentage-of-current-weight cap. These
+old assumptions produced an 8–16 month range for 100 kg to 70 kg, age 34, 5'10".
+The normal planning target now produces **30 weeks, displayed as About 7 months**.
+Thirty weeks is not six calendar months. An unadjusted 100 kg to 96 kg goal is
+4 weeks; an 80 kg to 70 kg goal is 10 weeks.
+
+Retain under-18, low-BMI, pregnancy and other health gates; health/profile
+adjustments; preparation phases; and health-specific weekly caps. A selected
+0.5 kg/week cap must still apply, and a preparation phase still uses half the
+adjusted planning pace. No path may exceed 1 kg/week, including high-activity
+profiles. Explain adjusted plans with the adjusted planning note, not the
+unqualified normal-conditions 1 kg/week note.
+
+The visible duration, milestones, first-13-week total, and private form summary
+all use the same single path. Round short durations up to whole weeks and longer
+ones to approximate months or years; never round small goals to zero. A goal
+not reached within the simulation horizon must be marked "More than", not given
+a fabricated completion date.
+
+General reference: the [NHS weight-loss guidance](https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/tips-to-help-you-lose-weight/)
+lists 0.5–1 kg/week as a target range. Using its upper end is an explicit planning
+assumption, not evidence that every client will achieve that pace or that this
+model predicts their individual response.
 
 The result shows one prominent **estimated timeframe for the full goal**.
 There are no graphs, starting-point-versus-CERTAIN comparisons, or numeric
-"a week to start" stats. Keep the existing calculation and health safeguards;
+"a week to start" stats. Keep the target-planning assumptions and health safeguards;
 do not treat 1 kg/week as a guaranteed minimum. The estimate assumes the selected
 lifestyle options with a configured `better.to` replacement are already in place.
 List those planned habits beside the coaching support and keep the concise
 estimate/assumptions note visible. The private form handoff uses the same full-goal
 duration, explicitly marked as an estimate rather than a guaranteed deadline.
-Keep unfinished ranges open-ended and omit the milestones panel when no milestone
+Keep unfinished plans open-ended and omit the milestones panel when no milestone
 is reached within the simulation horizon.
 
 Run `npm run test:estimator` for the single-duration result, absence of comparisons,
-private summary consistency, health safeguards and unfinished/small-goal cases.
+the exact 100-to-70 kg example, constant normal planning pace, private summary
+consistency, health safeguards and unfinished/small-goal cases.
 For UI changes, build and preview, complete all three quiz steps at 320, 375, 768
 and 1440 px, and check: one prominent estimated duration, no graphs or comparison
 labels, no horizontal overflow,
