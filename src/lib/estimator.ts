@@ -260,7 +260,7 @@ export function initializeEstimator(
     let weight = p.start;
     while (weight > p.target && path.length <= S.maxSimWeeks) {
       const week = path.length - 1;
-      let weeklyKg = p.weeklyKg;
+      let weeklyKg = p.weeklyKg * (week < S.programWeeks ? 1 : S.laterPace);
       if (week < p.prepWeeks) {
         weeklyKg *= S.resetPace;
       }
@@ -414,11 +414,24 @@ export function initializeEstimator(
 
     const weightAt = (path, week) =>
       Math.max(path[Math.min(week, path.length - 1)], target);
+    const earlyWeeks = Math.min(S.programWeeks, base.weeks ?? S.maxSimWeeks);
+    const earlyEndKg = weightAt(base.path, Math.ceil(earlyWeeks));
+    const quickWeeks = Math.min(S.quickWinWeeks, earlyWeeks);
     const program = {
-      weeks: S.programWeeks,
-      lossKg: roundHalf(start - weightAt(base.path, S.programWeeks)),
+      weeks: earlyWeeks,
+      lossKg: start - earlyEndKg,
+      endKg: earlyEndKg,
       reachesGoal:
         base.weeks !== null && base.weeks <= S.programWeeks,
+    };
+    const quickWin = {
+      weeks: quickWeeks,
+      lossKg: start - weightAt(base.path, Math.ceil(quickWeeks)),
+    };
+    const later = program.reachesGoal ? null : {
+      lossKg: Math.max(0, loseKg - program.lossKg),
+      weeks: base.weeks === null ? null : base.weeks - earlyWeeks,
+      startKg: earlyEndKg,
     };
 
     return {
@@ -433,6 +446,8 @@ export function initializeEstimator(
       goalDuration,
       planningAdjusted: base.planningAdjusted,
       program,
+      quickWin,
+      later,
       milestones,
       habits: habits.map((habit) => ({ focus: habit.focus, text: habit.text })),
       tags: base.effects
@@ -641,9 +656,13 @@ export function initializeEstimator(
 
   function resultHtml(r) {
     const p = r.program;
-    const programValue = p.reachesGoal
-      ? esc(TEXT.programGoal)
-      : `&minus;${formatKg(p.lossKg)} kg`;
+    const earlyLabel = weeksText(Math.max(1, Math.ceil(p.weeks)));
+    const quickLabel = weeksText(Math.max(1, Math.ceil(r.quickWin.weeks)));
+    const laterLabel = r.later?.weeks === null
+      ? "Continues beyond the planning horizon"
+      : r.later
+        ? `About ${weeksText(Math.max(1, Math.ceil(r.later.weeks)))}`
+        : "";
 
     const phases = [];
     if (r.prep.weeks) {
@@ -686,19 +705,37 @@ export function initializeEstimator(
       <div class="est-hero">
         <div class="est-goal-copy">
         <span class="est-kicker">${esc(TEXT.resultKicker)}</span>
-        <p class="est-hero-lead">${fill(TEXT.goalLead, { weight: `<strong>${formatKg(r.targetKg)} kg</strong>` })}</p>
-        <p class="est-hero-time"><span>${esc(r.goalDuration)}</span></p>
-        <p class="est-hero-sub">From <strong>${formatKg(r.startKg)} kg</strong> towards <strong>${formatKg(r.targetKg)} kg</strong>, with habits that fit your life.</p>
+        <p class="est-hero-lead">${fill(TEXT.earlyLead, { weeks: esc(earlyLabel) })}</p>
+        <p class="est-hero-progress"><span>~${formatKg(p.lossKg)} kg</span></p>
+        <p class="est-hero-sub">Planned weight loss: from <strong>${formatKg(r.startKg)} kg</strong> towards <strong>${formatKg(p.endKg)} kg</strong>. One meaningful milestone at a time.</p>
         </div>
         <div class="est-goal-next">
         <div class="est-hero-stats">
-          <div><strong>${programValue}</strong><span>${fill(p.reachesGoal ? TEXT.programGoalStat : TEXT.programStat, { weeks: p.weeks, months: Math.round(p.weeks / WEEKS_PER_MONTH) })}</span></div>
+          <div><strong>~${formatKg(r.quickWin.lossKg)} kg</strong><span>first ${esc(quickLabel)} (planned)</span></div>
           <div><strong>&minus;${formatKg(r.loseKg)} kg</strong><span>your overall goal</span></div>
         </div>
         <p class="est-hero-model">${esc(r.planningAdjusted ? TEXT.adjustedPlanningNote : TEXT.planningNote)}</p>
         <button type="button" class="est-cta" data-est-action="cta">${esc(TEXT.cta)} &rarr;</button>
         <button type="button" class="est-link" data-est-action="edit">${esc(TEXT.edit)}</button>
         </div>
+      </div>
+      <div class="est-plan-panel">
+        <h4 class="est-card-title">Your goal. One chapter at a time.</h4>
+        <div class="est-plan-grid">
+          <section class="est-plan-phase est-plan-phase--early" data-est-phase="early" aria-labelledby="est-early-title">
+            <h4 id="est-early-title">01 · Early momentum</h4>
+            <strong>~${formatKg(p.lossKg)} kg</strong>
+            <p>First ${esc(earlyLabel)} · ${formatKg(r.startKg)} kg → ${formatKg(p.endKg)} kg</p>
+            <span>Build your routine and work towards your first milestone.</span>
+          </section>
+          ${r.later ? `<section class="est-plan-phase" data-est-phase="later" aria-labelledby="est-later-title">
+            <h4 id="est-later-title">02 · Steady progress</h4>
+            <strong>~${formatKg(r.later.lossKg)} kg</strong>
+            <p>${esc(laterLabel)} · ${formatKg(r.later.startKg)} kg → ${formatKg(r.targetKg)} kg</p>
+            <span>A slower planned pace for the remaining weight, with ongoing adjustments.</span>
+          </section>` : ""}
+        </div>
+        <p class="est-full-timeline">Your full <strong>${formatKg(r.loseKg)} kg</strong> goal: <strong>${esc(r.goalDuration)}</strong>${r.weeks !== null && r.weeks > 10 ? ` · approximately ${esc(weeksText(Math.ceil(r.weeks)))}` : ""}. A phased planning illustration, not a deadline.</p>
       </div>
       ${strip ? `<div class="est-milestones-panel">
         <h4 class="est-card-title">Your estimated milestones</h4>
@@ -723,7 +760,7 @@ export function initializeEstimator(
   }
 
   function startConversation(r) {
-    const summary = `${formatKg(r.startKg)} kg to ${formatKg(r.targetKg)} kg; estimated timeline ${r.goalDuration} (planning estimate, not guaranteed)`;
+    const summary = `${formatKg(r.startKg)} kg to ${formatKg(r.targetKg)} kg; estimated timeline ${r.goalDuration}; early phase ~${formatKg(r.program.lossKg)} kg in ${weeksText(Math.ceil(r.program.weeks))} (phased planning targets, not guaranteed)`;
     if (S.whatsappNumber) {
       const text = fillText(TEXT.whatsappMessage, { summary });
       window.open(

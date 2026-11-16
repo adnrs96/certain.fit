@@ -7,11 +7,12 @@ const configuration = {
     // journey form. Leave empty and the quiz hands its estimate to that form,
     // which then sends nothing anywhere (no WhatsApp button is shown).
     whatsappNumber: "",
-    // Short-term horizon for the first result stat (13 weeks is about 3 months).
-    // It is not a programme length:
-    // the website states no programme length.
-    programWeeks: 13,
-    // Constant normal-conditions planning target, not a predicted or minimum loss.
+    // Illustrative early phase, not a programme length or a biological threshold.
+    programWeeks: 12,
+    quickWinWeeks: 3,
+    // Later planning uses 75% of the adjusted early pace.
+    laterPace: 0.75,
+    // Early normal-conditions planning target, not a predicted or minimum loss.
     // Health/profile adjustments, health-specific caps and preparation phases still apply.
     targetWeeklyKg: 1,
     // true: the estimate assumes each lifestyle answer improves to its `better` habit with the
@@ -122,15 +123,12 @@ const configuration = {
     gateBody:
       "Thank you for answering honestly. Based on what you shared, your doctor is the right first step, so we can’t offer an estimate or a place on our programme right now.",
     gateEdit: "Edit my answers",
-    resultKicker: "Your CERTAIN timeline",
-    goalLead: "Your estimated time to reach {weight}",
+    resultKicker: "Your early momentum",
+    earlyLead: "Your first {weeks}",
     planningNote:
-      "Based on a steady 1 kg/week planning target. Actual progress varies.",
+      "Early target: up to 1 kg/week. A more measured planning pace follows. Actual progress varies.",
     adjustedPlanningNote:
-      "Planning target adjusted for your profile, health or preparation needs. Actual progress varies.",
-    programStat: "estimated in your first {months} months",
-    programGoalStat: "within your first {months} months (estimated)",
-    programGoal: "Goal in view",
+      "Planning targets adjusted for your profile, health or preparation needs. Actual progress varies.",
     cta: "Talk to Akshat",
     edit: "Edit my answers",
     roadmapTitle: "Your roadmap",
@@ -152,7 +150,7 @@ const configuration = {
     milestoneHalf: "Halfway there",
     milestoneGoal: "Goal: {kg} kg",
     disclaimer:
-      "This calculator uses a constant 1 kg/week planning target in normal conditions, adjusted for your profile, health and preparation needs. It assumes the planned habits are in place and does not model plateaus or pauses. This is a target-based illustration, not a prediction of fat loss or a promised result. It isn’t medical advice or a guaranteed deadline.",
+      "These are illustrative weight-loss targets, not predicted results or guaranteed fat loss. The early phase uses up to 1 kg/week for 12 weeks; the later phase uses 75% of that adjusted pace. The phase lengths and rates are planning assumptions, not a validated model of your metabolism. Health adjustments, preparation phases and the habits listed above apply. It isn’t medical advice or a guaranteed deadline.",
     whatsappMessage:
       "Hi Akshat! I tried the timeline estimator on the CERTAIN website ({summary}). I'd like to work with you.",
   },

@@ -146,14 +146,18 @@ keep the existing `/timeline` route so shared links continue working.
 
 ### Timeline calculation
 
-The calculator is a **target-based planner**, not a metabolic or fat-loss
-prediction. Under normal conditions it uses a constant `targetWeeklyKg: 1` from
-`src/lib/estimator-config.ts`. There is one planning path: no half-speed upper
-bound, automatic slowdown schedule, or percentage-of-current-weight cap. These
-old assumptions produced an 8–16 month range for 100 kg to 70 kg, age 34, 5'10".
-The normal planning target now produces **30 weeks, displayed as About 7 months**.
-Thirty weeks is not six calendar months. An unadjusted 100 kg to 96 kg goal is
-4 weeks; an 80 kg to 70 kg goal is 10 weeks.
+The calculator is a **phased target-based planner**, not a metabolic or fat-loss
+prediction. `src/lib/estimator-config.ts` defines an early `programWeeks: 12`
+phase at up to `targetWeeklyKg: 1` kg/week in normal conditions, followed by
+`laterPace: 0.75` times that adjusted early pace. `quickWinWeeks: 3` provides
+a smaller early milestone. These are explicit planning assumptions, not a
+validated biological curve or a claim that everyone slows at week 12.
+
+The 100 kg to 70 kg example, age 34, 5'10", without profile/health reductions,
+splits into **12 kg in the first 12 weeks, then 18 kg over the next 24 weeks**:
+36 weeks, displayed as About 8 months. At 1 kg/week the three-week milestone
+is 3 kg, never 10–15 kg. An unadjusted 100 kg to 96 kg goal takes 4 weeks and
+has no later phase; an 80 kg to 70 kg goal takes 10 weeks.
 
 Retain under-18, low-BMI, pregnancy and other health gates; health/profile
 adjustments; preparation phases; and health-specific weekly caps. A selected
@@ -162,8 +166,9 @@ adjusted planning pace. No path may exceed 1 kg/week, including high-activity
 profiles. Explain adjusted plans with the adjusted planning note, not the
 unqualified normal-conditions 1 kg/week note.
 
-The visible duration, milestones, first-13-week total, and private form summary
-all use the same single path. Round short durations up to whole weeks and longer
+The early headline, three-week milestone, phase totals, full duration, dates
+and private form summary all use the same single path. Phase losses must sum to
+the total requested loss and never exceed it. Round short durations up to whole weeks and longer
 ones to approximate months or years; never round small goals to zero. A goal
 not reached within the simulation horizon must be marked "More than", not given
 a fabricated completion date.
@@ -173,7 +178,14 @@ lists 0.5–1 kg/week as a target range. Using its upper end is an explicit plan
 assumption, not evidence that every client will achieve that pace or that this
 model predicts their individual response.
 
-The result shows one prominent **estimated timeframe for the full goal**.
+The [NIDDK discussion of dynamic weight change](https://www.niddk.nih.gov/health-information/professionals/diabetes-discoveries-practice/nih-body-weight-planner)
+explains why weight loss can slow over time. It does not validate our fixed
+12-week transition or 0.75 factor. Do not market these planning assumptions as
+scientifically predicted fat loss or add an assumed rapid water-loss bonus.
+
+The result leads with **planned early weight loss**, followed by two sequential
+phases and a smaller full-goal timeframe. Short goals truncate the early phase
+at the goal; do not show a zero-loss later phase. Tiny goals must not round to zero.
 There are no graphs, starting-point-versus-CERTAIN comparisons, or numeric
 "a week to start" stats. Keep the target-planning assumptions and health safeguards;
 do not treat 1 kg/week as a guaranteed minimum. The estimate assumes the selected
@@ -184,11 +196,12 @@ duration, explicitly marked as an estimate rather than a guaranteed deadline.
 Keep unfinished plans open-ended and omit the milestones panel when no milestone
 is reached within the simulation horizon.
 
-Run `npm run test:estimator` for the single-duration result, absence of comparisons,
-the exact 100-to-70 kg example, constant normal planning pace, private summary
+Run `npm run test:estimator` for phase boundaries, phase-total consistency,
+the exact 100-to-70 kg example, absence of comparisons, private summary
 consistency, health safeguards and unfinished/small-goal cases.
 For UI changes, build and preview, complete all three quiz steps at 320, 375, 768
-and 1440 px, and check: one prominent estimated duration, no graphs or comparison
+and 1440 px, and check: a prominent early-loss milestone and sequential phase cards,
+the full timeline shown secondarily, no graphs or comparison
 labels, no horizontal overflow,
 no starting-weekly-rate stat, editing preserves the answers, and the CTA passes
 only the estimate summary via browser history state (no query parameters or
