@@ -159,6 +159,31 @@ and private form handoff must all use the same simulation result.
 Verify both ends of a 4 kg estimate, health gates and caps, long-goal projections,
 and the unchanged privacy-preserving handoff after modifying the calculation.
 
+The result is goal-led, not a prominent weekly-rate or deadline claim. Do not
+reintroduce the numeric "a week to start" stat or treat 1 kg/week as a guaranteed
+minimum. Two charts compare **Habits as entered** with **With planned habit
+changes**, not outcomes with versus without CERTAIN. Both use identical health
+inputs, weight axes, time horizons and duration units. The second scenario changes only the
+selected lifestyle options that have a configured `better.to` replacement.
+List those assumptions beside the coaching support; they are treated as already
+in place by the model, not as changes the client has already achieved. If no
+options change, show identical charts and explicitly explain why.
+
+These are illustrative model scenarios, not validated predictions or measured
+programme effectiveness. Keep that distinction visible near the charts, in the
+methodology note, and in the private starting-point-form summary. No "time saved"
+or coaching-success claim can be inferred from these arbitrary planning factors.
+If a path never reaches the goal within the simulation horizon, its chart must
+end at its actual projected weight, not extend artificially to the goal line.
+
+Run `npm run test:estimator` for comparison assumptions, identical scenarios,
+shared chart scales, health safeguards and unfinished/small-goal regression cases.
+For UI changes, build and preview, complete all three quiz steps at 320, 375, 768
+and 1440 px, and check: two labelled accessible charts, no horizontal overflow,
+no starting-weekly-rate stat, editing preserves the answers, and the CTA passes
+only the illustrative summary via browser history state (no query parameters or
+external health-data handoff).
+
 All booking links use `src/components/ConversationLink.tsx`, normally labelled
 **Start a free conversation**; the opening story uses its `label` prop for
 **Get in touch** beside Read my story. Update `conversationUrl` in

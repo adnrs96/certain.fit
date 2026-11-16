@@ -3,19 +3,19 @@ const Timeline = () => (
     <div className="container">
       <div id="est-shell" className="est-shell">
         <div className="est-intro">
-          <div className="eyebrow-pill">60-SECOND CHECK</div>
+          <div className="eyebrow-pill">PICTURE YOUR PROGRESS</div>
           <h1 className="section-title left">
-            How long will it take <span className="serif-italic">you?</span>
+            Your goal.{" "}
+            <span className="serif-italic">A way forward.</span>
           </h1>
           <p className="est-intro-sub">
-            A realistic, no-crash-diet timeline to your goal weight, built
-            around your body, your health and your week. We target 0.5–1 kg
-            per week, adapting the pace to you.
+            See your goal take shape and explore how changes to your everyday
+            habits could support it—with Akshat helping you put them into practice.
           </p>
           <ul className="est-benefits">
-            <li>Personal to your health and lifestyle</li>
-            <li>Safe, steady pace with milestones to celebrate</li>
-            <li>Akshat’s support with your habits, built in</li>
+            <li>Two clearly labelled planning scenarios</li>
+            <li>Small milestones, not one overwhelming finish line</li>
+            <li>A practical starting point for your conversation with Akshat</li>
           </ul>
           <p className="est-trust">
             3 quick steps · No sign-up · Answers stay on this page
