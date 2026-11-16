@@ -15,6 +15,15 @@ const Navigation = () => (
       </Link>
       <nav className="main-nav" aria-label="Main">
         <ul>
+          <li>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => isActive ? "is-current" : undefined}
+            >
+              Home
+            </NavLink>
+          </li>
           {navigationPages.map((page) => (
             <li key={page.path}>
               <NavLink

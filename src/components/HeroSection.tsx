@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ConversationLink from "@/components/ConversationLink";
 import HeroProgrammeVisual from "@/components/HeroProgrammeVisual";
 import ExpertiseSummary from "@/components/ExpertiseSummary";
 
@@ -15,11 +14,6 @@ const HeroSection = () => (
       <div className="hero-top-right">
         <ExpertiseSummary />
         <HeroProgrammeVisual />
-        <div className="hero-preview-action">
-          <Link className="hero-secondary-link" to="/how-it-works">
-            How it works →
-          </Link>
-        </div>
       </div>
       <p className="hero-lead">
         <strong>Built around your life.</strong> Nutrition, exercise and
@@ -27,7 +21,9 @@ const HeroSection = () => (
         routine and progress.
       </p>
       <div className="hero-ctas">
-        <ConversationLink className="btn-ocean-lg" />
+        <Link className="btn-ocean-lg" to="/how-it-works">
+          How it works →
+        </Link>
       </div>
     </div>
   </section>

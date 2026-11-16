@@ -3377,25 +3377,6 @@ html.js .role-card[data-reveal].is-visible:hover {
   font-weight: 700;
 }
 
-.page-context {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  color: var(--ink-secondary);
-  font-size: 13px;
-}
-
-.page-context a {
-  color: var(--cerulean);
-  text-decoration: none;
-}
-
-.page-context a:hover {
-  text-decoration: underline;
-}
-
 .page-main > section:first-of-type {
   padding-top: 64px;
 }
@@ -3536,8 +3517,8 @@ html.js .role-card[data-reveal].is-visible:hover {
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "title" "intro" "visual" "actions" "expertise" "preview-action";
-    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "title" "intro" "visual" "actions" "expertise";
+    grid-template-rows: auto auto auto auto auto;
     align-items: center;
     column-gap: 18px;
     row-gap: 16px;

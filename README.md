@@ -86,6 +86,9 @@ and the header highlights the current page.
 
 `src/components/SiteLayout.tsx` owns the shared header, footer, page scroll
 behavior, and initialization/cleanup of interactive sections.
+Desktop and mobile navigation include an explicit Home link. Its exact-match
+active state applies only at `/`. Pages do not display a separate Home / page
+breadcrumb row; browsing and return navigation belong in the top navigation.
 `src/lib/site-pages.ts` defines navigation labels and redirects old homepage
 section links such as `/#journal` to the corresponding page.
 
@@ -167,7 +170,7 @@ intended contact and the correct app/Web chat destination on desktop and mobile;
 an HTTP 200 alone does not prove a chat link works. These are normal external links;
 they do not append estimator answers, form entries, or prefilled health data.
 Styled conversation buttons display a WhatsApp icon; text-only footer links
-and the narrow sticky action remain compact. To verify a change, check the homepage's programme conversation action, the
+and the narrow sticky action remain compact. To verify a change, check the homepage's opening Get in touch and closing conversation actions, the
 standalone programme's booking action, desktop/mobile navigation, and the story
 page's conversation link, then open the destination without sending a message.
 
@@ -191,7 +194,7 @@ photo markup or regenerate the images when changing either placement.
 
 The existing programme hero follows this personal introduction, with an `h2`,
 and keeps its short introduction,
-one primary conversation button and a compact
+one primary How it works button linking to `/how-it-works` and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
 The timeline remains accessible through navigation and the closing section.
@@ -202,16 +205,20 @@ application, download, or new data-storage feature. Its link opens How it works;
 the journal opens `/journal`. Keep the foreground objects sparse and their
 labels unobscured. Founder photographs belong in the opening story preview and
 full story, not among the floating programme objects.
-The How it works button sits separately below the programme preview on desktop,
-and after the expertise card on mobile. Do not crowd it into the main conversation
-button row. The programme hero intentionally has no secondary Before and after
+The How it works button occupies the programme hero's main action slot,
+replacing its conversation action. Do not duplicate it under the mockup or
+expertise card. Get in touch is already available in the opening story section.
+The programme hero intentionally has no secondary Before and after
 button; the opening Read my story action and shared navigation still reach `/coach`.
 The Personally guided by Akshat offering is the homepage's third section,
 immediately after the story and programme introduction.
 At 880px and below, the headline, introduction, preview, and conversation
 actions stack in that order. The new story preview intentionally comes first;
 do not force the entire programme introduction into the initial mobile viewport.
-Keep its primary WhatsApp action visible and unobstructed when scrolled into view.
+Keep its primary How it works action visible and unobstructed when scrolled into view.
+The closing message is "Your weight-loss journey. Built on understanding you."
+Its supporting copy connects food, movement, sleep, stress and everyday life
+to the awareness and skills clients can use beyond coaching.
 The old founder-led eyebrow and “Skills for life” programme
 subtitle have been removed.
 

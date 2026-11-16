@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef } from "react";
-import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MobileCTA from "@/components/MobileCTA";
@@ -67,13 +67,6 @@ const SiteLayout = () => {
         tabIndex={-1}
         className={isHome ? undefined : "page-main"}
       >
-        {!isHome && (
-          <nav className="page-context container" aria-label="Breadcrumb">
-            <Link to="/">Home</Link>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page">{pageTitle || "Page not found"}</span>
-          </nav>
-        )}
         <Outlet />
       </main>
       <Footer />

@@ -44,11 +44,12 @@ const ClosingSection = () => (
       </svg>
       <h2 className="closing-title" id="closing-title">
         Your weight-loss journey.{" "}
-        <span className="serif-italic">Someone in your corner.</span>
+        <span className="serif-italic">Built on understanding you.</span>
       </h2>
       <p>
-        A weight-loss programme personally guided by Akshat, built around your
-        real life.
+        Food, movement, sleep, stress—and the life around them. Together, we
+        learn what works for you and build the skills to keep adapting, long
+        after coaching.
       </p>
       <div className="closing-ctas">
         <ConversationLink className="btn-ocean-lg on-dark" />
