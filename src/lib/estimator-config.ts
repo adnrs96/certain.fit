@@ -100,7 +100,7 @@ const configuration = {
     // Lifestyle step: {habits} lists the `focus` of each answer that has a better habit.
     lifestylePartner: {
       icon: "🤝",
-      text: "I’ll help with {habits}. You’ll see an illustration of these habit changes alongside your starting point.",
+      text: "I’ll help with {habits}. Your timeline assumes we build these habits into your routine.",
     },
     lifestyleStrong: {
       icon: "🌟",
@@ -133,20 +133,13 @@ const configuration = {
     gateBody:
       "Thank you for answering honestly. Based on what you shared, your doctor is the right first step, so we can’t offer an estimate or a place on our programme right now.",
     gateEdit: "Edit my answers",
-    resultKicker: "Your goal. Your next chapter.",
+    resultKicker: "Your CERTAIN timeline",
     goalLead: "Your estimated time to reach {weight}",
-    milestoneLead: "Your estimated time to lose your first {weight}",
-    goalSub: "As early as {date} · steady pace, no crash diets",
-    milestoneSub:
-      "As early as {date} · full goal of {kg} kg in about {duration}",
-    programStat: "in the first {months}-month illustration",
-    programGoalStat: "in the first {months}-month illustration",
+    programStat: "estimated in your first {months} months",
+    programGoalStat: "within your first {months} months (estimated)",
     programGoal: "Goal in view",
     cta: "Talk to Akshat",
     edit: "Edit my answers",
-    chartTitle: "Same goal. Different possibilities.",
-    chartBand: "First {months} months",
-    chartNow: "Now",
     roadmapTitle: "Your roadmap",
     resetPhase: "Reset · {weeks}",
     resetPhaseText: "{items}, while habits start",
@@ -157,7 +150,7 @@ const configuration = {
     lockPhaseText:
       "Your own plan for keeping it going, long after coaching ends",
     supportTitle: "What we work on together",
-    supportIntro: "The habit-change scenario assumes these changes. I help you practise them:",
+    supportIntro: "Habits we’ll work on to support your progress:",
     supportIntroStrong:
       "Your habits are already strong. I’ll help keep them steady with:",
     plannedAround: "Planned around",
@@ -166,7 +159,7 @@ const configuration = {
     milestoneHalf: "Halfway there",
     milestoneGoal: "Goal: {kg} kg",
     disclaimer:
-      "These are illustrations from a planning model, not measured CERTAIN results or a prediction of coaching effectiveness. Both use the same health factors and assume a starting target of up to 1 kg per week, capped at 1% of body weight and adjusted for health and progress. Only the listed habit assumptions differ; the model treats changes as already in place, though building habits takes time. Your actual pace may be slower. This is not medical advice or a guaranteed deadline.",
+      "This is a planning estimate based on your answers, not a promised result. It assumes the planned habits are in place; building them takes time. Your actual pace may vary. It isn’t medical advice or a guaranteed deadline.",
     whatsappMessage:
       "Hi Akshat! I tried the timeline estimator on the CERTAIN website ({summary}). I'd like to work with you.",
   },

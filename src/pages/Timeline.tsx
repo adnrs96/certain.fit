@@ -9,11 +9,11 @@ const Timeline = () => (
             <span className="serif-italic">A way forward.</span>
           </h1>
           <p className="est-intro-sub">
-            See your goal take shape and explore how changes to your everyday
-            habits could support it—with Akshat helping you put them into practice.
+            Get an estimated timeframe for your goal, based on your body, health
+            and everyday habits—with Akshat helping you put your plan into practice.
           </p>
           <ul className="est-benefits">
-            <li>Two clearly labelled planning scenarios</li>
+            <li>A personal timeline for your goal</li>
             <li>Small milestones, not one overwhelming finish line</li>
             <li>A practical starting point for your conversation with Akshat</li>
           </ul>

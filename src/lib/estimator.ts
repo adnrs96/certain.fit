@@ -90,20 +90,19 @@ export function initializeEstimator(
   function formatRange(
     lowWeeks: number | null,
     highWeeks: number | null,
-    unit?: "weeks" | "months" | "years",
   ) {
     if (lowWeeks === null) {
       return `more than ${Math.round(S.maxSimWeeks / WEEKS_PER_YEAR)} years`;
     }
     const high = highWeeks === null ? S.maxSimWeeks : highWeeks;
     const openEnd = highWeeks === null ? "+" : "";
-    if (unit === "weeks" || (!unit && high <= 10)) {
+    if (high <= 10) {
       const a = Math.max(1, Math.round(lowWeeks));
       return `${a}–${Math.max(a + 1, Math.round(high))}${openEnd} weeks`;
     }
     const a = Math.max(1, Math.round(lowWeeks / WEEKS_PER_MONTH));
     const b = Math.max(a + 1, Math.round(high / WEEKS_PER_MONTH));
-    if (unit === "months" || (!unit && b <= 24)) {
+    if (b <= 24) {
       return `${a}–${b}${openEnd} months`;
     }
     const ya = Math.max(1, roundHalf(lowWeeks / WEEKS_PER_YEAR));
@@ -397,7 +396,6 @@ export function initializeEstimator(
       });
     }
     const base = project(withPartner);
-    const asAnswered = S.includePartnerHabits ? project(answers) : base;
     const { start, target } = base;
     const loseKg = start - target;
     const goalDuration = formatRange(base.steadyWeeks, base.relaxedWeeks);
@@ -486,11 +484,6 @@ export function initializeEstimator(
       multiplier: base.multiplier,
       prep: { weeks: base.prepWeeks, items: base.prepItems },
       weeks: { steady: base.steadyWeeks, relaxed: base.relaxedWeeks },
-      asAnsweredWeeks: {
-        steady: asAnswered.steadyWeeks,
-        relaxed: asAnswered.relaxedWeeks,
-      },
-      asAnsweredPaths: { steady: asAnswered.steady, relaxed: asAnswered.relaxed },
       goalDuration,
       headline,
       startPaceKg,
@@ -581,82 +574,6 @@ export function initializeEstimator(
     lifestyle: lifestyleMessage,
     health: healthMessage,
   };
-
-  // ------------------------------------------------------------------ chart
-
-  function chartSvg(
-    r: Extract<ReturnType<typeof estimate>, { status: "ok" }>,
-    width: number,
-    scenario: "current" | "supported",
-  ) {
-    const W = Math.round(width);
-    const H = W < 420 ? 170 : 200;
-    const L = 40;
-    const R = 10;
-    const T = 22;
-    const B = 22;
-    const paths = scenario === "current" ? r.asAnsweredPaths : r.paths;
-    const end = Math.max(S.programWeeks, ...[
-      [r.weeks.relaxed, r.paths.relaxed.length - 1],
-      [r.asAnsweredWeeks.relaxed, r.asAnsweredPaths.relaxed.length - 1],
-    ].map(([weeks, horizon]) => Math.ceil(weeks ?? horizon)));
-    const span = r.startKg - r.targetKg;
-    const top = r.startKg + span * 0.04;
-    const bottom = r.targetKg - span * 0.12;
-    const x = (week) => L + (Math.min(week, end) / end) * (W - L - R);
-    const y = (kg) =>
-      T + ((top - Math.max(kg, r.targetKg)) / (top - bottom)) * (H - T - B);
-    const points = (path: number[]) => {
-      const reached = weeksUntil(path, r.targetKg);
-      const visible = path
-        .map((kg, week) => ({ kg, week }))
-        .filter(({ week }) => week <= end && (reached === null || week < reached))
-        .map(({ kg, week }) => [x(week), y(kg)]);
-      if (reached !== null && reached <= end) {
-        visible.push([x(reached), y(r.targetKg)], [x(end), y(r.targetKg)]);
-      } else {
-        visible.push([x(end), y(path[Math.min(end, path.length - 1)])]);
-      }
-      return visible;
-    };
-    const toAttr = (list) =>
-      list.map(([px, py]) => `${px.toFixed(1)},${py.toFixed(1)}`).join(" ");
-    const steady = points(paths.steady);
-    const relaxed = points(paths.relaxed);
-
-    const months = end / WEEKS_PER_MONTH;
-    const step =
-      [1, 2, 3, 6, 12, 24].find((s) => months / s <= (W < 420 ? 3 : 5)) || 24;
-    let ticks = "";
-    for (let m = step; m <= months + 0.01; m += step) {
-      const tx = x(m * WEEKS_PER_MONTH).toFixed(1);
-      ticks += `<line class="est-chart-grid" x1="${tx}" x2="${tx}" y1="${T}" y2="${H - B}"/>`;
-      ticks += `<text class="est-chart-tick" x="${tx}" y="${H - 6}" text-anchor="middle">${m % 12 === 0 ? `${m / 12} yr` : `${m} mo`}</text>`;
-    }
-
-    const goalY = y(r.targetKg);
-    const dots = (scenario === "supported" ? r.milestones : [])
-      .map(
-        (m) =>
-          `<circle class="est-chart-dot${m.key === "goal" ? " goal" : ""}" cx="${x(m.weeks).toFixed(1)}" cy="${y(m.kg).toFixed(1)}" r="${m.key === "goal" ? 6 : 4.5}"><title>${esc(m.label)}: ${shortDate(m.date, r.now)}</title></circle>`,
-      )
-      .join("");
-    const label = `${scenario === "current" ? "Habits as entered" : "With planned habit changes"}: illustrative weight range from ${formatKg(r.startKg)} kg towards ${formatKg(r.targetKg)} kg over a shared ${end}-week chart. The shaded area shows the model's pace range, not a confidence interval.`;
-    return `
-    <svg class="est-chart" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">
-      <rect class="est-chart-program" x="${L}" y="${T}" width="${(x(S.programWeeks) - L).toFixed(1)}" height="${H - T - B}" rx="6"/>
-      <text class="est-chart-program-label" x="${L + 6}" y="${T - 8}">${esc(fillText(TEXT.chartBand, { weeks: S.programWeeks, months: Math.round(S.programWeeks / WEEKS_PER_MONTH) }))}</text>
-      ${ticks}
-      <text class="est-chart-tick" x="${L}" y="${H - 6}">${esc(TEXT.chartNow)}</text>
-      <line class="est-chart-goal" x1="${L}" x2="${W - R}" y1="${goalY.toFixed(1)}" y2="${goalY.toFixed(1)}"/>
-      <text class="est-chart-axis" x="${L - 7}" y="${T - 8}" text-anchor="end">kg</text>
-      <text class="est-chart-axis" x="${L - 7}" y="${(y(r.startKg) + 4).toFixed(1)}" text-anchor="end">${formatKg(r.startKg)}</text>
-      <text class="est-chart-axis goal" x="${L - 7}" y="${(goalY + 4).toFixed(1)}" text-anchor="end">${formatKg(r.targetKg)}</text>
-      <polygon class="est-chart-range" points="${toAttr(steady)} ${toAttr(relaxed.slice().reverse())}"/>
-      <polyline class="est-chart-line" points="${toAttr(steady)}"/>
-      ${dots}
-    </svg>`;
-  }
 
   // ---------------------------------------------------------- quiz markup
 
@@ -778,12 +695,6 @@ export function initializeEstimator(
   }
 
   function resultHtml(r) {
-    const comparisonWeeks = Math.max(
-      r.weeks.relaxed ?? S.maxSimWeeks,
-      r.asAnsweredWeeks.relaxed ?? S.maxSimWeeks,
-    );
-    const comparisonUnit =
-      comparisonWeeks <= 26 ? "weeks" : comparisonWeeks <= 104 ? "months" : "years";
     const p = r.program;
     const programValue = p.reachesGoal
       ? esc(TEXT.programGoal)
@@ -832,43 +743,24 @@ export function initializeEstimator(
       <div class="est-hero">
         <div class="est-goal-copy">
         <span class="est-kicker">${esc(TEXT.resultKicker)}</span>
-        <p class="est-hero-lead">You want to lose</p>
-        <p class="est-hero-time"><span>${formatKg(r.loseKg)}</span> kg</p>
-        <p class="est-hero-sub">From <strong>${formatKg(r.startKg)} kg</strong> towards <strong>${formatKg(r.targetKg)} kg</strong>. Let’s break it into changes you can actually live with.</p>
+        <p class="est-hero-lead">${fill(TEXT.goalLead, { weight: `<strong>${formatKg(r.targetKg)} kg</strong>` })}</p>
+        <p class="est-hero-time"><span>${esc(r.goalDuration)}</span></p>
+        <p class="est-hero-sub">From <strong>${formatKg(r.startKg)} kg</strong> towards <strong>${formatKg(r.targetKg)} kg</strong>, with habits that fit your life.</p>
         </div>
         <div class="est-goal-next">
         <div class="est-hero-stats">
           <div><strong>${programValue}</strong><span>${fill(p.reachesGoal ? TEXT.programGoalStat : TEXT.programStat, { weeks: p.weeks, months: Math.round(p.weeks / WEEKS_PER_MONTH) })}</span></div>
-          <div><strong>One next step</strong><span>Food, movement, sleep and stress—connected</span></div>
+          <div><strong>&minus;${formatKg(r.loseKg)} kg</strong><span>your overall goal</span></div>
         </div>
-        <p class="est-hero-model">An illustration to explore, not a promised result.</p>
+        <p class="est-hero-model">An estimated timeframe, not a fixed deadline.</p>
         <button type="button" class="est-cta" data-est-action="cta">${esc(TEXT.cta)} &rarr;</button>
         <button type="button" class="est-link" data-est-action="edit">${esc(TEXT.edit)}</button>
         </div>
       </div>
-      <div class="est-chart-panel">
-        <h4 class="est-card-title">${esc(TEXT.chartTitle)}</h4>
-        <p class="est-comparison-intro">Two illustrations of your path forward: your starting habits, and the changes we can work on together.</p>
-        <div class="est-comparison-grid">
-          <section class="est-scenario est-scenario--current" aria-labelledby="est-current-title">
-            <span class="est-scenario-kicker">Starting point</span>
-            <h4 id="est-current-title">Habits as entered</h4>
-            <p class="est-scenario-duration">${esc(formatRange(r.asAnsweredWeeks.steady, r.asAnsweredWeeks.relaxed, comparisonUnit))}</p>
-            <p class="est-scenario-description">Illustration if the habits you entered stay the same.</p>
-            <div class="est-chart-host" data-est-chart="current"></div>
-          </section>
-          <section class="est-scenario est-scenario--supported" aria-labelledby="est-supported-title">
-            <span class="est-scenario-kicker">What we build towards</span>
-            <h4 id="est-supported-title">With planned habit changes</h4>
-            <p class="est-scenario-duration">${esc(formatRange(r.weeks.steady, r.weeks.relaxed, comparisonUnit))}</p>
-            <p class="est-scenario-description">Illustration using the habit changes listed below, which CERTAIN helps you practise.</p>
-            <div class="est-chart-host" data-est-chart="supported"></div>
-          </section>
-        </div>
-        <p class="est-comparison-note">${r.habits.length ? "Same health factors and chart scales. Only the listed habit assumptions change." : "Your starting habits already match the model’s planned habits, so both scenarios are the same."} Shading shows two modelled paces, not guaranteed results.</p>
-        <h4 class="est-card-title est-milestones-title">Milestones in the habit-change illustration</h4>
+      ${strip ? `<div class="est-milestones-panel">
+        <h4 class="est-card-title">Your estimated milestones</h4>
         <ol class="est-ms-strip">${strip}</ol>
-      </div>
+      </div>` : ""}
     </div>
     <div class="est-result-bottom">
       <div class="est-card">
@@ -888,7 +780,7 @@ export function initializeEstimator(
   }
 
   function startConversation(r) {
-    const summary = `${formatKg(r.startKg)} kg to ${formatKg(r.targetKg)} kg; illustrative habit-change planning window ${r.goalDuration}, not a predicted result`;
+    const summary = `${formatKg(r.startKg)} kg to ${formatKg(r.targetKg)} kg; estimated timeline ${r.goalDuration} (planning estimate, not guaranteed)`;
     if (S.whatsappNumber) {
       const text = fillText(TEXT.whatsappMessage, { summary });
       window.open(
@@ -1035,13 +927,6 @@ export function initializeEstimator(
       resultEl.innerHTML =
         result.status === "ok" ? resultHtml(result) : gateHtml();
       resultEl.classList.remove("hidden");
-      resultEl.querySelectorAll<HTMLElement>("[data-est-chart]").forEach((chartHost) => {
-        chartHost.innerHTML = chartSvg(
-          result,
-          Math.max(160, Math.min(720, chartHost.clientWidth || 560)),
-          chartHost.dataset.estChart === "current" ? "current" : "supported",
-        );
-      });
       resultEl.focus({ preventScroll: true });
       if (result.status === "ok") {
         shell.scrollIntoView({ behavior: "smooth", block: "start" });

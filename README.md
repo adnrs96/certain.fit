@@ -154,34 +154,29 @@ age/lifestyle adjustments, and slowdown as weight is lost. No scenario may excee
 1 kg per week; individual estimates may be slower than the baseline target.
 For an otherwise unadjusted 100 kg adult aiming for 96 kg, the estimate is
 4–8 weeks, not a guaranteed maximum of one month. Lower starting weights can take
-longer because of the percentage ceiling. The chart, milestones, near-term totals,
+longer because of the percentage ceiling. The duration, milestones, near-term totals,
 and private form handoff must all use the same simulation result.
 Verify both ends of a 4 kg estimate, health gates and caps, long-goal projections,
 and the unchanged privacy-preserving handoff after modifying the calculation.
 
-The result is goal-led, not a prominent weekly-rate or deadline claim. Do not
-reintroduce the numeric "a week to start" stat or treat 1 kg/week as a guaranteed
-minimum. Two charts compare **Habits as entered** with **With planned habit
-changes**, not outcomes with versus without CERTAIN. Both use identical health
-inputs, weight axes, time horizons and duration units. The second scenario changes only the
-selected lifestyle options that have a configured `better.to` replacement.
-List those assumptions beside the coaching support; they are treated as already
-in place by the model, not as changes the client has already achieved. If no
-options change, show identical charts and explicitly explain why.
+The result shows one prominent **estimated timeframe for the full goal**.
+There are no graphs, starting-point-versus-CERTAIN comparisons, or numeric
+"a week to start" stats. Keep the existing calculation and health safeguards;
+do not treat 1 kg/week as a guaranteed minimum. The estimate assumes the selected
+lifestyle options with a configured `better.to` replacement are already in place.
+List those planned habits beside the coaching support and keep the concise
+estimate/assumptions note visible. The private form handoff uses the same full-goal
+duration, explicitly marked as an estimate rather than a guaranteed deadline.
+Keep unfinished ranges open-ended and omit the milestones panel when no milestone
+is reached within the simulation horizon.
 
-These are illustrative model scenarios, not validated predictions or measured
-programme effectiveness. Keep that distinction visible near the charts, in the
-methodology note, and in the private starting-point-form summary. No "time saved"
-or coaching-success claim can be inferred from these arbitrary planning factors.
-If a path never reaches the goal within the simulation horizon, its chart must
-end at its actual projected weight, not extend artificially to the goal line.
-
-Run `npm run test:estimator` for comparison assumptions, identical scenarios,
-shared chart scales, health safeguards and unfinished/small-goal regression cases.
+Run `npm run test:estimator` for the single-duration result, absence of comparisons,
+private summary consistency, health safeguards and unfinished/small-goal cases.
 For UI changes, build and preview, complete all three quiz steps at 320, 375, 768
-and 1440 px, and check: two labelled accessible charts, no horizontal overflow,
+and 1440 px, and check: one prominent estimated duration, no graphs or comparison
+labels, no horizontal overflow,
 no starting-weekly-rate stat, editing preserves the answers, and the CTA passes
-only the illustrative summary via browser history state (no query parameters or
+only the estimate summary via browser history state (no query parameters or
 external health-data handoff).
 
 All booking links use `src/components/ConversationLink.tsx`, normally labelled
