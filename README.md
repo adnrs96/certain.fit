@@ -77,7 +77,7 @@ and the header highlights the current page.
 |---|---|---|
 | `/` | Story and transformation preview, floating programme preview, Personally guided by Akshat offering, and closing invitation | `src/pages/Index.tsx` |
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
-| `/how-it-works` | Whole-person health philosophy and diagram, six coaching areas, coaching stages, and both kinds of progress | `src/pages/HowItWorks.tsx` |
+| `/how-it-works` | Whole-person health philosophy and diagram, six coaching areas, and discovery call | `src/pages/HowItWorks.tsx` |
 | `/journal` | The Growth Journal chapters and examples | `src/pages/Journal.tsx` |
 | `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
 | `/programme` | Six coaching areas, included support, and learning as you progress | `src/pages/Programme.tsx` |
@@ -125,7 +125,9 @@ not claim obesity is caused only by a hidden issue, dismiss nutrition/activity,
 or promise a cure. Blood markers and medical concerns remain clinician-led.
 The page links to the public sources. Its practical coaching areas must not be
 labelled as PN's six dimensions or imply a PN partnership or endorsement.
-Preserve the coaching cadence, six work-area cards, journal and progress sections.
+Preserve the six work-area cards and discovery call. The page ends after
+discovery: the "Then we put it into practice" timeline, daily-support banner,
+journal bridge and two-kinds-of-progress section have intentionally been removed.
 Verify all six node labels/descriptions, no node/hub overlap at 320px and above,
 visible content without scrolling to reveal it, one `h1`, working section links,
 animated data/figure under normal motion, and a complete static final pose with
@@ -287,14 +289,14 @@ qualifications link. Check both image loading and small-screen layout after edit
 
 ### Coaching cadence and feedback-loop animation
 
-`src/pages/HowItWorks.tsx` explains the discovery agenda and programme cadence;
+`src/pages/HowItWorks.tsx` explains the philosophy, coaching areas and discovery agenda;
 its page-specific styles live in `src/pages/HowItWorks.css`.
 
 The discovery agenda totals 45 minutes (5 + 15 + 10 + 10 + 5). It is presented
 as the fuller discovery session after a free 30-minute introductory call. The initial
 conversation action now opens WhatsApp, where the introductory call is arranged;
 it must not imply that clicking the button books a calendar appointment.
-The programme begins a couple of days after discovery, with daily check-ins
+Service details elsewhere: the programme begins a couple of days after discovery, with daily check-ins
 for 14 days, then weekly video calls informed by the weekly journal. WhatsApp
 support is 9 AM–9 PM IST daily, including weekends. Keep the programme card,
 FAQ, and estimator support copy consistent when these service details change.
@@ -302,7 +304,8 @@ FAQ, and estimator support copy consistent when these service details change.
 `src/components/CoachingLoop.tsx` opens How it works with the page's primary
 heading and a single nutrition/sleep/stress/energy/movement/health-context diagram. The six areas
 are informational, not buttons; do not restore the removed example panel or
-selection controls. The six work-area cards, programme cadence and journal follow the diagram.
+selection controls. The six work-area cards and discovery call follow the diagram;
+no programme cadence, journal bridge or progress section follows discovery.
 SVG data-flow animation is decorative; all meaning remains available in text.
 The centre shows an SVG person moving through resting, building, and celebratory
 poses on a nine-second loop, with a filling progress ring. This illustrates the
