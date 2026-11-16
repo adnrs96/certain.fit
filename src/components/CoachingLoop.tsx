@@ -1,10 +1,12 @@
-import { Brain, Footprints, Repeat2, Utensils } from "lucide-react";
+import { Brain, Footprints, HeartPulse, Moon, Utensils, Zap } from "lucide-react";
 
 const areas = [
-  { id: "nutrition", label: "Nutrition", signal: "Hunger & energy", Icon: Utensils },
-  { id: "movement", label: "Movement", signal: "Strength & recovery", Icon: Footprints },
-  { id: "habits", label: "Habits", signal: "Routines & triggers", Icon: Repeat2 },
-  { id: "mindset", label: "Mindset", signal: "Stress & self-talk", Icon: Brain },
+  { id: "nutrition", label: "Nutrition", signal: "Food, hunger & fullness", Icon: Utensils },
+  { id: "sleep", label: "Sleep", signal: "Rest & recovery", Icon: Moon },
+  { id: "stress", label: "Stress", signal: "Workload, emotions & coping", Icon: Brain },
+  { id: "energy", label: "Energy", signal: "How you feel day to day", Icon: Zap },
+  { id: "movement", label: "Movement", signal: "Activity that fits your life", Icon: Footprints },
+  { id: "markers", label: "Health context", signal: "Blood markers & medical advice", Icon: HeartPulse },
 ] as const;
 
 const CoachingLoop = () => {
@@ -12,28 +14,38 @@ const CoachingLoop = () => {
     <section className="coaching-system" id="how-it-works" aria-labelledby="coaching-system-title">
       <div className="container coaching-system-grid">
         <div className="section-head coaching-system-copy" data-reveal="">
-          <span className="eyebrow-pill">ONE CONNECTED SYSTEM</span>
+          <span className="eyebrow-pill">THE CERTAIN PHILOSOPHY · 360° HEALTH</span>
           <h1 className="section-title" id="coaching-system-title">
-            Four connected areas.{" "}
-            <span className="serif-italic">One evolving plan.</span>
+            There’s more to your weight.{" "}
+            <span className="serif-italic">Let’s see the whole picture.</span>
           </h1>
           <p className="section-lead">
-            Your meals, movement, routines, and thoughts all tell a story.
-            I connect that feedback to choose where we focus next, then adjust
-            the plan with you. Nothing works in isolation.
+            You deserve more than “eat less, move more.” Nutrition and exercise
+            matter—but they don’t tell your whole story.
+          </p>
+          <p className="philosophy-detail">
+            At CERTAIN, I connect the dots between your food, sleep, stress,
+            energy, movement and health context. Your work, relationships and
+            surroundings are part of the picture, too.
+          </p>
+          <p className="philosophy-detail">
+            Together, we notice your patterns, understand what gets in the way,
+            and practise changes that fit. Not just a plan to follow—awareness
+            and skills to manage your weight beyond coaching.
           </p>
         </div>
-        <figure className="loop-panel">
+        <figure className="loop-panel" aria-labelledby="whole-health-title">
           <div className="loop-toolbar">
-            <span>THE FEEDBACK LOOP</span>
+            <span id="whole-health-title">YOUR HEALTH IS CONNECTED</span>
+            <span className="loop-live-note">An approach that evolves with you</span>
           </div>
           <div className="loop-diagram">
             <svg className="loop-connections" viewBox="0 0 600 500" preserveAspectRatio="none" aria-hidden="true">
-              <path className="loop-track" d="M300 83Q500 83 500 250T300 417T100 250T300 83" />
-              <path className="loop-track" d="M300 83V417M100 250H500" />
-              <path className="loop-data" d="M300 83Q500 83 500 250T300 417T100 250T300 83" />
-              <path className="loop-data" d="M300 83V417M100 250H500" />
-              <path className="loop-data loop-data--return" d="M300 83V417M100 250H500" />
+              <ellipse className="loop-track" cx="300" cy="250" rx="200" ry="180" />
+              <path className="loop-track" d="M100 83L500 417M500 83L100 417M100 250H500" />
+              <ellipse className="loop-data" cx="300" cy="250" rx="200" ry="180" />
+              <path className="loop-data" d="M100 83L500 417M500 83L100 417" />
+              <path className="loop-data loop-data--return" d="M100 250H500" />
             </svg>
             {areas.map(({ id, label, signal, Icon }) => (
               <div key={id} className={`loop-node loop-node--${id}`}>
@@ -69,9 +81,31 @@ const CoachingLoop = () => {
             </div>
           </div>
           <figcaption className="loop-caption">
-            Your feedback reshapes the plan. Each adjustment helps your transformation take shape.
+            <strong>You at the centre. Your real life around you.</strong>
+            Your feedback helps us choose the next small change, then learn and
+            adjust—not repeat a rigid plan.
           </figcaption>
         </figure>
+        <div className="philosophy-context">
+          <p>
+            Weight is influenced by biology, habits, health conditions,
+            medications and environment—not simply willpower. Blood-test
+            findings and medical concerns stay with your doctor; I help you
+            put their advice into everyday practice.
+          </p>
+          <p className="philosophy-sources">
+            Informed by{" "}
+            <a href="https://www.precisionnutrition.com/deep-health">Precision Nutrition’s Deep Health approach</a>
+            {" "}and{" "}
+            <a href="https://www.precisionnutrition.com/precision-nutrition-sleep-stress-management-recovery-coaching-certification-faq">
+              sleep, stress and recovery coaching
+            </a>
+            .{" "}
+            <a href="https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/factors-affecting-weight-health">
+              More on what influences weight.
+            </a>
+          </p>
+        </div>
       </div>
     </section>
   );

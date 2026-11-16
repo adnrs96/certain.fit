@@ -77,7 +77,7 @@ and the header highlights the current page.
 |---|---|---|
 | `/` | Story and transformation preview, floating programme preview, Personally guided by Akshat offering, and closing invitation | `src/pages/Index.tsx` |
 | `/coach` | Akshat’s story and why he founded CERTAIN | `src/pages/Coach.tsx` |
-| `/how-it-works` | Feedback loop, six coaching areas, coaching stages, and both kinds of progress | `src/pages/HowItWorks.tsx` |
+| `/how-it-works` | Whole-person health philosophy and diagram, six coaching areas, coaching stages, and both kinds of progress | `src/pages/HowItWorks.tsx` |
 | `/journal` | The Growth Journal chapters and examples | `src/pages/Journal.tsx` |
 | `/timeline` | Personal timeline estimator | `src/pages/Timeline.tsx` |
 | `/programme` | Six coaching areas, included support, and learning as you progress | `src/pages/Programme.tsx` |
@@ -102,6 +102,34 @@ this shared component rather than duplicating them inside the offer card.
 The old Honest by design section has been removed from both locations.
 Diet and movement lead the coaching cards; cravings, stress/sleep, habits,
 and blood markers follow in that order.
+
+### How it works: whole-person philosophy
+
+`src/components/CoachingLoop.tsx` owns the page's only `h1`, original philosophy
+copy and large six-node diagram. `src/pages/HowItWorks.css` controls its centered
+hero layout, animated connections, and existing three-pose transformation figure.
+Keep this diagram full-width below the introduction, not a small side illustration.
+The six practical areas are nutrition, sleep, stress, energy, movement and health
+context; these are CERTAIN's coaching areas, not PN's six Deep Health dimensions.
+
+Research informing the copy:
+- PN Deep Health: https://www.precisionnutrition.com/deep-health
+- PN public assessment article: https://www.precisionnutrition.com/deep-health-guide
+- PN sleep/stress/recovery curriculum and coaching scope:
+  https://www.precisionnutrition.com/precision-nutrition-sleep-stress-management-recovery-coaching-certification-faq
+- Weight contributors:
+  https://www.niddk.nih.gov/health-information/weight-management/adult-overweight-obesity/factors-affecting-weight-health
+
+The intent is to connect lifestyle, wider circumstances and self-awareness,
+not claim obesity is caused only by a hidden issue, dismiss nutrition/activity,
+or promise a cure. Blood markers and medical concerns remain clinician-led.
+The page links to the public sources. Its practical coaching areas must not be
+labelled as PN's six dimensions or imply a PN partnership or endorsement.
+Preserve the coaching cadence, six work-area cards, journal and progress sections.
+Verify all six node labels/descriptions, no node/hub overlap at 320px and above,
+visible content without scrolling to reveal it, one `h1`, working section links,
+animated data/figure under normal motion, and a complete static final pose with
+reduced motion. No pause buttons should be introduced.
 
 The homepage passes `showDetailsLink` to show a **Know more** link to
 `/programme`. The programme route remains available directly and in the footer,
@@ -272,9 +300,9 @@ support is 9 AM–9 PM IST daily, including weekends. Keep the programme card,
 FAQ, and estimator support copy consistent when these service details change.
 
 `src/components/CoachingLoop.tsx` opens How it works with the page's primary
-heading and a single nutrition/movement/habits/mindset diagram. The four areas
+heading and a single nutrition/sleep/stress/energy/movement/health-context diagram. The six areas
 are informational, not buttons; do not restore the removed example panel or
-selection controls. The programme cadence and journal follow the diagram.
+selection controls. The six work-area cards, programme cadence and journal follow the diagram.
 SVG data-flow animation is decorative; all meaning remains available in text.
 The centre shows an SVG person moving through resting, building, and celebratory
 poses on a nine-second loop, with a filling progress ring. This illustrates the
