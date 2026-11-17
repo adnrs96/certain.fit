@@ -17,18 +17,18 @@ const HomeStoryIntro = () => (
         <div className="home-story-summary">
           <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
           <p>
-            My transformation journey made me realise the gaps, and how broken
-            fat-loss coaching has become. Most coaches don&apos;t treat weight
-            loss as a behaviour problem, focusing instead on diets and workouts.
-            No wonder the results don&apos;t last!
+            Most coaches treat weight-loss as a diet or nutrition problem. But
+            my own transformation journey, from being obese for{" "}
+            <strong>15+ years</strong> to losing <strong>40+ kg</strong>, has taught
+            me how broken that advice is.
           </p>
           <p>
             Now with my own experience, paired with{" "}
-            <strong>globally recognised</strong> expertise in nutrition, exercise
-            and stress management, I help{" "}
-            <strong>tech professionals</strong> lose weight, while managing a
-            stressful career, through a <strong>simple system</strong> that fits
-            real chaotic life.
+            <strong>globally recognised</strong> coaching expertise in nutrition,
+            exercise and stress management, I help{" "}
+            <strong>tech professionals</strong> lose weight and transform, while
+            managing a stressful career, through a <strong>simple system</strong>{" "}
+            that fits real chaotic life.
           </p>
         </div>
         <div className="home-story-action">
