@@ -616,6 +616,11 @@ p {
   color: var(--ink-primary);
 }
 
+.hero-programme-copy {
+  display: block;
+  margin-top: 12px;
+}
+
 .hero-ctas {
   grid-area: actions;
   display: flex;

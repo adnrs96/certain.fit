@@ -7,7 +7,7 @@ const HeroSection = () => (
     <div className="container hero-grid">
       <h2 className="hero-title">
         <span className="hero-system-description">
-          A hyper-personalised approach to sustainable weight management
+          Introducing,
         </span>
         The CERTAIN <span className="serif-italic">System</span>
       </h2>
@@ -16,9 +16,15 @@ const HeroSection = () => (
         <HeroProgrammeVisual />
       </div>
       <p className="hero-lead">
-        <strong>Built around your life.</strong> Nutrition, exercise and
-        psychology come together in a plan that adapts to your food preferences,
-        routine and progress.
+        <strong>
+          Because life is full of uncertainties. Managing your fitness goals
+          shouldn&apos;t be.
+        </strong>
+        <span className="hero-programme-copy">
+          CERTAIN is a structured, personalised programme that brings nutrition,
+          movement, sleep and stress management together—built around your food
+          preferences, your routine and your life.
+        </span>
       </p>
       <div className="hero-ctas">
         <Link className="btn-ocean-lg" to="/how-it-works">

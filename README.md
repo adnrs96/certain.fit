@@ -240,8 +240,13 @@ dimensions, and compact between-photo ~40 kg marker with the full story.
 Its CSS preserves the story's existing framed-photo design. Do not duplicate the
 photo markup or regenerate the images when changing either placement.
 
-The existing programme hero follows this personal introduction, with an `h2`,
-and keeps its short introduction,
+The existing programme hero follows this personal introduction, with an `h2`
+reading "Introducing, The CERTAIN System". Its lead is "Because life is full of
+uncertainties. Managing your fitness goals shouldn't be." The supporting copy
+describes the structured, personalised programme across nutrition, movement,
+sleep and stress, adapted to food preferences, routine and real life. The motto
+belongs to this programme introduction; the founder-story headline is unchanged.
+Keep this introduction short, with
 one primary How it works button linking to `/how-it-works` and a compact
 programme illustration. Keep detailed service copy below the hero; do not
 add a trust list, more mockup panels, or a separate timeline promotion.
