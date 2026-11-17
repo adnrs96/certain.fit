@@ -4,7 +4,7 @@ export const sitePages = [
   { path: "/coach", label: "Before and after", title: "Before and after · Akshat’s story" },
   { path: "/how-it-works", label: "How it works", title: "How CERTAIN works" },
   { path: "/journal", label: "Journal", title: "The Growth Journal" },
-  { path: "/timeline", label: "How long will it take?", title: "How long will it take?" },
+  { path: "/timeline", label: "How long will it take me?", title: "How long will it take me?" },
   { path: "/programme", label: "Programme", title: "The CERTAIN programme" },
   { path: "/faq", label: "FAQs", title: "Your questions answered" },
 ];

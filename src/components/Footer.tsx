@@ -19,7 +19,7 @@ const Footer = () => (
         </div>
         <div>
           <h2>Get started</h2>
-          <Link to="/timeline">How long will it take?</Link>
+          <Link to="/timeline">How long will it take me?</Link>
           <Link to="/programme">Programme</Link>
           <ConversationLink />
           <Link to="/faq">Questions</Link>
