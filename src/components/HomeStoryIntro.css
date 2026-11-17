@@ -42,6 +42,14 @@
   line-height: 1.65;
 }
 
+.home-story-summary p {
+  margin: 0;
+}
+
+.home-story-summary p + p {
+  margin-top: 12px;
+}
+
 .home-story .founder-photo-pair {
   margin: 0 auto;
 }

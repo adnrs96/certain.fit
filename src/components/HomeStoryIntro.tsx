@@ -14,12 +14,19 @@ const HomeStoryIntro = () => (
           if I could transform
           <span className="serif-italic">I was sick of failing again and again.</span>
         </h1>
-        <p className="home-story-summary">
-          With globally recognised training in nutrition, exercise and stress
-          management, I help <strong>tech professionals</strong> lose weight,
-          while managing a stressful career, through a{" "}
-          <strong>simple system</strong> that fits real chaotic life.
-        </p>
+        <div className="home-story-summary">
+          <p>
+            My transformation journey made me re-think traditionally coached
+            weight loss.
+          </p>
+          <p>
+            Now with my own experience, paired with globally recognised expertise
+            in nutrition, exercise and stress management, I help{" "}
+            <strong>tech professionals</strong> lose weight, while managing a
+            stressful career, through a <strong>simple system</strong> that fits
+            real chaotic life.
+          </p>
+        </div>
         <div className="home-story-action">
           <Link className="btn-ocean-lg" to="/coach">Read my story →</Link>
           <ConversationLink className="btn-ghost-lg" label="Get in touch" />
