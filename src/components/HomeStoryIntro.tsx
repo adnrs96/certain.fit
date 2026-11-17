@@ -6,16 +6,14 @@ import "./HomeStoryIntro.css";
 const HomeStoryIntro = () => (
   <section className="home-story" id="top" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
-      <header className="home-story-heading">
+      <div className="home-story-copy">
         <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
         <h1 id="home-story-title">
-          I help people in tech solve their weight management problems
+          I wasn&apos;t certain
+          <br />
+          if I could transform
+          <span className="serif-italic">I was sick of failing again and again.</span>
         </h1>
-        <p className="home-story-lead serif-italic">
-          Using a simple, structured approach
-        </p>
-      </header>
-      <div className="home-story-copy">
         <div className="home-story-summary">
           <p>
             My transformation journey made me <strong>re-think</strong>{" "}
@@ -35,22 +33,7 @@ const HomeStoryIntro = () => (
           <ConversationLink className="btn-ghost-lg" label="Get in touch" />
         </div>
       </div>
-      <div className="home-story-visual">
-        <TransformationPhotos beforeCaption="Before" afterCaption="Now" />
-        <p className="home-story-photo-note">
-          <span>Also a Senior SWE at a FAANG company</span>
-          <svg viewBox="0 0 64 48" aria-hidden="true">
-            <path
-              d="M4 38c24 8 49-6 46-32m-9 9 9-9 8 10"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </p>
-      </div>
+      <TransformationPhotos beforeCaption="Before" afterCaption="Now" />
     </div>
   </section>
 );
