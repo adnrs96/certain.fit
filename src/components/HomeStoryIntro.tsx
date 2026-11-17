@@ -16,12 +16,13 @@ const HomeStoryIntro = () => (
         </h1>
         <div className="home-story-summary">
           <p>
-            My transformation journey made me re-think traditionally coached
-            weight loss.
+            My transformation journey made me <strong>re-think</strong>{" "}
+            traditionally coached weight loss.
           </p>
           <p>
-            Now with my own experience, paired with globally recognised expertise
-            in nutrition, exercise and stress management, I help{" "}
+            Now with my own experience, paired with{" "}
+            <strong>globally recognised</strong> expertise in nutrition, exercise
+            and stress management, I help{" "}
             <strong>tech professionals</strong> lose weight, while managing a
             stressful career, through a <strong>simple system</strong> that fits
             real chaotic life.
