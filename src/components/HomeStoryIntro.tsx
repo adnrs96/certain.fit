@@ -9,10 +9,8 @@ const HomeStoryIntro = () => (
       <div className="home-story-copy">
         <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
         <h1 id="home-story-title">
-          I wasn&apos;t certain
-          <br />
-          if I could transform
-          <span className="serif-italic">I was sick of failing again and again.</span>
+          I help people in tech solve their weight management problems
+          <span className="serif-italic">Using a simple, structured approach</span>
         </h1>
         <div className="home-story-summary">
           <p>
@@ -33,7 +31,22 @@ const HomeStoryIntro = () => (
           <ConversationLink className="btn-ghost-lg" label="Get in touch" />
         </div>
       </div>
-      <TransformationPhotos beforeCaption="Before" afterCaption="Now" />
+      <div className="home-story-visual">
+        <TransformationPhotos beforeCaption="Before" afterCaption="Now" />
+        <p className="home-story-photo-note">
+          <span>Also a Senior SWE at a FAANG company</span>
+          <svg viewBox="0 0 64 48" aria-hidden="true">
+            <path
+              d="M4 38c24 8 49-6 46-32m-9 9 9-9 8 10"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </p>
+      </div>
     </div>
   </section>
 );

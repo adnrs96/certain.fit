@@ -245,9 +245,10 @@ reading "Introducing, The CERTAIN System". Its lead is "Because life is full of
 uncertainties. Managing your fitness goals shouldn't be." The supporting copy
 describes the structured, personalised programme across nutrition, movement,
 sleep and stress, adapted to food preferences, routine and real life. The motto
-belongs to this programme introduction. The founder story opens on two lines:
-"I wasn't certain" / "if I could transform", with the subtitle "I was sick of
-failing again and again."
+belongs to this programme introduction. The founder story opens with "I help
+people in tech solve their weight management problems", with the subtitle
+"Using a simple, structured approach". An arrow annotation by the photos reads
+"Also a Senior SWE at a FAANG company".
 Keep this introduction short, with
 one primary How it works button linking to `/how-it-works` and a compact
 programme illustration. Keep detailed service copy below the hero; do not
