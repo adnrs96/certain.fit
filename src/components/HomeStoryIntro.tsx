@@ -9,8 +9,8 @@ const HomeStoryIntro = () => (
       <div className="home-story-copy">
         <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
         <h1 id="home-story-title">
-          I kept putting my health off.{" "}
-          <span className="serif-italic">There was always another deadline.</span>
+          I wasn&apos;t certain I could transform.{" "}
+          <span className="serif-italic">I was sick of failing again and again.</span>
         </h1>
         <p className="home-story-summary">
           With globally recognised training in nutrition, exercise and stress
