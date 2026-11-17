@@ -7,11 +7,10 @@ const HomeStoryIntro = () => (
   <section className="home-story" id="top" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
       <div className="home-story-copy">
+        <p className="home-story-audience">For people in tech</p>
         <h1 id="home-story-title">
-          I wasn&apos;t certain
-          <br />
-          if I could transform
-          <span className="serif-italic">I was sick of failing again and again.</span>
+          Your weight shouldn&apos;t run your life.
+          <span className="serif-italic">It&apos;s time to feel in control again.</span>
         </h1>
         <div className="home-story-summary">
           <p className="home-story-intro">Hi, I&apos;m Akshat.</p>

@@ -245,9 +245,10 @@ reading "Introducing, The CERTAIN System". Its lead is "Because life is full of
 uncertainties. Managing your fitness goals shouldn't be." The supporting copy
 describes the structured, personalised programme across nutrition, movement,
 sleep and stress, adapted to food preferences, routine and real life. The motto
-belongs to this programme introduction. The founder story opens on two lines:
-"I wasn't certain" / "if I could transform", with the subtitle "I was sick of
-failing again and again."
+belongs to this programme introduction. The opening uses the audience label
+"For people in tech", the headline "Your weight shouldn't run your life.", and
+the subtitle "It's time to feel in control again." The greeting "Hi, I'm Akshat."
+sits before the transformation story, not above the headline.
 Keep this introduction short, with
 one primary How it works button linking to `/how-it-works` and a compact
 programme illustration. Keep detailed service copy below the hero; do not

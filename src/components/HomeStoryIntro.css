@@ -10,6 +10,14 @@
   gap: 64px;
 }
 
+.home-story-audience {
+  margin: 0 0 12px;
+  color: var(--ink-hand);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .home-story-intro {
   margin: 0 0 14px;
   color: var(--ink-hand);
@@ -20,7 +28,7 @@
 .home-story h1 {
   margin: 0;
   color: var(--ink-primary);
-  font-size: clamp(40px, 4.3vw, 60px);
+  font-size: clamp(38px, 4.3vw, 54px);
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1.08;
@@ -73,13 +81,18 @@
 
   .home-story-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "title" "photos" "summary" "action";
+    grid-template-areas: "audience" "title" "photos" "summary" "action";
     gap: 16px;
     text-align: center;
   }
 
   .home-story-copy {
     display: contents;
+  }
+
+  .home-story-audience {
+    grid-area: audience;
+    margin: 0;
   }
 
   .home-story-intro {
@@ -128,9 +141,9 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .home-story h1 {
-    font-size: clamp(32px, 10vw, 36px);
+    font-size: clamp(28px, 8.8vw, 36px);
   }
 }
 
