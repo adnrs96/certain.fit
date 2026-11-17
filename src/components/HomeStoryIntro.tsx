@@ -6,12 +6,16 @@ import "./HomeStoryIntro.css";
 const HomeStoryIntro = () => (
   <section className="home-story" id="top" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
-      <div className="home-story-copy">
+      <header className="home-story-heading">
         <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
         <h1 id="home-story-title">
           I help people in tech solve their weight management problems
-          <span className="serif-italic">Using a simple, structured approach</span>
         </h1>
+        <p className="home-story-lead serif-italic">
+          Using a simple, structured approach
+        </p>
+      </header>
+      <div className="home-story-copy">
         <div className="home-story-summary">
           <p>
             My transformation journey made me <strong>re-think</strong>{" "}

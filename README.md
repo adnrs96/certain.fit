@@ -230,8 +230,10 @@ refers to his previous coaches; those historical references are intentional.
 ### Homepage focus and booking-button animation
 
 `HomeStoryIntro.tsx` opens the homepage with Akshat's story and the actual before
-and after photographs. Its title is the page's only `h1`. On mobile, the photos
-come before the supporting paragraph so both photographs are visible on initial
+and after photographs. Its title is the page's only `h1`. The moderately sized,
+full-width heading and separate subtitle sit above a two-column copy/photo row
+on desktop; do not constrain the long headline to the body-copy column. On
+mobile, the photos come before the supporting paragraph so both photographs are visible on initial
 load, including 320 by 568 screens. The Read my story action opens `/coach`;
 Get in touch opens the shared WhatsApp destination. Keep both buttons side by
 side on small screens with readable labels, adequate tap targets, and no overflow.
