@@ -7,7 +7,6 @@ const HomeStoryIntro = () => (
   <section className="home-story" id="top" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
       <div className="home-story-copy">
-        <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
         <h1 id="home-story-title">
           I wasn&apos;t certain
           <br />
@@ -15,6 +14,7 @@ const HomeStoryIntro = () => (
           <span className="serif-italic">I was sick of failing again and again.</span>
         </h1>
         <div className="home-story-summary">
+          <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
           <p>
             My transformation journey made me <strong>re-think</strong>{" "}
             traditionally coached weight loss.

@@ -73,7 +73,7 @@
 
   .home-story-grid {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "intro" "title" "photos" "summary" "action";
+    grid-template-areas: "title" "photos" "summary" "action";
     gap: 16px;
     text-align: center;
   }
@@ -83,7 +83,6 @@
   }
 
   .home-story-intro {
-    grid-area: intro;
     margin: 0;
     font-size: 24px;
   }
