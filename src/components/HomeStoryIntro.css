@@ -11,11 +11,31 @@
 }
 
 .home-story-audience {
-  margin: 0 0 12px;
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  margin: 0 0 16px;
+  padding: 0 5px 2px;
   color: var(--ink-hand);
-  font-size: 14px;
+  font-family: var(--font-hand);
+  font-size: 28px;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  line-height: 1.15;
+  transform: rotate(-2deg);
+}
+
+.home-story-audience::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 8px;
+  border-radius: 45% 30% 50% 35%;
+  background: var(--glow-blue);
+  opacity: 0.55;
+  transform: rotate(1deg) skewX(-12deg);
 }
 
 .home-story-intro {
@@ -28,7 +48,7 @@
 .home-story h1 {
   margin: 0;
   color: var(--ink-primary);
-  font-size: clamp(38px, 4.3vw, 54px);
+  font-size: clamp(38px, 4.3vw, 53px);
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1.08;
@@ -92,6 +112,7 @@
 
   .home-story-audience {
     grid-area: audience;
+    justify-self: center;
     margin: 0;
   }
 
@@ -143,7 +164,7 @@
 
 @media (max-width: 400px) {
   .home-story h1 {
-    font-size: clamp(28px, 8.8vw, 36px);
+    font-size: clamp(27px, 8.6vw, 36px);
   }
 }
 

@@ -249,6 +249,8 @@ belongs to this programme introduction. The opening uses the audience label
 "For people in tech", the headline "Your weight shouldn't run your life.", and
 the subtitle "It's time to feel in control again." The greeting "Hi, I'm Akshat."
 sits before the transformation story, not above the headline.
+The headline breaks after "Your weight"; the audience label uses a handwritten,
+slightly tilted style with a blue marker underline.
 Keep this introduction short, with
 one primary How it works button linking to `/how-it-works` and a compact
 programme illustration. Keep detailed service copy below the hero; do not
