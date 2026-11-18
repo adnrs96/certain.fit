@@ -15,13 +15,14 @@ const HomeStoryIntro = () => (
         <div className="home-story-summary">
           <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
           <p>
-            I battled obesity for <strong>15+ years</strong>. Now I help{" "}
-            <strong>people in tech</strong> transform their bodies, just like I did.
+            I help people in stressful jobs like tech transform into their best
+            selves. Having lost 40+ kg myself, I truly believe obesity is more
+            than a diet problem.
           </p>
           <p>
             At <strong>Certain Fitness</strong>, our mission is to help people
-            reclaim their best selves from the clutches of obesity and support
-            them in living their best lives!
+            reclaim their <strong>health, physical capabilities, confidence</strong>{" "}
+            and <strong>freedom</strong> through a simple, curated system.
           </p>
         </div>
         <div className="home-story-action">
