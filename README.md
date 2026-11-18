@@ -246,10 +246,10 @@ uncertainties. Managing your fitness goals shouldn't be." The supporting copy
 describes the structured, personalised programme across nutrition, movement,
 sleep and stress, adapted to food preferences, routine and real life. The motto
 belongs to this programme introduction. The opening uses the audience label
-"For people in tech", the headline "Your weight shouldn't run your life.", and
+"For people in tech", the headline "Stop letting your weight control your life", and
 the subtitle "It's time to feel in control again." The greeting "Hi, I'm Akshat."
 sits before the transformation story, not above the headline.
-The headline breaks after "Your weight"; the audience label uses a handwritten,
+The headline wraps naturally; the audience label uses a handwritten,
 slightly tilted style with a blue marker underline.
 Keep this introduction short, with
 one primary How it works button linking to `/how-it-works` and a compact
