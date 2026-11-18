@@ -88,7 +88,7 @@
   justify-content: flex-end;
   gap: 8px;
   width: min(100%, 440px);
-  margin: 20px auto 0;
+  margin: 0 auto 12px;
   padding-right: 12px;
   color: var(--ink-hand);
   font-family: var(--font-hand);
@@ -100,8 +100,8 @@
   flex: 0 0 48px;
   width: 48px;
   height: 36px;
-  align-self: flex-start;
-  margin-top: -12px;
+  align-self: flex-end;
+  margin-bottom: -12px;
 }
 
 .home-story-summary strong {

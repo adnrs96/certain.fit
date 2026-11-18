@@ -35,12 +35,11 @@ const HomeStoryIntro = () => (
         </div>
       </div>
       <div className="home-story-visual">
-        <TransformationPhotos beforeCaption="Before" afterCaption="Now" />
         <p className="home-story-photo-note">
           <span>FAANG Senior SWE</span>
           <svg viewBox="0 0 64 48" aria-hidden="true">
             <path
-              d="M4 38c24 8 49-6 46-32m-9 9 9-9 8 10"
+              d="M4 10c24-8 49 6 46 32m-9-9 9 9 8-10"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.8"
@@ -49,6 +48,7 @@ const HomeStoryIntro = () => (
             />
           </svg>
         </p>
+        <TransformationPhotos beforeCaption="Before" afterCaption="Now" />
       </div>
     </div>
   </section>
