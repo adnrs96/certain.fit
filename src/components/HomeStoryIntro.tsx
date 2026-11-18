@@ -15,7 +15,7 @@ const HomeStoryIntro = () => (
         <div className="home-story-summary">
           <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
           <p>
-            I have been battling obesity for <strong>15+ years</strong>. Now I help{" "}
+            I battled obesity for <strong>15+ years</strong>. Now I help{" "}
             <strong>people in tech</strong> transform their bodies, just like I did.
           </p>
           <p>
