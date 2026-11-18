@@ -19,9 +19,9 @@ const HomeStoryIntro = () => (
             <strong>people in tech</strong> transform their bodies, just like I did.
           </p>
           <p>
-            With my <strong>globally recognised</strong> expertise in coaching,
-            nutrition, exercise and stress management, let me help you gain your
-            confidence back.
+            With my <strong>globally recognised</strong> expertise in health
+            coaching, let me help you gain your confidence back, so you can end
+            this cycle once and for all!
           </p>
         </div>
         <div className="home-story-action">
