@@ -15,18 +15,13 @@ const HomeStoryIntro = () => (
         <div className="home-story-summary">
           <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
           <p>
-            Most coaches treat weight-loss as a diet or nutrition problem. But
-            my own transformation journey, from being obese for{" "}
-            <strong>15+ years</strong> to losing <strong>40+ kg</strong>, has taught
-            me how broken that advice is.
+            I have been battling obesity for <strong>15+ years</strong>. Now I help{" "}
+            <strong>people in tech</strong> transform their bodies, just like I did.
           </p>
           <p>
-            Now with my own experience, paired with{" "}
-            <strong>globally recognised</strong> coaching expertise in nutrition,
-            exercise and stress management, I help{" "}
-            <strong>tech professionals</strong> lose weight and transform, while
-            managing a stressful career, through a <strong>simple system</strong>{" "}
-            that fits real chaotic life.
+            With my <strong>globally recognised</strong> expertise in coaching,
+            nutrition, exercise and stress management, let me help you gain your
+            confidence back.
           </p>
         </div>
         <div className="home-story-action">
