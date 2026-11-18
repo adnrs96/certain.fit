@@ -19,10 +19,9 @@ const HomeStoryIntro = () => (
             <strong>people in tech</strong> transform their bodies, just like I did.
           </p>
           <p>
-            At <strong>Certain Fitness</strong>, our mission is helping people
-            reclaim the <strong>health, physical capabilities, confidence</strong>{" "}
-            and <strong>freedom</strong> that may have been compromised along the
-            way.
+            At <strong>Certain Fitness</strong>, our mission is to help people
+            reclaim their best selves from the clutches of obesity and support
+            them in living their best lives!
           </p>
         </div>
         <div className="home-story-action">
