@@ -82,6 +82,28 @@
   margin: 0 auto;
 }
 
+.home-story-photo-note {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  width: min(100%, 440px);
+  margin: 20px auto 0;
+  padding-right: 12px;
+  color: var(--ink-hand);
+  font-family: var(--font-hand);
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.home-story-photo-note svg {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 36px;
+  align-self: flex-start;
+  margin-top: -12px;
+}
+
 .home-story-summary strong {
   color: var(--ink-primary);
   font-weight: 800;
@@ -132,7 +154,7 @@
     font-size: clamp(22px, 4.6vw, 30px);
   }
 
-  .home-story .founder-photo-pair {
+  .home-story-visual {
     grid-area: photos;
     width: min(100%, 380px);
     margin: 8px auto 4px;
@@ -177,7 +199,7 @@
     gap: 6px;
   }
 
-  .home-story .founder-photo-pair {
+  .home-story-visual {
     margin: 4px auto 0;
   }
 

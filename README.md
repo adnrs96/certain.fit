@@ -239,6 +239,8 @@ side on small screens with readable labels, adequate tap targets, and no overflo
 dimensions, and compact between-photo ~40 kg marker with the full story.
 Its CSS preserves the story's existing framed-photo design. Do not duplicate the
 photo markup or regenerate the images when changing either placement.
+The homepage adds a handwritten "FAANG Senior SWE" annotation and curved arrow
+pointing to the Now photo; this stays outside the shared photo component.
 
 The existing programme hero follows this personal introduction, with an `h2`
 reading "Introducing, The CERTAIN System". Its lead is "Because life is full of
