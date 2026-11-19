@@ -9,7 +9,7 @@ const HomeStoryIntro = () => (
       <div className="home-story-copy">
         <p className="home-story-audience">For people in tech</p>
         <h1 id="home-story-title">
-          Fat-loss is the most impactful project you will do
+          Re-Discover yourself
           <span className="serif-italic">It&apos;s time to feel confident again</span>
         </h1>
         <div className="home-story-summary">

@@ -248,7 +248,7 @@ uncertainties. Managing your fitness goals shouldn't be." The supporting copy
 describes the structured, personalised programme across nutrition, movement,
 sleep and stress, adapted to food preferences, routine and real life. The motto
 belongs to this programme introduction. The opening uses the audience label
-"For people in tech", the headline "Fat-loss is the most impactful project you will do", and
+"For people in tech", the headline "Re-Discover yourself", and
 the subtitle "It's time to feel confident again". The greeting "Hi, I'm Akshat."
 sits before the transformation story, not above the headline.
 The headline wraps naturally; the audience label uses a handwritten,
