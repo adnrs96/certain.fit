@@ -9,8 +9,8 @@ const HomeStoryIntro = () => (
       <div className="home-story-copy">
         <p className="home-story-audience">For people in tech</p>
         <h1 id="home-story-title">
-          Re-Discover yourself
-          <span className="serif-italic">It&apos;s time to feel confident again</span>
+          Rediscover yourself
+          <span className="serif-italic">..2027 is your year to feel confident again!</span>
         </h1>
         <div className="home-story-summary">
           <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
