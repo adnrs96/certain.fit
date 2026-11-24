@@ -247,12 +247,10 @@ reading "Introducing, The CERTAIN System". Its lead is "Because life is full of
 uncertainties. Managing your fitness goals shouldn't be." The supporting copy
 describes the structured, personalised programme across nutrition, movement,
 sleep and stress, adapted to food preferences, routine and real life. The motto
-belongs to this programme introduction. The opening uses the audience label
-"For people in tech", the headline "Rediscover yourself", and
-the subtitle "..2027 is your year to feel confident again!" The greeting
-"Hi, I'm Akshat."
-sits before the transformation story, not above the headline.
-The headline wraps naturally; the audience label uses a handwritten,
+belongs to this programme introduction. The opening uses the greeting
+"Hi, I'm Akshat" above the headline "15 years of obesity made me think I was
+the problem", with no separate subtitle or repeated greeting in the story.
+The headline wraps naturally; the greeting uses a handwritten,
 slightly tilted style with a blue marker underline.
 Keep this introduction short, with
 one primary How it works button linking to `/how-it-works` and a compact

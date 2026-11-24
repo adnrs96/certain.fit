@@ -7,13 +7,11 @@ const HomeStoryIntro = () => (
   <section className="home-story" id="top" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
       <div className="home-story-copy">
-        <p className="home-story-audience">For people in tech</p>
+        <p className="home-story-audience">Hi, I&apos;m Akshat</p>
         <h1 id="home-story-title">
-          Rediscover yourself
-          <span className="serif-italic">..2027 is your year to feel confident again!</span>
+          15 years of obesity made me think I was the problem
         </h1>
         <div className="home-story-summary">
-          <p className="home-story-intro">Hi, I&apos;m Akshat.</p>
           <p>
             I help people in stressful jobs like tech transform into their best
             selves. Having lost 40+ kg myself, I truly believe obesity is more
