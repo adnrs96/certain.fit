@@ -39,8 +39,8 @@ const TransformationPhotos = ({
       <img
         src={akshatNow}
         alt="Akshat in a black vest after his transformation"
-        width="1200"
-        height="1600"
+        width="1086"
+        height="1448"
       />
       <figcaption>{afterCaption}</figcaption>
     </figure>
