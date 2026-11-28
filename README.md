@@ -229,10 +229,12 @@ refers to his previous coaches; those historical references are intentional.
 
 ### Homepage focus and booking-button animation
 
-`HomeStoryIntro.tsx` opens the homepage with Akshat's story and the actual before
-and after photographs. Its title is the page's only `h1`. On mobile, the photos
-come before the supporting paragraph so both photographs are visible on initial
-load, including 320 by 568 screens. The Read my story action opens `/coach`;
+`HomeOfferingIntro.tsx` opens the homepage with its only `h1`: "Holistic Weight &
+Lifestyle Management", followed by "for Technology Professionals" and the
+supporting line "Nutrition, movement, sleep and stress—connected, not treated in
+isolation." `HomeStoryIntro.tsx` follows with Akshat's story, an `h2`, and the
+actual before and after photographs. On mobile, the photos come before the
+supporting story paragraphs. The Read my story action opens `/coach`;
 Get in touch opens the shared WhatsApp destination. Keep both buttons side by
 side on small screens with readable labels, adequate tap targets, and no overflow.
 `TransformationPhotos.tsx` shares the photo pair, descriptive alt text, intrinsic

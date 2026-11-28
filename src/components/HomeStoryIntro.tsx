@@ -4,13 +4,13 @@ import ConversationLink from "@/components/ConversationLink";
 import "./HomeStoryIntro.css";
 
 const HomeStoryIntro = () => (
-  <section className="home-story" id="top" aria-labelledby="home-story-title">
+  <section className="home-story" aria-labelledby="home-story-title">
     <div className="container home-story-grid">
       <div className="home-story-copy">
         <p className="home-story-audience">Hi, I&apos;m Akshat</p>
-        <h1 id="home-story-title">
+        <h2 className="home-story-title" id="home-story-title">
           15 years of obesity made me think I was the problem
-        </h1>
+        </h2>
         <div className="home-story-summary">
           <p>
             I help people in stressful jobs like tech transform into their best

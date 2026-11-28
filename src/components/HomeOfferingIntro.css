@@ -1,0 +1,42 @@
+.home-offering {
+  padding: 56px 0 40px;
+  background: var(--paper);
+  text-align: center;
+}
+
+.home-offering h1 {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: var(--ink-primary);
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.home-offering h1 span {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink-hand);
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 500;
+}
+
+.home-offering p {
+  max-width: 660px;
+  margin: 20px auto 0;
+  color: var(--ink-secondary);
+  font-size: 16px;
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+@media (max-width: 560px) {
+  .home-offering {
+    padding: 32px 0;
+  }
+
+  .home-offering p {
+    font-size: 15px;
+  }
+}

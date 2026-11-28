@@ -45,7 +45,7 @@
   font-size: 26px;
 }
 
-.home-story h1 {
+.home-story-title {
   margin: 0;
   color: var(--ink-primary);
   font-size: clamp(38px, 4.3vw, 53px);
@@ -54,7 +54,7 @@
   line-height: 1.08;
 }
 
-.home-story h1 span {
+.home-story-title span {
   display: block;
   color: var(--ink-hand);
   margin-top: 10px;
@@ -143,14 +143,14 @@
     font-size: 24px;
   }
 
-  .home-story h1 {
+  .home-story-title {
     grid-area: title;
     max-width: 550px;
     margin: 0 auto;
     font-size: clamp(36px, 7vw, 48px);
   }
 
-  .home-story h1 span {
+  .home-story-title span {
     font-size: clamp(22px, 4.6vw, 30px);
   }
 
@@ -185,7 +185,7 @@
 }
 
 @media (max-width: 400px) {
-  .home-story h1 {
+  .home-story-title {
     font-size: clamp(27px, 8.6vw, 36px);
   }
 }
